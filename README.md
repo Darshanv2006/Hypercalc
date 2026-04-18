@@ -130,6 +130,20 @@ This project is configured for deployment on Vercel:
 4. Add tests if applicable
 5. Submit a pull request
 
+## 👨‍💻 Author
+
+**Darshan V**
+🚀 Full Stack Developer | Engineering Student
+
+* 🔗 GitHub: https://github.com/Darshanv2006
+* 💡 Project: HyperCalc
+* ⚡ Tech: Next.js, TypeScript, Tailwind CSS
+
+> Passionate about building engineering tools that simplify complex calculations.
+
+---
+
+
 ## License
 
 MIT License - see LICENSE file for details.
