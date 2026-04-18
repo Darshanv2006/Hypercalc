@@ -139,9 +139,7 @@ This project is configured for deployment on Vercel:
 * 💡 Project: HyperCalc
 * ⚡ Tech: Next.js, TypeScript, Tailwind CSS
 
-> Passionate about building engineering tools that simplify complex calculations.
 
----
 
 
 ## License
