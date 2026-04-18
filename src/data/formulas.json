@@ -1,0 +1,6544 @@
+[
+  {
+    "id": "mech_01",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "basic",
+    "name": "Normal Stress",
+    "symbol": "σ",
+    "formula": "\\sigma = \\frac{F}{A}",
+    "variables": {
+      "F": "Force (N)",
+      "A": "Cross-sectional Area (m²)"
+    },
+    "applications": [
+      "stress analysis",
+      "material selection"
+    ],
+    "calculator_route": "/mechanical/stress-strain",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_02",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "basic",
+    "name": "Normal Strain",
+    "symbol": "ε",
+    "formula": "\\varepsilon = \\frac{\\Delta L}{L_0}",
+    "variables": {
+      "\\Delta L": "Change in length (m)",
+      "L_0": "Original length (m)"
+    },
+    "applications": [
+      "deformation analysis",
+      "material testing"
+    ],
+    "calculator_route": "/mechanical/stress-strain",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_03",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "basic",
+    "name": "Young's Modulus",
+    "symbol": "E",
+    "formula": "E = \\frac{\\sigma}{\\varepsilon}",
+    "variables": {
+      "\\sigma": "Normal Stress (Pa)",
+      "\\varepsilon": "Normal Strain"
+    },
+    "applications": [
+      "material characterization",
+      "structural design"
+    ],
+    "calculator_route": "/mechanical/stress-strain",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_04",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "intermediate",
+    "name": "Shear Stress",
+    "symbol": "τ",
+    "formula": "\\tau = \\frac{V \\cdot Q}{I \\cdot b}",
+    "variables": {
+      "V": "Shear Force (N)",
+      "Q": "First moment of area (m³)",
+      "I": "Moment of inertia (m⁴)",
+      "b": "Width at point (m)"
+    },
+    "applications": [
+      "beam design",
+      "cross-section analysis"
+    ],
+    "calculator_route": "/mechanical/beam-deflection",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_05",
+    "domain": "mechanical",
+    "category": "dynamics",
+    "difficulty": "basic",
+    "name": "Torque & Power",
+    "symbol": "P",
+    "formula": "P = \\tau \\cdot \\omega",
+    "variables": {
+      "\\tau": "Torque (N·m)",
+      "\\omega": "Angular velocity (rad/s)"
+    },
+    "applications": [
+      "motor sizing",
+      "engine design"
+    ],
+    "calculator_route": "/mechanical/torque-power",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_06",
+    "domain": "mechanical",
+    "category": "dynamics",
+    "difficulty": "intermediate",
+    "name": "Gear Ratio",
+    "symbol": "GR",
+    "formula": "GR = \\frac{N_{out}}{N_{in}} = \\frac{\\omega_{in}}{\\omega_{out}}",
+    "variables": {
+      "N_{out}": "Output teeth",
+      "N_{in}": "Input teeth",
+      "\\omega": "Angular velocity (rad/s)"
+    },
+    "applications": [
+      "gearbox design",
+      "speed reduction"
+    ],
+    "calculator_route": "/mechanical/gear-ratio",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_07",
+    "domain": "mechanical",
+    "category": "fluid_mechanics",
+    "difficulty": "intermediate",
+    "name": "Reynolds Number",
+    "symbol": "Re",
+    "formula": "Re = \\frac{\\rho v D}{\\mu}",
+    "variables": {
+      "\\rho": "Fluid density (kg/m³)",
+      "v": "Velocity (m/s)",
+      "D": "Pipe diameter (m)",
+      "\\mu": "Dynamic viscosity (Pa·s)"
+    },
+    "applications": [
+      "flow regime classification",
+      "pipe design"
+    ],
+    "calculator_route": "/mechanical/reynolds-pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_08",
+    "domain": "mechanical",
+    "category": "heat_transfer",
+    "difficulty": "intermediate",
+    "name": "Fourier's Law of Conduction",
+    "symbol": "Q",
+    "formula": "Q = -k A \\frac{dT}{dx}",
+    "variables": {
+      "k": "Thermal conductivity (W/m·K)",
+      "A": "Area (m²)",
+      "dT/dx": "Temperature gradient (K/m)"
+    },
+    "applications": [
+      "wall insulation",
+      "heat sink design"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_09",
+    "domain": "mechanical",
+    "category": "machine_design",
+    "difficulty": "intermediate",
+    "name": "Torsional Shear Stress (Shaft)",
+    "symbol": "τ",
+    "formula": "\\tau = \\frac{T \\cdot r}{J}",
+    "variables": {
+      "T": "Applied torque (N·m)",
+      "r": "Outer radius (m)",
+      "J": "Polar moment of inertia (m⁴)"
+    },
+    "applications": [
+      "shaft design",
+      "drive systems"
+    ],
+    "calculator_route": "/mechanical/shaft-design",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_10",
+    "domain": "mechanical",
+    "category": "machine_design",
+    "difficulty": "basic",
+    "name": "Hooke's Law (Spring)",
+    "symbol": "F",
+    "formula": "F = k \\cdot x",
+    "variables": {
+      "k": "Spring constant (N/m)",
+      "x": "Displacement (m)"
+    },
+    "applications": [
+      "spring selection",
+      "vibration isolation"
+    ],
+    "calculator_route": "/mechanical/spring-design",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_11",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "intermediate",
+    "name": "Beam Deflection (UDL, Simply Supported)",
+    "symbol": "δ",
+    "formula": "\\delta_{max} = \\frac{5wL^4}{384EI}",
+    "variables": {
+      "w": "UDL (N/m)",
+      "L": "Beam length (m)",
+      "E": "Young's modulus (Pa)",
+      "I": "Moment of inertia (m⁴)"
+    },
+    "applications": [
+      "structural design",
+      "beam sizing"
+    ],
+    "calculator_route": "/mechanical/beam-deflection",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_12",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "basic",
+    "name": "Bending Stress",
+    "symbol": "σ_b",
+    "formula": "\\sigma_b = \\frac{M \\cdot y}{I}",
+    "variables": {
+      "M": "Bending moment (N·m)",
+      "y": "Distance from neutral axis (m)",
+      "I": "Second moment of area (m⁴)"
+    },
+    "applications": [
+      "beam design",
+      "structural analysis"
+    ],
+    "calculator_route": "/mechanical/beam-deflection",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_13",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "intermediate",
+    "name": "Factor of Safety",
+    "symbol": "FoS",
+    "formula": "FoS = \\frac{S_{ut}}{\\sigma_{max}}",
+    "variables": {
+      "S_{ut}": "Ultimate tensile strength (Pa)",
+      "\\sigma_{max}": "Maximum applied stress (Pa)"
+    },
+    "applications": [
+      "design safety",
+      "material selection"
+    ],
+    "calculator_route": "/mechanical/stress-strain",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_14",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "intermediate",
+    "name": "Poisson's Ratio",
+    "symbol": "ν",
+    "formula": "\\nu = -\\frac{\\varepsilon_{lateral}}{\\varepsilon_{axial}}",
+    "variables": {
+      "\\varepsilon_{lateral}": "Lateral strain",
+      "\\varepsilon_{axial}": "Axial strain"
+    },
+    "applications": [
+      "multi-axial stress",
+      "material characterization"
+    ],
+    "calculator_route": "/mechanical/stress-strain",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_15",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "advanced",
+    "name": "Von Mises Stress",
+    "symbol": "σ_v",
+    "formula": "\\sigma_v = \\sqrt{\\sigma_x^2 - \\sigma_x\\sigma_y + \\sigma_y^2 + 3\\tau_{xy}^2}",
+    "variables": {
+      "\\sigma_x": "Normal stress x (Pa)",
+      "\\sigma_y": "Normal stress y (Pa)",
+      "\\tau_{xy}": "Shear stress (Pa)"
+    },
+    "applications": [
+      "failure prediction",
+      "FEA interpretation"
+    ],
+    "calculator_route": "/mechanical/stress-strain",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_16",
+    "domain": "mechanical",
+    "category": "dynamics",
+    "difficulty": "basic",
+    "name": "Kinetic Energy",
+    "symbol": "KE",
+    "formula": "KE = \\frac{1}{2}mv^2",
+    "variables": {
+      "m": "Mass (kg)",
+      "v": "Velocity (m/s)"
+    },
+    "applications": [
+      "impact analysis",
+      "energy storage"
+    ],
+    "calculator_route": "/electrical/energy-storage",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_17",
+    "domain": "mechanical",
+    "category": "dynamics",
+    "difficulty": "basic",
+    "name": "Potential Energy",
+    "symbol": "PE",
+    "formula": "PE = mgh",
+    "variables": {
+      "m": "Mass (kg)",
+      "g": "9.81 m/s²",
+      "h": "Height (m)"
+    },
+    "applications": [
+      "energy balance",
+      "gravity systems"
+    ],
+    "calculator_route": "/mechanical/torque-power",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_18",
+    "domain": "mechanical",
+    "category": "dynamics",
+    "difficulty": "basic",
+    "name": "Angular Momentum",
+    "symbol": "L",
+    "formula": "L = I \\cdot \\omega",
+    "variables": {
+      "I": "Moment of inertia (kg·m²)",
+      "\\omega": "Angular velocity (rad/s)"
+    },
+    "applications": [
+      "flywheel design",
+      "gyroscopes"
+    ],
+    "calculator_route": "/mechanical/torque-power",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_19",
+    "domain": "mechanical",
+    "category": "dynamics",
+    "difficulty": "intermediate",
+    "name": "Work-Energy Theorem",
+    "symbol": "W",
+    "formula": "W = \\Delta KE = \\frac{1}{2}mv_f^2 - \\frac{1}{2}mv_i^2",
+    "variables": {
+      "m": "Mass (kg)",
+      "v_f": "Final velocity (m/s)",
+      "v_i": "Initial velocity (m/s)"
+    },
+    "applications": [
+      "mechanical advantage",
+      "power systems"
+    ],
+    "calculator_route": "/mechanical/torque-power",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_20",
+    "domain": "mechanical",
+    "category": "fluid_mechanics",
+    "difficulty": "intermediate",
+    "name": "Bernoulli's Equation",
+    "symbol": "P",
+    "formula": "P_1 + \\frac{1}{2}\\rho v_1^2 + \\rho g h_1 = P_2 + \\frac{1}{2}\\rho v_2^2 + \\rho g h_2",
+    "variables": {
+      "P": "Pressure (Pa)",
+      "\\rho": "Fluid density (kg/m³)",
+      "v": "Velocity (m/s)",
+      "h": "Height (m)"
+    },
+    "applications": [
+      "pipe flow",
+      "aircraft lift",
+      "nozzle design"
+    ],
+    "calculator_route": "/mechanical/reynolds-pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_21",
+    "domain": "mechanical",
+    "category": "fluid_mechanics",
+    "difficulty": "intermediate",
+    "name": "Continuity Equation",
+    "symbol": "Q",
+    "formula": "Q = A_1 v_1 = A_2 v_2",
+    "variables": {
+      "A": "Cross-sectional area (m²)",
+      "v": "Flow velocity (m/s)",
+      "Q": "Volumetric flow rate (m³/s)"
+    },
+    "applications": [
+      "pipe sizing",
+      "HVAC design"
+    ],
+    "calculator_route": "/mechanical/reynolds-pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_22",
+    "domain": "mechanical",
+    "category": "fluid_mechanics",
+    "difficulty": "basic",
+    "name": "Hydraulic Pressure",
+    "symbol": "P",
+    "formula": "P = \\rho g h",
+    "variables": {
+      "\\rho": "Fluid density (kg/m³)",
+      "g": "9.81 m/s²",
+      "h": "Fluid column height (m)"
+    },
+    "applications": [
+      "dam design",
+      "submarine pressure"
+    ],
+    "calculator_route": "/mechanical/reynolds-pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_23",
+    "domain": "mechanical",
+    "category": "heat_transfer",
+    "difficulty": "intermediate",
+    "name": "Newton's Law of Cooling (Convection)",
+    "symbol": "Q",
+    "formula": "Q = h A (T_s - T_\\infty)",
+    "variables": {
+      "h": "Convection coefficient (W/m²·K)",
+      "A": "Surface area (m²)",
+      "T_s": "Surface temperature (K)",
+      "T_\\infty": "Ambient temperature (K)"
+    },
+    "applications": [
+      "heat sink sizing",
+      "cooling systems"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_24",
+    "domain": "mechanical",
+    "category": "heat_transfer",
+    "difficulty": "intermediate",
+    "name": "Stefan-Boltzmann Radiation",
+    "symbol": "Q",
+    "formula": "Q = \\varepsilon \\sigma A T^4",
+    "variables": {
+      "\\varepsilon": "Emissivity (0-1)",
+      "\\sigma": "5.67×10⁻⁸ W/m²·K⁴",
+      "A": "Area (m²)",
+      "T": "Temperature (K)"
+    },
+    "applications": [
+      "thermal radiation",
+      "furnace design"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_25",
+    "domain": "mechanical",
+    "category": "heat_transfer",
+    "difficulty": "basic",
+    "name": "Thermal Resistance",
+    "symbol": "R_th",
+    "formula": "R_{th} = \\frac{L}{kA}",
+    "variables": {
+      "L": "Thickness (m)",
+      "k": "Thermal conductivity (W/m·K)",
+      "A": "Area (m²)"
+    },
+    "applications": [
+      "insulation design",
+      "PCB thermal management"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_26",
+    "domain": "mechanical",
+    "category": "thermodynamics",
+    "difficulty": "basic",
+    "name": "First Law of Thermodynamics",
+    "symbol": "ΔU",
+    "formula": "\\Delta U = Q - W",
+    "variables": {
+      "Q": "Heat added to system (J)",
+      "W": "Work done by system (J)"
+    },
+    "applications": [
+      "engine analysis",
+      "refrigeration"
+    ],
+    "calculator_route": "/physics/thermodynamics",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.Q - inputs.W"
+  },
+  {
+    "id": "mech_27",
+    "domain": "mechanical",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Carnot Efficiency",
+    "symbol": "η",
+    "formula": "\\eta_{Carnot} = 1 - \\frac{T_L}{T_H}",
+    "variables": {
+      "T_L": "Cold reservoir temperature (K)",
+      "T_H": "Hot reservoir temperature (K)"
+    },
+    "applications": [
+      "engine efficiency limit",
+      "refrigeration COP"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_28",
+    "domain": "mechanical",
+    "category": "thermodynamics",
+    "difficulty": "basic",
+    "name": "Specific Heat (Sensible Heat)",
+    "symbol": "Q",
+    "formula": "Q = mc\\Delta T",
+    "variables": {
+      "m": "Mass (kg)",
+      "c": "Specific heat capacity (J/kg·K)",
+      "\\Delta T": "Temperature change (K)"
+    },
+    "applications": [
+      "calorimetry",
+      "thermal storage"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_29",
+    "domain": "mechanical",
+    "category": "vibrations",
+    "difficulty": "intermediate",
+    "name": "Natural Frequency (Spring-Mass)",
+    "symbol": "ω_n",
+    "formula": "\\omega_n = \\sqrt{\\frac{k}{m}}",
+    "variables": {
+      "k": "Spring stiffness (N/m)",
+      "m": "Mass (kg)"
+    },
+    "applications": [
+      "vibration isolation",
+      "resonance prediction"
+    ],
+    "calculator_route": "/mechanical/spring-design",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_30",
+    "domain": "mechanical",
+    "category": "vibrations",
+    "difficulty": "intermediate",
+    "name": "Damping Ratio",
+    "symbol": "ζ",
+    "formula": "\\zeta = \\frac{c}{2\\sqrt{km}}",
+    "variables": {
+      "c": "Damping coefficient (N·s/m)",
+      "k": "Spring stiffness (N/m)",
+      "m": "Mass (kg)"
+    },
+    "applications": [
+      "shock absorber design",
+      "dynamic systems"
+    ],
+    "calculator_route": "/mechanical/spring-design",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_31",
+    "domain": "mechanical",
+    "category": "machine_design",
+    "difficulty": "intermediate",
+    "name": "Endurance Limit (Fatigue)",
+    "symbol": "S_e",
+    "formula": "S_e = k_a k_b k_c k_d k_e S_e'",
+    "variables": {
+      "k_a": "Surface factor",
+      "k_b": "Size factor",
+      "k_c": "Load factor",
+      "k_d": "Temperature factor",
+      "k_e": "Reliability factor",
+      "S_e'": "Rotary beam endurance limit (Pa)"
+    },
+    "applications": [
+      "fatigue life prediction",
+      "shaft design"
+    ],
+    "calculator_route": "/calculator/mech_31",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.k_a * inputs.k_b * inputs.k_c * inputs.k_d * inputs.k_e * inputs.S_e_prime"
+  },
+  {
+    "id": "mech_32",
+    "domain": "mechanical",
+    "category": "machine_design",
+    "difficulty": "intermediate",
+    "name": "Angle of Twist (Shaft)",
+    "symbol": "φ",
+    "formula": "\\phi = \\frac{TL}{GJ}",
+    "variables": {
+      "T": "Torque (N·m)",
+      "L": "Length (m)",
+      "G": "Shear modulus (Pa)",
+      "J": "Polar moment of inertia (m⁴)"
+    },
+    "applications": [
+      "shaft stiffness",
+      "power transmission"
+    ],
+    "calculator_route": "/mechanical/shaft-design",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_33",
+    "domain": "mechanical",
+    "category": "machine_design",
+    "difficulty": "intermediate",
+    "name": "Belt Drive Velocity Ratio",
+    "symbol": "VR",
+    "formula": "VR = \\frac{N_2}{N_1} = \\frac{d_1}{d_2}",
+    "variables": {
+      "N_1": "Driver speed (rpm)",
+      "N_2": "Driven speed (rpm)",
+      "d_1": "Driver diameter (m)",
+      "d_2": "Driven diameter (m)"
+    },
+    "applications": [
+      "belt drive design",
+      "conveyor systems"
+    ],
+    "calculator_route": "/mechanical/gear-ratio",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_34",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "intermediate",
+    "name": "Thin-Walled Pressure Vessel (Hoop Stress)",
+    "symbol": "σ_θ",
+    "formula": "\\sigma_\\theta = \\frac{pr}{t}",
+    "variables": {
+      "p": "Internal pressure (Pa)",
+      "r": "Inner radius (m)",
+      "t": "Wall thickness (m)"
+    },
+    "applications": [
+      "pressure vessel design",
+      "pipe burst analysis"
+    ],
+    "calculator_route": "/mechanical/stress-strain",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_35",
+    "domain": "mechanical",
+    "category": "fluid_mechanics",
+    "difficulty": "intermediate",
+    "name": "Drag Force",
+    "symbol": "F_D",
+    "formula": "F_D = \\frac{1}{2} C_D \\rho A v^2",
+    "variables": {
+      "C_D": "Drag coefficient",
+      "\\rho": "Fluid density (kg/m³)",
+      "A": "Frontal area (m²)",
+      "v": "Velocity (m/s)"
+    },
+    "applications": [
+      "vehicle aerodynamics",
+      "structural wind load"
+    ],
+    "calculator_route": "/mechanical/reynolds-pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_36",
+    "domain": "mechanical",
+    "category": "machine_design",
+    "difficulty": "basic",
+    "name": "Mechanical Efficiency",
+    "symbol": "η",
+    "formula": "\\eta = \\frac{P_{out}}{P_{in}} \\times 100\\%",
+    "variables": {
+      "P_{out}": "Output power (W)",
+      "P_{in}": "Input power (W)"
+    },
+    "applications": [
+      "gearbox efficiency",
+      "motor selection"
+    ],
+    "calculator_route": "/mechanical/gear-ratio",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_37",
+    "domain": "mechanical",
+    "category": "thermodynamics",
+    "difficulty": "advanced",
+    "name": "Ideal Rankine Cycle Efficiency",
+    "symbol": "η",
+    "formula": "\\eta = 1 - \\frac{Q_{out}}{Q_{in}} = \\frac{W_{net}}{Q_{in}}",
+    "variables": {
+      "Q_{in}": "Heat input (kJ/kg)",
+      "Q_{out}": "Heat rejected (kJ/kg)",
+      "W_{net}": "Net work output (kJ/kg)"
+    },
+    "applications": [
+      "steam power plant analysis"
+    ],
+    "calculator_route": "/calculator/mech_37",
+    "calculator_eligible": true,
+    "compute_logic": "1 - (inputs.Q_out / inputs.Q_in)"
+  },
+  {
+    "id": "mech_38",
+    "domain": "mechanical",
+    "category": "strength_of_materials",
+    "difficulty": "basic",
+    "name": "Shear Modulus (Modulus of Rigidity)",
+    "symbol": "G",
+    "formula": "G = \\frac{E}{2(1 + \\nu)}",
+    "variables": {
+      "E": "Young's modulus (Pa)",
+      "\\nu": "Poisson's ratio"
+    },
+    "applications": [
+      "torsion analysis",
+      "material selection"
+    ],
+    "calculator_route": "/mechanical/stress-strain",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_39",
+    "domain": "mechanical",
+    "category": "dynamics",
+    "difficulty": "basic",
+    "name": "Centripetal Force",
+    "symbol": "F_c",
+    "formula": "F_c = \\frac{mv^2}{r} = m\\omega^2 r",
+    "variables": {
+      "m": "Mass (kg)",
+      "v": "Tangential velocity (m/s)",
+      "r": "Radius (m)",
+      "\\omega": "Angular velocity (rad/s)"
+    },
+    "applications": [
+      "rotor design",
+      "vehicle cornering"
+    ],
+    "calculator_route": "/mechanical/torque-power",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_40",
+    "domain": "mechanical",
+    "category": "dynamics",
+    "difficulty": "basic",
+    "name": "Impulse-Momentum",
+    "symbol": "J",
+    "formula": "J = F \\cdot \\Delta t = m(v_f - v_i)",
+    "variables": {
+      "F": "Force (N)",
+      "\\Delta t": "Time (s)",
+      "m": "Mass (kg)",
+      "v_f, v_i": "Final/initial velocity (m/s)"
+    },
+    "applications": [
+      "impact design",
+      "crash analysis"
+    ],
+    "calculator_route": "/mechanical/torque-power",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_41",
+    "domain": "mechanical",
+    "category": "fluid_mechanics",
+    "difficulty": "intermediate",
+    "name": "Pump Power",
+    "symbol": "P",
+    "formula": "P = \\frac{\\rho g Q H}{\\eta}",
+    "variables": {
+      "\\rho": "Fluid density (kg/m³)",
+      "g": "9.81 m/s²",
+      "Q": "Flow rate (m³/s)",
+      "H": "Head (m)",
+      "\\eta": "Pump efficiency"
+    },
+    "applications": [
+      "pump selection",
+      "pipeline design"
+    ],
+    "calculator_route": "/mechanical/reynolds-pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_42",
+    "domain": "mechanical",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Coefficient of Performance (Refrigeration)",
+    "symbol": "COP",
+    "formula": "COP = \\frac{Q_L}{W_{net}} = \\frac{T_L}{T_H - T_L}",
+    "variables": {
+      "Q_L": "Heat removed from cold space (kJ)",
+      "W_{net}": "Work input (kJ)",
+      "T_L": "Cold temperature (K)",
+      "T_H": "Hot temperature (K)"
+    },
+    "applications": [
+      "refrigerator design",
+      "AC sizing"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_43",
+    "domain": "mechanical",
+    "category": "vibrations",
+    "difficulty": "advanced",
+    "name": "Critical Speed of Shaft",
+    "symbol": "N_c",
+    "formula": "N_c = \\frac{30}{\\pi}\\sqrt{\\frac{g}{\\delta_{st}}}",
+    "variables": {
+      "g": "9.81 m/s²",
+      "\\delta_{st}": "Static deflection under self-weight (m)"
+    },
+    "applications": [
+      "shaft design",
+      "turbomachinery"
+    ],
+    "calculator_route": "/mechanical/shaft-design",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_44",
+    "domain": "mechanical",
+    "category": "machine_design",
+    "difficulty": "intermediate",
+    "name": "Screw Lead & Velocity Ratio",
+    "symbol": "VR",
+    "formula": "VR = \\frac{\\pi D}{l}",
+    "variables": {
+      "D": "Mean screw diameter (m)",
+      "l": "Lead (m)"
+    },
+    "applications": [
+      "lead screw design",
+      "power screws"
+    ],
+    "calculator_route": "/mechanical/gear-ratio",
+    "calculator_eligible": true
+  },
+  {
+    "id": "mech_45",
+    "domain": "mechanical",
+    "category": "materials_science",
+    "difficulty": "basic",
+    "name": "Thermal Expansion",
+    "symbol": "ΔL",
+    "formula": "\\Delta L = \\alpha L_0 \\Delta T",
+    "variables": {
+      "\\alpha": "Coefficient of thermal expansion (1/K)",
+      "L_0": "Original length (m)",
+      "\\Delta T": "Temperature change (K)"
+    },
+    "applications": [
+      "pipe expansion joints",
+      "bridge design"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_01",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "basic",
+    "name": "Ohm's Law",
+    "symbol": "V",
+    "formula": "V = I \\cdot R",
+    "variables": {
+      "I": "Current (A)",
+      "R": "Resistance (Ω)"
+    },
+    "applications": [
+      "circuit design",
+      "component sizing"
+    ],
+    "calculator_route": "/electrical/ohms-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_02",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "basic",
+    "name": "Electric Power",
+    "symbol": "P",
+    "formula": "P = V \\cdot I = I^2 R = \\frac{V^2}{R}",
+    "variables": {
+      "V": "Voltage (V)",
+      "I": "Current (A)",
+      "R": "Resistance (Ω)"
+    },
+    "applications": [
+      "power dissipation",
+      "circuit efficiency"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_03",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "RC Time Constant",
+    "symbol": "τ",
+    "formula": "\\tau = R \\cdot C",
+    "variables": {
+      "R": "Resistance (Ω)",
+      "C": "Capacitance (F)"
+    },
+    "applications": [
+      "filter design",
+      "timing circuits"
+    ],
+    "calculator_route": "/electrical/rc-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_04",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "RL Time Constant",
+    "symbol": "τ",
+    "formula": "\\tau = \\frac{L}{R}",
+    "variables": {
+      "L": "Inductance (H)",
+      "R": "Resistance (Ω)"
+    },
+    "applications": [
+      "transient analysis",
+      "motor drives"
+    ],
+    "calculator_route": "/electrical/rl-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_05",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "advanced",
+    "name": "RLC Resonant Frequency",
+    "symbol": "ω₀",
+    "formula": "\\omega_0 = \\frac{1}{\\sqrt{LC}}",
+    "variables": {
+      "L": "Inductance (H)",
+      "C": "Capacitance (F)"
+    },
+    "applications": [
+      "filter design",
+      "oscillators"
+    ],
+    "calculator_route": "/electrical/rlc-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_06",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "RC Capacitor Voltage (Charging)",
+    "symbol": "V_C",
+    "formula": "V_C(t) = V_s\\left(1 - e^{-t/\\tau}\\right)",
+    "variables": {
+      "V_s": "Source voltage (V)",
+      "t": "Time (s)",
+      "\\tau": "RC time constant (s)"
+    },
+    "applications": [
+      "capacitor charging",
+      "pulse shaping"
+    ],
+    "calculator_route": "/electrical/rc-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_07",
+    "domain": "electrical",
+    "category": "power_systems",
+    "difficulty": "intermediate",
+    "name": "Apparent Power",
+    "symbol": "S",
+    "formula": "S = V \\cdot I^*",
+    "variables": {
+      "V": "RMS Voltage (V)",
+      "I*": "Complex conjugate of current (A)"
+    },
+    "applications": [
+      "power factor analysis",
+      "grid planning"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_08",
+    "domain": "electrical",
+    "category": "electronics",
+    "difficulty": "intermediate",
+    "name": "Inverting Op-Amp Gain",
+    "symbol": "A_v",
+    "formula": "A_v = -\\frac{R_f}{R_{in}}",
+    "variables": {
+      "R_f": "Feedback resistance (Ω)",
+      "R_{in}": "Input resistance (Ω)"
+    },
+    "applications": [
+      "amplifier design",
+      "signal conditioning"
+    ],
+    "calculator_route": "/electrical/op-amp",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_09",
+    "domain": "electrical",
+    "category": "electronics",
+    "difficulty": "basic",
+    "name": "LED Resistor",
+    "symbol": "R",
+    "formula": "R = \\frac{V_s - V_f}{I_f}",
+    "variables": {
+      "V_s": "Supply voltage (V)",
+      "V_f": "LED forward voltage (V)",
+      "I_f": "LED forward current (A)"
+    },
+    "applications": [
+      "LED circuit design"
+    ],
+    "calculator_route": "/electrical/led-resistor",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_10",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "Decibels (Power)",
+    "symbol": "dB",
+    "formula": "dB = 10 \\log_{10}\\left(\\frac{P_{out}}{P_{in}}\\right)",
+    "variables": {
+      "P_{out}": "Output power (W)",
+      "P_{in}": "Input power (W)"
+    },
+    "applications": [
+      "audio engineering",
+      "signal loss"
+    ],
+    "calculator_route": "/electrical/decibels",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_11",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "basic",
+    "name": "Kirchhoff's Voltage Law (KVL)",
+    "symbol": "ΣV",
+    "formula": "\\sum V = 0 \\text{ around any closed loop}",
+    "variables": {
+      "V": "Voltage drops and rises around the loop (V)"
+    },
+    "applications": [
+      "mesh analysis",
+      "circuit simulation"
+    ],
+    "calculator_route": "/calculator/elec_11",
+    "calculator_eligible": true,
+    "compute_logic": "'Sum of V = 0 loop. Cannot evaluate symbolically.'"
+  },
+  {
+    "id": "elec_12",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "basic",
+    "name": "Kirchhoff's Current Law (KCL)",
+    "symbol": "ΣI",
+    "formula": "\\sum I_{in} = \\sum I_{out} \\text{ at any node}",
+    "variables": {
+      "I_{in}": "Currents entering node (A)",
+      "I_{out}": "Currents leaving node (A)"
+    },
+    "applications": [
+      "nodal analysis",
+      "junction circuit solving"
+    ],
+    "calculator_route": "/calculator/elec_12",
+    "calculator_eligible": true,
+    "compute_logic": "'Sum of I_in = Sum of I_out. Cannot evaluate symbolically.'"
+  },
+  {
+    "id": "elec_13",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "Thevenin Equivalent Voltage",
+    "symbol": "V_th",
+    "formula": "V_{th} = V_{oc}",
+    "variables": {
+      "V_{oc}": "Open-circuit voltage at output terminals (V)"
+    },
+    "applications": [
+      "circuit simplification",
+      "load analysis"
+    ],
+    "calculator_route": "/calculator/elec_13",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.V_oc"
+  },
+  {
+    "id": "elec_14",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "Norton Equivalent Current",
+    "symbol": "I_N",
+    "formula": "I_N = \\frac{V_{th}}{R_{th}}",
+    "variables": {
+      "V_{th}": "Thevenin voltage (V)",
+      "R_{th}": "Thevenin resistance (Ω)"
+    },
+    "applications": [
+      "current source equivalents",
+      "power transfer"
+    ],
+    "calculator_route": "/electrical/ohms-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_15",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "Maximum Power Transfer",
+    "symbol": "R_L",
+    "formula": "P_{max} \\text{ when } R_L = R_{th}",
+    "variables": {
+      "R_L": "Load resistance (Ω)",
+      "R_{th}": "Thevenin resistance (Ω)"
+    },
+    "applications": [
+      "audio amplifiers",
+      "RF antenna design"
+    ],
+    "calculator_route": "/electrical/ohms-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_16",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "Capacitor Energy",
+    "symbol": "E_C",
+    "formula": "E_C = \\frac{1}{2}CV^2",
+    "variables": {
+      "C": "Capacitance (F)",
+      "V": "Voltage across capacitor (V)"
+    },
+    "applications": [
+      "energy storage",
+      "power supplies"
+    ],
+    "calculator_route": "/electrical/rc-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_17",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "Inductor Energy",
+    "symbol": "E_L",
+    "formula": "E_L = \\frac{1}{2}LI^2",
+    "variables": {
+      "L": "Inductance (H)",
+      "I": "Current through inductor (A)"
+    },
+    "applications": [
+      "magnetic energy storage",
+      "switched-mode power supplies"
+    ],
+    "calculator_route": "/electrical/rl-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_18",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "Reactance — Capacitive",
+    "symbol": "X_C",
+    "formula": "X_C = \\frac{1}{2\\pi f C}",
+    "variables": {
+      "f": "Frequency (Hz)",
+      "C": "Capacitance (F)"
+    },
+    "applications": [
+      "AC circuit analysis",
+      "filter design"
+    ],
+    "calculator_route": "/electrical/rc-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_19",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "Reactance — Inductive",
+    "symbol": "X_L",
+    "formula": "X_L = 2\\pi f L",
+    "variables": {
+      "f": "Frequency (Hz)",
+      "L": "Inductance (H)"
+    },
+    "applications": [
+      "AC circuit analysis",
+      "transformer design"
+    ],
+    "calculator_route": "/electrical/rl-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_20",
+    "domain": "electrical",
+    "category": "circuit_analysis",
+    "difficulty": "intermediate",
+    "name": "Impedance (Series RLC)",
+    "symbol": "Z",
+    "formula": "Z = \\sqrt{R^2 + (X_L - X_C)^2}",
+    "variables": {
+      "R": "Resistance (Ω)",
+      "X_L": "Inductive reactance (Ω)",
+      "X_C": "Capacitive reactance (Ω)"
+    },
+    "applications": [
+      "AC power factor",
+      "resonance circuits"
+    ],
+    "calculator_route": "/electrical/rlc-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_21",
+    "domain": "electrical",
+    "category": "power_systems",
+    "difficulty": "intermediate",
+    "name": "Power Factor",
+    "symbol": "PF",
+    "formula": "PF = \\cos\\phi = \\frac{P}{S}",
+    "variables": {
+      "\\phi": "Phase angle between V and I",
+      "P": "Real power (W)",
+      "S": "Apparent power (VA)"
+    },
+    "applications": [
+      "power factor correction",
+      "motor efficiency"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_22",
+    "domain": "electrical",
+    "category": "power_systems",
+    "difficulty": "intermediate",
+    "name": "Reactive Power",
+    "symbol": "Q",
+    "formula": "Q = VI\\sin\\phi",
+    "variables": {
+      "V": "RMS Voltage (V)",
+      "I": "RMS Current (A)",
+      "\\phi": "Phase angle"
+    },
+    "applications": [
+      "VAR compensation",
+      "transmission losses"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_23",
+    "domain": "electrical",
+    "category": "power_systems",
+    "difficulty": "intermediate",
+    "name": "Three-Phase Power",
+    "symbol": "P",
+    "formula": "P = \\sqrt{3}\\, V_L I_L \\cos\\phi",
+    "variables": {
+      "V_L": "Line voltage (V)",
+      "I_L": "Line current (A)",
+      "\\cos\\phi": "Power factor"
+    },
+    "applications": [
+      "industrial motor drives",
+      "grid metering"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_24",
+    "domain": "electrical",
+    "category": "power_systems",
+    "difficulty": "intermediate",
+    "name": "Transformer Voltage Ratio",
+    "symbol": "a",
+    "formula": "\\frac{V_1}{V_2} = \\frac{N_1}{N_2}",
+    "variables": {
+      "V_1, V_2": "Primary/secondary voltages (V)",
+      "N_1, N_2": "Primary/secondary turns"
+    },
+    "applications": [
+      "transformer design",
+      "voltage stepping"
+    ],
+    "calculator_route": "/electrical/transformer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_25",
+    "domain": "electrical",
+    "category": "power_systems",
+    "difficulty": "intermediate",
+    "name": "Transformer Current Ratio",
+    "symbol": "I",
+    "formula": "\\frac{I_1}{I_2} = \\frac{N_2}{N_1}",
+    "variables": {
+      "I_1, I_2": "Primary/secondary currents (A)",
+      "N_1, N_2": "Turn counts"
+    },
+    "applications": [
+      "transformer loading",
+      "current transformer design"
+    ],
+    "calculator_route": "/electrical/transformer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_26",
+    "domain": "electrical",
+    "category": "power_systems",
+    "difficulty": "basic",
+    "name": "Transmission Line Power Loss",
+    "symbol": "P_loss",
+    "formula": "P_{loss} = I^2 R",
+    "variables": {
+      "I": "Line current (A)",
+      "R": "Line resistance (Ω)"
+    },
+    "applications": [
+      "grid efficiency",
+      "cable sizing"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_27",
+    "domain": "electrical",
+    "category": "electromagnetism",
+    "difficulty": "intermediate",
+    "name": "Faraday's Law of Electromagnetic Induction",
+    "symbol": "EMF",
+    "formula": "\\mathcal{E} = -N \\frac{d\\Phi}{dt}",
+    "variables": {
+      "N": "Number of turns",
+      "d\\Phi/dt": "Rate of change of magnetic flux (Wb/s)"
+    },
+    "applications": [
+      "generator design",
+      "induction motor"
+    ],
+    "calculator_route": "/calculator/elec_27",
+    "calculator_eligible": true,
+    "compute_logic": "-inputs.N * inputs.dPhi_dt"
+  },
+  {
+    "id": "elec_28",
+    "domain": "electrical",
+    "category": "electromagnetism",
+    "difficulty": "basic",
+    "name": "Magnetic Force on Current (Motor Force)",
+    "symbol": "F",
+    "formula": "F = BIL",
+    "variables": {
+      "B": "Magnetic flux density (T)",
+      "I": "Current (A)",
+      "L": "Conductor length (m)"
+    },
+    "applications": [
+      "DC motor torque",
+      "rail gun"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_29",
+    "domain": "electrical",
+    "category": "electromagnetism",
+    "difficulty": "intermediate",
+    "name": "Magnetic Flux",
+    "symbol": "Φ",
+    "formula": "\\Phi = B \\cdot A \\cdot \\cos\\theta",
+    "variables": {
+      "B": "Flux density (T)",
+      "A": "Area (m²)",
+      "\\theta": "Angle between B and normal"
+    },
+    "applications": [
+      "transformer core",
+      "generator analysis"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_30",
+    "domain": "electrical",
+    "category": "electromagnetism",
+    "difficulty": "intermediate",
+    "name": "Ampere's Law (Solenoid Field)",
+    "symbol": "B",
+    "formula": "B = \\mu_0 n I",
+    "variables": {
+      "\\mu_0": "4π×10⁻⁷ H/m",
+      "n": "Turns per unit length (1/m)",
+      "I": "Current (A)"
+    },
+    "applications": [
+      "solenoid design",
+      "electromagnet sizing"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_31",
+    "domain": "electrical",
+    "category": "electronics",
+    "difficulty": "intermediate",
+    "name": "BJT Transistor Current Gain",
+    "symbol": "β",
+    "formula": "\\beta = \\frac{I_C}{I_B}",
+    "variables": {
+      "I_C": "Collector current (A)",
+      "I_B": "Base current (A)"
+    },
+    "applications": [
+      "amplifier design",
+      "switching circuits"
+    ],
+    "calculator_route": "/electrical/ohms-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_32",
+    "domain": "electrical",
+    "category": "electronics",
+    "difficulty": "intermediate",
+    "name": "Op-Amp Inverting Gain",
+    "symbol": "A_v",
+    "formula": "A_v = -\\frac{R_f}{R_{in}}",
+    "variables": {
+      "R_f": "Feedback resistor (Ω)",
+      "R_{in}": "Input resistor (Ω)"
+    },
+    "applications": [
+      "signal amplification",
+      "audio inverter"
+    ],
+    "calculator_route": "/electrical/op-amp",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_33",
+    "domain": "electrical",
+    "category": "electronics",
+    "difficulty": "intermediate",
+    "name": "Op-Amp Non-Inverting Gain",
+    "symbol": "A_v",
+    "formula": "A_v = 1 + \\frac{R_f}{R_1}",
+    "variables": {
+      "R_f": "Feedback resistor (Ω)",
+      "R_1": "Ground resistor (Ω)"
+    },
+    "applications": [
+      "buffer stages",
+      "sensor amplification"
+    ],
+    "calculator_route": "/electrical/op-amp",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_34",
+    "domain": "electrical",
+    "category": "electronics",
+    "difficulty": "intermediate",
+    "name": "Zener Diode Voltage Regulation",
+    "symbol": "V_Z",
+    "formula": "V_{out} = V_Z",
+    "variables": {
+      "V_Z": "Zener breakdown voltage (V)"
+    },
+    "applications": [
+      "voltage regulation",
+      "overvoltage protection"
+    ],
+    "calculator_route": "/calculator/elec_34",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.V_Z"
+  },
+  {
+    "id": "elec_35",
+    "domain": "electrical",
+    "category": "signals",
+    "difficulty": "intermediate",
+    "name": "Nyquist Sampling Theorem",
+    "symbol": "f_s",
+    "formula": "f_s \\geq 2 f_{max}",
+    "variables": {
+      "f_s": "Sampling frequency (Hz)",
+      "f_{max}": "Maximum signal frequency (Hz)"
+    },
+    "applications": [
+      "ADC design",
+      "digital audio/video"
+    ],
+    "calculator_route": "/electrical/decibels",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_36",
+    "domain": "electrical",
+    "category": "signals",
+    "difficulty": "intermediate",
+    "name": "Signal-to-Noise Ratio (SNR)",
+    "symbol": "SNR",
+    "formula": "SNR = 10\\log_{10}\\left(\\frac{P_{signal}}{P_{noise}}\\right)",
+    "variables": {
+      "P_{signal}": "Signal power (W)",
+      "P_{noise}": "Noise power (W)"
+    },
+    "applications": [
+      "communication systems",
+      "amplifier quality"
+    ],
+    "calculator_route": "/electrical/decibels",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_37",
+    "domain": "electrical",
+    "category": "signals",
+    "difficulty": "intermediate",
+    "name": "Bandwidth of RC Low-Pass Filter",
+    "symbol": "f_c",
+    "formula": "f_c = \\frac{1}{2\\pi RC}",
+    "variables": {
+      "R": "Resistance (Ω)",
+      "C": "Capacitance (F)"
+    },
+    "applications": [
+      "audio filter design",
+      "anti-aliasing"
+    ],
+    "calculator_route": "/electrical/rc-circuit",
+    "calculator_eligible": true
+  },
+  {
+    "id": "elec_38",
+    "domain": "electrical",
+    "category": "signals",
+    "difficulty": "advanced",
+    "name": "Fourier Series (Fundamental)",
+    "symbol": "f(t)",
+    "formula": "f(t) = a_0 + \\sum_{n=1}^{\\infty}\\left(a_n\\cos\\frac{n\\pi t}{L} + b_n\\sin\\frac{n\\pi t}{L}\\right)",
+    "variables": {
+      "a_0": "DC component",
+      "a_n, b_n": "Fourier coefficients",
+      "L": "Half-period"
+    },
+    "applications": [
+      "signal decomposition",
+      "harmonic analysis"
+    ],
+    "calculator_route": "/calculator/elec_38",
+    "calculator_eligible": true,
+    "compute_logic": "'Fourier series expansion. Symbolic/Iterative evaluation only.'"
+  },
+  {
+    "id": "elec_39",
+    "domain": "electrical",
+    "category": "power_systems",
+    "difficulty": "intermediate",
+    "name": "DC Motor Speed-Torque",
+    "symbol": "N",
+    "formula": "N = \\frac{V - I_a R_a}{K\\Phi}",
+    "variables": {
+      "V": "Supply voltage (V)",
+      "I_a": "Armature current (A)",
+      "R_a": "Armature resistance (Ω)",
+      "K": "Motor constant",
+      "\\Phi": "Flux per pole (Wb)"
+    },
+    "applications": [
+      "DC motor speed control",
+      "electric vehicle drives"
+    ],
+    "calculator_route": "/calculator/elec_39",
+    "calculator_eligible": true,
+    "compute_logic": "(inputs.V - inputs.I_a * inputs.R_a) / (inputs.K * inputs.Phi)"
+  },
+  {
+    "id": "elec_40",
+    "domain": "electrical",
+    "category": "electromagnetism",
+    "difficulty": "advanced",
+    "name": "Coulomb's Law",
+    "symbol": "F",
+    "formula": "F = k_e \\frac{q_1 q_2}{r^2}",
+    "variables": {
+      "k_e": "8.99×10⁹ N·m²/C²",
+      "q_1, q_2": "Charges (C)",
+      "r": "Distance (m)"
+    },
+    "applications": [
+      "electrostatics",
+      "capacitor fringe fields"
+    ],
+    "calculator_route": "/electrical/power-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_01",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "intermediate",
+    "name": "Max Bending Moment (UDL, Simply Supported)",
+    "symbol": "M",
+    "formula": "M_{max} = \\frac{wL^2}{8}",
+    "variables": {
+      "w": "UDL (N/m)",
+      "L": "Span (m)"
+    },
+    "applications": [
+      "beam sizing",
+      "slab design"
+    ],
+    "calculator_route": "/civil/beam-load-moment",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_02",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "intermediate",
+    "name": "Euler Buckling Load",
+    "symbol": "P_cr",
+    "formula": "P_{cr} = \\frac{\\pi^2 E I}{(KL)^2}",
+    "variables": {
+      "E": "Young's modulus (Pa)",
+      "I": "Moment of inertia (m⁴)",
+      "K": "Effective length factor",
+      "L": "Column length (m)"
+    },
+    "applications": [
+      "column design",
+      "slenderness check"
+    ],
+    "calculator_route": "/civil/column-buckling",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_03",
+    "domain": "civil",
+    "category": "hydrology",
+    "difficulty": "intermediate",
+    "name": "Darcy-Weisbach Head Loss",
+    "symbol": "h_f",
+    "formula": "h_f = f \\frac{L}{D} \\frac{v^2}{2g}",
+    "variables": {
+      "f": "Friction factor",
+      "L": "Pipe length (m)",
+      "D": "Diameter (m)",
+      "v": "Velocity (m/s)",
+      "g": "Gravity (9.81 m/s²)"
+    },
+    "applications": [
+      "pipe network design",
+      "pump selection"
+    ],
+    "calculator_route": "/civil/pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_04",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "intermediate",
+    "name": "Factor of Safety (Slope)",
+    "symbol": "FS",
+    "formula": "FS = \\frac{c + \\sigma \\tan\\phi}{\\tau}",
+    "variables": {
+      "c": "Cohesion (Pa)",
+      "\\sigma": "Normal stress (Pa)",
+      "\\phi": "Friction angle (°)",
+      "\\tau": "Shear stress (Pa)"
+    },
+    "applications": [
+      "slope stability",
+      "embankment design"
+    ],
+    "calculator_route": "/civil/slope-stability",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_05",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "advanced",
+    "name": "Moment of Inertia (Rectangle)",
+    "symbol": "I",
+    "formula": "I = \\frac{bh^3}{12}",
+    "variables": {
+      "b": "Width (m)",
+      "h": "Height (m)"
+    },
+    "applications": [
+      "beam stiffness",
+      "section modulus"
+    ],
+    "calculator_route": "/civil/beam-load-moment",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_06",
+    "domain": "civil",
+    "category": "construction",
+    "difficulty": "basic",
+    "name": "Concrete Mix Water-Cement Ratio",
+    "symbol": "w/c",
+    "formula": "\\frac{w}{c} = \\frac{\\text{Water mass}}{\\text{Cement mass}}",
+    "variables": {
+      "w": "Water mass (kg)",
+      "c": "Cement mass (kg)"
+    },
+    "applications": [
+      "concrete mix design",
+      "grade specification"
+    ],
+    "calculator_route": "/civil/concrete-mix",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_07",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "basic",
+    "name": "Beam Deflection (Point Load, Simply Supported)",
+    "symbol": "δ",
+    "formula": "\\delta_{max} = \\frac{PL^3}{48EI}",
+    "variables": {
+      "P": "Point load (N)",
+      "L": "Beam span (m)",
+      "E": "Young's modulus (Pa)",
+      "I": "Moment of inertia (m⁴)"
+    },
+    "applications": [
+      "bridge beam sizing",
+      "floor beam design"
+    ],
+    "calculator_route": "/mechanical/beam-deflection",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_08",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "intermediate",
+    "name": "Section Modulus",
+    "symbol": "Z",
+    "formula": "Z = \\frac{I}{y_{max}}",
+    "variables": {
+      "I": "Second moment of area (m⁴)",
+      "y_{max}": "Distance from neutral axis to extreme fibre (m)"
+    },
+    "applications": [
+      "beam bending stress check",
+      "structural design"
+    ],
+    "calculator_route": "/civil/beam-load-moment",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_09",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "intermediate",
+    "name": "Deflection (Cantilever, UDL)",
+    "symbol": "δ",
+    "formula": "\\delta_{max} = \\frac{wL^4}{8EI}",
+    "variables": {
+      "w": "UDL (N/m)",
+      "L": "Length (m)",
+      "E": "Elastic modulus (Pa)",
+      "I": "Moment of inertia (m⁴)"
+    },
+    "applications": [
+      "cantilevered balcony",
+      "retaining wall"
+    ],
+    "calculator_route": "/civil/beam-load-moment",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_10",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "basic",
+    "name": "Axial Stress",
+    "symbol": "σ",
+    "formula": "\\sigma = \\frac{P}{A}",
+    "variables": {
+      "P": "Axial load (N)",
+      "A": "Cross-section area (m²)"
+    },
+    "applications": [
+      "column load check",
+      "truss member stress"
+    ],
+    "calculator_route": "/civil/column-buckling",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_11",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "intermediate",
+    "name": "Combined Bending & Axial (Interaction)",
+    "symbol": "Unity",
+    "formula": "\\frac{P}{P_n} + \\frac{M}{M_n} \\leq 1.0",
+    "variables": {
+      "P": "Applied axial load (N)",
+      "P_n": "Nominal axial capacity (N)",
+      "M": "Applied moment (N·m)",
+      "M_n": "Nominal moment capacity (N·m)"
+    },
+    "applications": [
+      "beam-column design",
+      "interaction check"
+    ],
+    "calculator_route": "/calculator/civil_11",
+    "calculator_eligible": true,
+    "compute_logic": "(inputs.P / inputs.P_n) + (inputs.M / inputs.M_n)"
+  },
+  {
+    "id": "civil_12",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "intermediate",
+    "name": "Terzaghi's Bearing Capacity",
+    "symbol": "q_u",
+    "formula": "q_u = cN_c + qN_q + 0.5\\gamma B N_\\gamma",
+    "variables": {
+      "c": "Cohesion (Pa)",
+      "N_c, N_q, N_\\gamma": "Bearing capacity factors",
+      "q": "Surcharge (Pa)",
+      "\\gamma": "Unit weight (N/m³)",
+      "B": "Footing width (m)"
+    },
+    "applications": [
+      "shallow foundation design",
+      "footing sizing"
+    ],
+    "calculator_route": "/civil/slope-stability",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_13",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "basic",
+    "name": "Effective Stress",
+    "symbol": "σ'",
+    "formula": "\\sigma' = \\sigma - u",
+    "variables": {
+      "\\sigma": "Total stress (Pa)",
+      "u": "Pore water pressure (Pa)"
+    },
+    "applications": [
+      "soil consolidation",
+      "foundation design"
+    ],
+    "calculator_route": "/civil/slope-stability",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_14",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "intermediate",
+    "name": "Terzaghi's Consolidation (Time Factor)",
+    "symbol": "T_v",
+    "formula": "T_v = \\frac{c_v t}{H^2}",
+    "variables": {
+      "c_v": "Coefficient of consolidation (m²/s)",
+      "t": "Time (s)",
+      "H": "Drainage path (m)"
+    },
+    "applications": [
+      "settlement prediction",
+      "embankment design"
+    ],
+    "calculator_route": "/civil/slope-stability",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_15",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "intermediate",
+    "name": "Rankine Active Earth Pressure",
+    "symbol": "K_a",
+    "formula": "K_a = \\tan^2\\left(45^\\circ - \\frac{\\phi}{2}\\right)",
+    "variables": {
+      "\\phi": "Soil internal friction angle (°)"
+    },
+    "applications": [
+      "retaining wall design",
+      "basement wall"
+    ],
+    "calculator_route": "/civil/slope-stability",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_16",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "basic",
+    "name": "Void Ratio",
+    "symbol": "e",
+    "formula": "e = \\frac{V_v}{V_s}",
+    "variables": {
+      "V_v": "Volume of voids (m³)",
+      "V_s": "Volume of solids (m³)"
+    },
+    "applications": [
+      "soil classification",
+      "permeability analysis"
+    ],
+    "calculator_route": "/civil/slope-stability",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_17",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "basic",
+    "name": "Darcy's Law (Seepage)",
+    "symbol": "Q",
+    "formula": "Q = k i A",
+    "variables": {
+      "k": "Hydraulic conductivity (m/s)",
+      "i": "Hydraulic gradient",
+      "A": "Cross-section area (m²)"
+    },
+    "applications": [
+      "seepage through dams",
+      "dewatering design"
+    ],
+    "calculator_route": "/civil/pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_18",
+    "domain": "civil",
+    "category": "hydrology",
+    "difficulty": "intermediate",
+    "name": "Manning's Equation (Open Channel)",
+    "symbol": "V",
+    "formula": "V = \\frac{1}{n} R_h^{2/3} S^{1/2}",
+    "variables": {
+      "n": "Manning's roughness coefficient",
+      "R_h": "Hydraulic radius (m)",
+      "S": "Channel slope (m/m)"
+    },
+    "applications": [
+      "river flow sizing",
+      "drainage design"
+    ],
+    "calculator_route": "/civil/pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_19",
+    "domain": "civil",
+    "category": "hydrology",
+    "difficulty": "intermediate",
+    "name": "Rational Method (Peak Runoff)",
+    "symbol": "Q",
+    "formula": "Q = C i A",
+    "variables": {
+      "C": "Runoff coefficient (0–1)",
+      "i": "Rainfall intensity (mm/hr)",
+      "A": "Catchment area (ha)"
+    },
+    "applications": [
+      "stormwater drain sizing",
+      "culvert design"
+    ],
+    "calculator_route": "/civil/pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_20",
+    "domain": "civil",
+    "category": "hydrology",
+    "difficulty": "intermediate",
+    "name": "Hydraulic Radius",
+    "symbol": "R_h",
+    "formula": "R_h = \\frac{A}{P}",
+    "variables": {
+      "A": "Cross-sectional flow area (m²)",
+      "P": "Wetted perimeter (m)"
+    },
+    "applications": [
+      "open channel design",
+      "pipe flow"
+    ],
+    "calculator_route": "/civil/pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_21",
+    "domain": "civil",
+    "category": "hydrology",
+    "difficulty": "intermediate",
+    "name": "Froude Number",
+    "symbol": "Fr",
+    "formula": "Fr = \\frac{V}{\\sqrt{gD}}",
+    "variables": {
+      "V": "Flow velocity (m/s)",
+      "g": "9.81 m/s²",
+      "D": "Hydraulic depth (m)"
+    },
+    "applications": [
+      "channel flow regime",
+      "spillway design"
+    ],
+    "calculator_route": "/civil/pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_22",
+    "domain": "civil",
+    "category": "transportation",
+    "difficulty": "basic",
+    "name": "Stopping Sight Distance",
+    "symbol": "SSD",
+    "formula": "SSD = 0.278 V t + \\frac{V^2}{254(f \\pm G)}",
+    "variables": {
+      "V": "Design speed (km/h)",
+      "t": "Reaction time (s, ~2.5)",
+      "f": "Friction coefficient",
+      "G": "Grade (fraction)"
+    },
+    "applications": [
+      "highway geometric design",
+      "road safety"
+    ],
+    "calculator_route": "/civil/beam-load-moment",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_23",
+    "domain": "civil",
+    "category": "transportation",
+    "difficulty": "intermediate",
+    "name": "Horizontal Curve Radius",
+    "symbol": "R",
+    "formula": "R = \\frac{V^2}{127(e + f)}",
+    "variables": {
+      "V": "Design speed (km/h)",
+      "e": "Superelevation (m/m)",
+      "f": "Side friction factor"
+    },
+    "applications": [
+      "road horizontal curve design"
+    ],
+    "calculator_route": "/civil/beam-load-moment",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_24",
+    "domain": "civil",
+    "category": "transportation",
+    "difficulty": "basic",
+    "name": "Pavement CBR & Thickness (AASHTO simplified)",
+    "symbol": "SN",
+    "formula": "SN = a_1 D_1 + a_2 D_2 m_2 + a_3 D_3 m_3",
+    "variables": {
+      "a_i": "Layer strength coefficients",
+      "D_i": "Layer thickness (inches)",
+      "m_i": "Drainage coefficients"
+    },
+    "applications": [
+      "flexible pavement design"
+    ],
+    "calculator_route": "/calculator/civil_24",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.a_1 * inputs.D_1 + inputs.a_2 * inputs.D_2 * inputs.m_2 + inputs.a_3 * inputs.D_3 * inputs.m_3"
+  },
+  {
+    "id": "civil_25",
+    "domain": "civil",
+    "category": "construction",
+    "difficulty": "basic",
+    "name": "Compressive Strength (Concrete)",
+    "symbol": "f'c",
+    "formula": "f'c = \\frac{P}{A}",
+    "variables": {
+      "P": "Failure load (N)",
+      "A": "Cross-section area (m²)"
+    },
+    "applications": [
+      "concrete quality control",
+      "mix design verification"
+    ],
+    "calculator_route": "/civil/concrete-mix",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_26",
+    "domain": "civil",
+    "category": "construction",
+    "difficulty": "intermediate",
+    "name": "Reinforcement Ratio (RC Beam)",
+    "symbol": "ρ",
+    "formula": "\\rho = \\frac{A_s}{b \\cdot d}",
+    "variables": {
+      "A_s": "Steel area (m²)",
+      "b": "Beam width (m)",
+      "d": "Effective depth (m)"
+    },
+    "applications": [
+      "RC beam design",
+      "ductility check"
+    ],
+    "calculator_route": "/civil/concrete-mix",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_27",
+    "domain": "civil",
+    "category": "construction",
+    "difficulty": "intermediate",
+    "name": "Nominal Moment Capacity (RC Beam)",
+    "symbol": "Mn",
+    "formula": "M_n = A_s f_y \\left(d - \\frac{a}{2}\\right)",
+    "variables": {
+      "A_s": "Steel area (m²)",
+      "f_y": "Steel yield strength (Pa)",
+      "d": "Effective depth (m)",
+      "a": "Depth of stress block (m)"
+    },
+    "applications": [
+      "RC beam flexural design",
+      "slab design"
+    ],
+    "calculator_route": "/civil/concrete-mix",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_28",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "intermediate",
+    "name": "Shear Capacity (RC Beam)",
+    "symbol": "Vc",
+    "formula": "V_c = 0.17\\sqrt{f'c} \\cdot b \\cdot d",
+    "variables": {
+      "f'c": "Concrete compressive strength (MPa)",
+      "b": "Beam width (m)",
+      "d": "Effective depth (m)"
+    },
+    "applications": [
+      "shear design",
+      "stirrup spacing"
+    ],
+    "calculator_route": "/civil/beam-load-moment",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_29",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "advanced",
+    "name": "Slope-Deflection Equation",
+    "symbol": "M",
+    "formula": "M_{AB} = \\frac{2EI}{L}(2\\theta_A + \\theta_B - 3\\psi) + FEM_{AB}",
+    "variables": {
+      "EI": "Flexural rigidity (N·m²)",
+      "L": "Member length (m)",
+      "\\theta_A, \\theta_B": "End rotations (rad)",
+      "\\psi": "Chord rotation (rad)"
+    },
+    "applications": [
+      "indeterminate frame analysis"
+    ],
+    "calculator_route": "/calculator/civil_29",
+    "calculator_eligible": true,
+    "compute_logic": "(2 * inputs.E * inputs.I / inputs.L) * (2 * inputs.theta_A + inputs.theta_B - 3 * inputs.psi) + inputs.FEM_AB"
+  },
+  {
+    "id": "civil_30",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "intermediate",
+    "name": "Settlement (Immediate — Elastic)",
+    "symbol": "S_i",
+    "formula": "S_i = \\frac{q B (1-\\nu^2)}{E} I_w",
+    "variables": {
+      "q": "Contact pressure (Pa)",
+      "B": "Footing width (m)",
+      "\\nu": "Poisson's ratio",
+      "E": "Soil elastic modulus (Pa)",
+      "I_w": "Influence factor"
+    },
+    "applications": [
+      "foundation settlement",
+      "serviceability check"
+    ],
+    "calculator_route": "/calculator/civil_30",
+    "calculator_eligible": true,
+    "compute_logic": "(inputs.q * inputs.B * (1 - Math.pow(inputs.nu, 2)) / inputs.E) * inputs.I_w"
+  },
+  {
+    "id": "civil_31",
+    "domain": "civil",
+    "category": "hydrology",
+    "difficulty": "basic",
+    "name": "Specific Energy (Open Channel)",
+    "symbol": "E",
+    "formula": "E = y + \\frac{V^2}{2g}",
+    "variables": {
+      "y": "Flow depth (m)",
+      "V": "Flow velocity (m/s)",
+      "g": "9.81 m/s²"
+    },
+    "applications": [
+      "critical depth",
+      "energy grade line"
+    ],
+    "calculator_route": "/civil/pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_32",
+    "domain": "civil",
+    "category": "hydrology",
+    "difficulty": "intermediate",
+    "name": "Hazen-Williams (Pipe Flow)",
+    "symbol": "V",
+    "formula": "V = 0.849\\, C\\, R_h^{0.63}\\, S^{0.54}",
+    "variables": {
+      "C": "Hazen-Williams coefficient",
+      "R_h": "Hydraulic radius (m)",
+      "S": "Slope of hydraulic grade line"
+    },
+    "applications": [
+      "water supply pipe sizing",
+      "distribution network"
+    ],
+    "calculator_route": "/civil/pipe-flow",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_33",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "intermediate",
+    "name": "Wind Load on Structure",
+    "symbol": "F_w",
+    "formula": "F_w = q_z C_f A_f",
+    "variables": {
+      "q_z": "Design wind pressure (Pa)",
+      "C_f": "Force coefficient",
+      "A_f": "Projected area (m²)"
+    },
+    "applications": [
+      "tall building design",
+      "tower design"
+    ],
+    "calculator_route": "/calculator/civil_33",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.q_z * inputs.C_f * inputs.A_f"
+  },
+  {
+    "id": "civil_34",
+    "domain": "civil",
+    "category": "structural_analysis",
+    "difficulty": "basic",
+    "name": "Truss Member Force (Method of Joints)",
+    "symbol": "F",
+    "formula": "\\sum F_x = 0,\\quad \\sum F_y = 0",
+    "variables": {
+      "F_x": "Horizontal force components (N)",
+      "F_y": "Vertical force components (N)"
+    },
+    "applications": [
+      "truss analysis",
+      "bridge design"
+    ],
+    "calculator_route": "/calculator/civil_34",
+    "calculator_eligible": true,
+    "compute_logic": "'Equilibrium equations. Sum of forces is 0.'"
+  },
+  {
+    "id": "civil_35",
+    "domain": "civil",
+    "category": "construction",
+    "difficulty": "basic",
+    "name": "Slump Test (Workability)",
+    "symbol": "S",
+    "formula": "S = h_{before} - h_{after}\\text{ (mm)}",
+    "variables": {
+      "h_{before}": "Initial height of cone (300 mm)",
+      "h_{after}": "Height of concrete after slump (mm)"
+    },
+    "applications": [
+      "concrete workability",
+      "quality control"
+    ],
+    "calculator_route": "/calculator/civil_35",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.h_before - inputs.h_after"
+  },
+  {
+    "id": "civil_36",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "intermediate",
+    "name": "Proctor Compaction (Dry Density)",
+    "symbol": "ρ_d",
+    "formula": "\\rho_d = \\frac{\\rho}{1 + w}",
+    "variables": {
+      "\\rho": "Bulk density (kg/m³)",
+      "w": "Water content (decimal)"
+    },
+    "applications": [
+      "road subgrade compaction",
+      "earthfill dams"
+    ],
+    "calculator_route": "/civil/slope-stability",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_37",
+    "domain": "civil",
+    "category": "hydrology",
+    "difficulty": "intermediate",
+    "name": "Unit Hydrograph (SCS Method)",
+    "symbol": "Q_p",
+    "formula": "Q_p = \\frac{0.208 A}{t_p}",
+    "variables": {
+      "A": "Catchment area (km²)",
+      "t_p": "Time to peak (hr)"
+    },
+    "applications": [
+      "flood peak estimation",
+      "dam spillway sizing"
+    ],
+    "calculator_route": "/calculator/civil_37",
+    "calculator_eligible": true,
+    "compute_logic": "0.208 * inputs.A / inputs.t_p"
+  },
+  {
+    "id": "civil_38",
+    "domain": "civil",
+    "category": "geotechnical",
+    "difficulty": "advanced",
+    "name": "Pile Capacity (Static Formula)",
+    "symbol": "Q_u",
+    "formula": "Q_u = Q_s + Q_p = f_s A_s + q_p A_p",
+    "variables": {
+      "f_s": "Unit skin friction (Pa)",
+      "A_s": "Pile shaft area (m²)",
+      "q_p": "Unit end bearing (Pa)",
+      "A_p": "Pile toe area (m²)"
+    },
+    "applications": [
+      "pile foundation design",
+      "offshore structures"
+    ],
+    "calculator_route": "/calculator/civil_38",
+    "calculator_eligible": true,
+    "compute_logic": "(inputs.f_s * inputs.A_s) + (inputs.q_p * inputs.A_p)"
+  },
+  {
+    "id": "civil_39",
+    "domain": "civil",
+    "category": "transportation",
+    "difficulty": "intermediate",
+    "name": "Traffic Density-Speed-Flow",
+    "symbol": "q",
+    "formula": "q = k \\cdot v",
+    "variables": {
+      "k": "Traffic density (veh/km)",
+      "v": "Space mean speed (km/h)"
+    },
+    "applications": [
+      "road capacity analysis",
+      "traffic signal design"
+    ],
+    "calculator_route": "/civil/beam-load-moment",
+    "calculator_eligible": true
+  },
+  {
+    "id": "civil_40",
+    "domain": "civil",
+    "category": "construction",
+    "difficulty": "basic",
+    "name": "Quantity of Steel (Rule of Thumb)",
+    "symbol": "V_s",
+    "formula": "V_s = \\rho \\times 1\\%\\text{ to }4\\%\\text{ of concrete volume}",
+    "variables": {
+      "\\rho": "Steel density 7850 kg/m³",
+      "1%-4%": "Reinforcement ratio range"
+    },
+    "applications": [
+      "RC quantity estimation",
+      "bill of materials"
+    ],
+    "calculator_route": "/calculator/civil_40",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.rho * 0.02 * inputs.concrete_volume"
+  },
+  {
+    "id": "chem_01",
+    "domain": "chemical",
+    "category": "thermodynamics",
+    "difficulty": "basic",
+    "name": "Ideal Gas Law",
+    "symbol": "PV",
+    "formula": "PV = nRT",
+    "variables": {
+      "P": "Pressure (Pa)",
+      "V": "Volume (m³)",
+      "n": "Moles (mol)",
+      "R": "Gas constant (8.314 J/mol·K)",
+      "T": "Temperature (K)"
+    },
+    "applications": [
+      "reactor sizing",
+      "compression"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_02",
+    "domain": "chemical",
+    "category": "process_calculations",
+    "difficulty": "basic",
+    "name": "Molar Mass",
+    "symbol": "M",
+    "formula": "M = \\frac{m}{n}",
+    "variables": {
+      "m": "Mass of substance (g)",
+      "n": "Amount of substance (mol)"
+    },
+    "applications": [
+      "stoichiometry",
+      "concentration"
+    ],
+    "calculator_route": "/chemical/molar-mass",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_03",
+    "domain": "chemical",
+    "category": "process_calculations",
+    "difficulty": "intermediate",
+    "name": "Concentration (Molarity)",
+    "symbol": "M",
+    "formula": "M = \\frac{n}{V}",
+    "variables": {
+      "n": "Moles of solute (mol)",
+      "V": "Volume of solution (L)"
+    },
+    "applications": [
+      "solution preparation",
+      "titrations"
+    ],
+    "calculator_route": "/chemical/molar-mass",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_04",
+    "domain": "chemical",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "LMTD (Log Mean Temperature Difference)",
+    "symbol": "LMTD",
+    "formula": "LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)}",
+    "variables": {
+      "\\Delta T_1": "Temperature diff at inlet (K)",
+      "\\Delta T_2": "Temperature diff at outlet (K)"
+    },
+    "applications": [
+      "heat exchanger design"
+    ],
+    "calculator_route": "/chemical/heat-exchanger",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_05",
+    "domain": "chemical",
+    "category": "separations",
+    "difficulty": "basic",
+    "name": "Henderson-Hasselbalch (pH)",
+    "symbol": "pH",
+    "formula": "pH = pK_a + \\log\\left(\\frac{[A^-]}{[HA]}\\right)",
+    "variables": {
+      "pK_a": "Acid dissociation constant",
+      "[A⁻]": "Conjugate base concentration (mol/L)",
+      "[HA]": "Acid concentration (mol/L)"
+    },
+    "applications": [
+      "buffer design",
+      "pH control"
+    ],
+    "calculator_route": "/chemical/ph-buffer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_06",
+    "domain": "chemical",
+    "category": "reaction_engineering",
+    "difficulty": "intermediate",
+    "name": "Arrhenius Equation",
+    "symbol": "k",
+    "formula": "k = A e^{-E_a / RT}",
+    "variables": {
+      "A": "Frequency factor",
+      "E_a": "Activation energy (J/mol)",
+      "R": "Gas constant (8.314)",
+      "T": "Temperature (K)"
+    },
+    "applications": [
+      "reaction rate prediction",
+      "catalyst design"
+    ],
+    "calculator_route": "/calculator/chem_06",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.A * Math.exp(-inputs.E_a / (8.314 * inputs.T))"
+  },
+  {
+    "id": "chem_07",
+    "domain": "chemical",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Gibbs Free Energy",
+    "symbol": "ΔG",
+    "formula": "\\Delta G = \\Delta H - T\\Delta S",
+    "variables": {
+      "\\Delta H": "Enthalpy change (J/mol)",
+      "T": "Temperature (K)",
+      "\\Delta S": "Entropy change (J/mol·K)"
+    },
+    "applications": [
+      "reaction spontaneity",
+      "equilibrium prediction"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_08",
+    "domain": "chemical",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Clausius-Clapeyron Equation",
+    "symbol": "P",
+    "formula": "\\ln\\left(\\frac{P_2}{P_1}\\right) = -\\frac{\\Delta H_{vap}}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)",
+    "variables": {
+      "P_1, P_2": "Vapour pressures (Pa)",
+      "\\Delta H_{vap}": "Enthalpy of vaporisation (J/mol)",
+      "R": "8.314 J/mol·K",
+      "T_1, T_2": "Temperatures (K)"
+    },
+    "applications": [
+      "distillation design",
+      "vapour pressure estimation"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_09",
+    "domain": "chemical",
+    "category": "thermodynamics",
+    "difficulty": "basic",
+    "name": "Hess's Law (Enthalpy of Reaction)",
+    "symbol": "ΔH_rxn",
+    "formula": "\\Delta H_{rxn} = \\sum \\Delta H_f^\\circ(\\text{products}) - \\sum \\Delta H_f^\\circ(\\text{reactants})",
+    "variables": {
+      "\\Delta H_f^\\circ": "Standard enthalpy of formation (kJ/mol)"
+    },
+    "applications": [
+      "reaction heat calculation",
+      "calorimetry"
+    ],
+    "calculator_route": "/calculator/chem_09",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.H_products - inputs.H_reactants"
+  },
+  {
+    "id": "chem_10",
+    "domain": "chemical",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Van't Hoff Equation",
+    "symbol": "K",
+    "formula": "\\frac{d\\ln K}{dT} = \\frac{\\Delta H_{rxn}^\\circ}{RT^2}",
+    "variables": {
+      "K": "Equilibrium constant",
+      "T": "Temperature (K)",
+      "\\Delta H_{rxn}^\\circ": "Standard enthalpy of reaction (J/mol)"
+    },
+    "applications": [
+      "temperature effect on equilibrium",
+      "reactor design"
+    ],
+    "calculator_route": "/calculator/chem_10",
+    "calculator_eligible": true,
+    "compute_logic": "'Differential Van\\'t Hoff Equation.'"
+  },
+  {
+    "id": "chem_11",
+    "domain": "chemical",
+    "category": "reaction_engineering",
+    "difficulty": "basic",
+    "name": "First-Order Reaction Rate",
+    "symbol": "r",
+    "formula": "-r_A = k C_A",
+    "variables": {
+      "k": "Rate constant (1/s)",
+      "C_A": "Concentration of A (mol/L)"
+    },
+    "applications": [
+      "reactor sizing",
+      "kinetics analysis"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_12",
+    "domain": "chemical",
+    "category": "reaction_engineering",
+    "difficulty": "basic",
+    "name": "Second-Order Reaction Rate",
+    "symbol": "r",
+    "formula": "-r_A = k C_A^2",
+    "variables": {
+      "k": "Rate constant (L/mol·s)",
+      "C_A": "Concentration of A (mol/L)"
+    },
+    "applications": [
+      "bimolecular reactions",
+      "reactor design"
+    ],
+    "calculator_route": "/calculator/chem_12",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.k * Math.pow(inputs.C_A, 2)"
+  },
+  {
+    "id": "chem_13",
+    "domain": "chemical",
+    "category": "reaction_engineering",
+    "difficulty": "intermediate",
+    "name": "CSTR Design Equation",
+    "symbol": "V",
+    "formula": "V = \\frac{F_{A0} \\cdot X}{-r_A}",
+    "variables": {
+      "F_{A0}": "Molar feed rate (mol/s)",
+      "X": "Conversion (0-1)",
+      "-r_A": "Reaction rate (mol/L·s)"
+    },
+    "applications": [
+      "CSTR sizing",
+      "conversion optimisation"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_14",
+    "domain": "chemical",
+    "category": "reaction_engineering",
+    "difficulty": "intermediate",
+    "name": "PFR Design Equation",
+    "symbol": "V",
+    "formula": "V = F_{A0} \\int_0^X \\frac{dX}{-r_A}",
+    "variables": {
+      "F_{A0}": "Inlet molar flow (mol/s)",
+      "X": "Conversion",
+      "-r_A": "Rate of reaction (mol/L·s)"
+    },
+    "applications": [
+      "plug flow reactor sizing",
+      "tubular reactor design"
+    ],
+    "calculator_route": "/calculator/chem_14",
+    "calculator_eligible": true,
+    "compute_logic": "'PFR Volume Integral. Requires rate expression integration.'"
+  },
+  {
+    "id": "chem_15",
+    "domain": "chemical",
+    "category": "reaction_engineering",
+    "difficulty": "intermediate",
+    "name": "Damköhler Number",
+    "symbol": "Da",
+    "formula": "Da = \\frac{k \\tau C_{A0}^{n-1}}{1}",
+    "variables": {
+      "k": "Rate constant",
+      "\\tau": "Residence time (s)",
+      "C_{A0}": "Initial concentration (mol/L)",
+      "n": "Reaction order"
+    },
+    "applications": [
+      "reactor performance",
+      "scale-up analysis"
+    ],
+    "calculator_route": "/calculator/chem_15",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.k * inputs.tau * Math.pow(inputs.C_A0, inputs.n - 1)"
+  },
+  {
+    "id": "chem_16",
+    "domain": "chemical",
+    "category": "mass_transfer",
+    "difficulty": "intermediate",
+    "name": "Fick's First Law of Diffusion",
+    "symbol": "J",
+    "formula": "J = -D \\frac{dC}{dz}",
+    "variables": {
+      "D": "Diffusivity (m²/s)",
+      "C": "Concentration (mol/m³)",
+      "z": "Distance (m)"
+    },
+    "applications": [
+      "membrane separations",
+      "absorption columns"
+    ],
+    "calculator_route": "/calculator/chem_16",
+    "calculator_eligible": true,
+    "compute_logic": "-inputs.D * inputs.dC_dz"
+  },
+  {
+    "id": "chem_17",
+    "domain": "chemical",
+    "category": "mass_transfer",
+    "difficulty": "intermediate",
+    "name": "Sherwood Number",
+    "symbol": "Sh",
+    "formula": "Sh = \\frac{k_c L}{D}",
+    "variables": {
+      "k_c": "Mass transfer coefficient (m/s)",
+      "L": "Characteristic length (m)",
+      "D": "Diffusivity (m²/s)"
+    },
+    "applications": [
+      "packed column design",
+      "mass transfer analysis"
+    ],
+    "calculator_route": "/calculator/chem_17",
+    "calculator_eligible": true,
+    "compute_logic": "(inputs.k_c * inputs.L) / inputs.D"
+  },
+  {
+    "id": "chem_18",
+    "domain": "chemical",
+    "category": "mass_transfer",
+    "difficulty": "intermediate",
+    "name": "Overall Mass Transfer (NTU-HTU)",
+    "symbol": "Z",
+    "formula": "Z = NTU \\times HTU",
+    "variables": {
+      "NTU": "Number of transfer units",
+      "HTU": "Height of a transfer unit (m)"
+    },
+    "applications": [
+      "absorption column height",
+      "stripping design"
+    ],
+    "calculator_route": "/calculator/chem_18",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.NTU * inputs.HTU"
+  },
+  {
+    "id": "chem_19",
+    "domain": "chemical",
+    "category": "heat_transfer",
+    "difficulty": "intermediate",
+    "name": "Overall Heat Transfer Coefficient",
+    "symbol": "U",
+    "formula": "\\frac{1}{UA} = \\frac{1}{h_i A_i} + \\frac{\\ln(r_o/r_i)}{2\\pi k L} + \\frac{1}{h_o A_o}",
+    "variables": {
+      "h_i, h_o": "Inner/outer convection coefficients (W/m²·K)",
+      "k": "Wall conductivity (W/m·K)",
+      "r_i, r_o": "Inner/outer radii (m)"
+    },
+    "applications": [
+      "shell-and-tube heat exchanger design"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_20",
+    "domain": "chemical",
+    "category": "heat_transfer",
+    "difficulty": "intermediate",
+    "name": "NTU-Effectiveness Method",
+    "symbol": "ε",
+    "formula": "\\varepsilon = 1 - e^{-NTU(1-C^*)} / (1 - C^* e^{-NTU(1-C^*)})",
+    "variables": {
+      "NTU": "Number of transfer units",
+      "C*": "Heat capacity ratio (C_min/C_max)"
+    },
+    "applications": [
+      "heat exchanger effectiveness"
+    ],
+    "calculator_route": "/calculator/chem_20",
+    "calculator_eligible": true,
+    "compute_logic": "1 - Math.exp(-inputs.NTU * (1 - inputs.C_star)) / (1 - inputs.C_star * Math.exp(-inputs.NTU * (1 - inputs.C_star)))"
+  },
+  {
+    "id": "chem_21",
+    "domain": "chemical",
+    "category": "fluid_flow",
+    "difficulty": "intermediate",
+    "name": "Hagen-Poiseuille (Laminar Pipe Flow)",
+    "symbol": "Q",
+    "formula": "Q = \\frac{\\pi r^4 \\Delta P}{8 \\mu L}",
+    "variables": {
+      "r": "Pipe radius (m)",
+      "\\Delta P": "Pressure drop (Pa)",
+      "\\mu": "Dynamic viscosity (Pa·s)",
+      "L": "Pipe length (m)"
+    },
+    "applications": [
+      "pipe sizing",
+      "viscous flow analysis"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_22",
+    "domain": "chemical",
+    "category": "fluid_flow",
+    "difficulty": "basic",
+    "name": "Reynolds Number (Chemical)",
+    "symbol": "Re",
+    "formula": "Re = \\frac{\\rho u D}{\\mu}",
+    "variables": {
+      "\\rho": "Fluid density (kg/m³)",
+      "u": "Velocity (m/s)",
+      "D": "Pipe diameter (m)",
+      "\\mu": "Viscosity (Pa·s)"
+    },
+    "applications": [
+      "flow regime",
+      "mixing vessel design"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_23",
+    "domain": "chemical",
+    "category": "fluid_flow",
+    "difficulty": "intermediate",
+    "name": "Ergun Equation (Packed Bed)",
+    "symbol": "ΔP",
+    "formula": "\\frac{\\Delta P}{L} = \\frac{150 \\mu u (1-\\varepsilon)^2}{d_p^2 \\varepsilon^3} + \\frac{1.75 \\rho u^2 (1-\\varepsilon)}{d_p \\varepsilon^3}",
+    "variables": {
+      "\\mu": "Viscosity (Pa·s)",
+      "u": "Superficial velocity (m/s)",
+      "\\varepsilon": "Bed void fraction",
+      "d_p": "Particle diameter (m)",
+      "\\rho": "Fluid density (kg/m³)"
+    },
+    "applications": [
+      "packed bed pressure drop",
+      "catalyst bed design"
+    ],
+    "calculator_route": "/calculator/chem_23",
+    "calculator_eligible": true,
+    "compute_logic": "(150 * inputs.mu * inputs.u * Math.pow(1 - inputs.epsilon, 2)) / (Math.pow(inputs.d_p, 2) * Math.pow(inputs.epsilon, 3)) + (1.75 * inputs.rho * Math.pow(inputs.u, 2) * (1 - inputs.epsilon)) / (inputs.d_p * Math.pow(inputs.epsilon, 3))"
+  },
+  {
+    "id": "chem_24",
+    "domain": "chemical",
+    "category": "separations",
+    "difficulty": "intermediate",
+    "name": "Raoult's Law",
+    "symbol": "P_A",
+    "formula": "P_A = x_A P_A^{sat}",
+    "variables": {
+      "x_A": "Mole fraction of A in liquid",
+      "P_A^{sat}": "Saturation pressure of A (Pa)"
+    },
+    "applications": [
+      "VLE calculations",
+      "distillation design"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_25",
+    "domain": "chemical",
+    "category": "separations",
+    "difficulty": "intermediate",
+    "name": "Relative Volatility",
+    "symbol": "α",
+    "formula": "\\alpha_{AB} = \\frac{y_A/x_A}{y_B/x_B} = \\frac{P_A^{sat}}{P_B^{sat}}",
+    "variables": {
+      "y_A, y_B": "Vapour mole fractions",
+      "x_A, x_B": "Liquid mole fractions",
+      "P^{sat}": "Saturation pressures (Pa)"
+    },
+    "applications": [
+      "distillation feasibility",
+      "column design"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_26",
+    "domain": "chemical",
+    "category": "separations",
+    "difficulty": "advanced",
+    "name": "Fenske Equation (Minimum Stages)",
+    "symbol": "N_min",
+    "formula": "N_{min} = \\frac{\\ln\\left[\\frac{(x_D/(1-x_D))}{(x_B/(1-x_B))}\\right]}{\\ln \\alpha}",
+    "variables": {
+      "x_D": "Distillate mole fraction",
+      "x_B": "Bottoms mole fraction",
+      "\\alpha": "Relative volatility"
+    },
+    "applications": [
+      "distillation column minimum trays"
+    ],
+    "calculator_route": "/calculator/chem_26",
+    "calculator_eligible": true,
+    "compute_logic": "Math.log((inputs.x_D / (1 - inputs.x_D)) / (inputs.x_B / (1 - inputs.x_B))) / Math.log(inputs.alpha)"
+  },
+  {
+    "id": "chem_27",
+    "domain": "chemical",
+    "category": "process_calculations",
+    "difficulty": "basic",
+    "name": "Mass Balance (Steady State)",
+    "symbol": "In = Out",
+    "formula": "\\dot{m}_{in} = \\dot{m}_{out} + \\text{Accumulation}",
+    "variables": {
+      "\\dot{m}_{in}": "Mass in (kg/s)",
+      "\\dot{m}_{out}": "Mass out (kg/s)"
+    },
+    "applications": [
+      "process flowsheet balances",
+      "reactor design"
+    ],
+    "calculator_route": "/calculator/chem_27",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.m_out + inputs.Accumulation"
+  },
+  {
+    "id": "chem_28",
+    "domain": "chemical",
+    "category": "process_calculations",
+    "difficulty": "basic",
+    "name": "Energy Balance (Open System)",
+    "symbol": "Q",
+    "formula": "Q - W_s = \\Delta H + \\Delta KE + \\Delta PE",
+    "variables": {
+      "Q": "Heat transfer (J)",
+      "W_s": "Shaft work (J)",
+      "\\Delta H": "Enthalpy change (J)",
+      "\\Delta KE": "Kinetic energy change (J)"
+    },
+    "applications": [
+      "pump/turbine sizing",
+      "heat exchanger energy balance"
+    ],
+    "calculator_route": "/calculator/chem_28",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.delta_H + inputs.delta_KE + inputs.delta_PE + inputs.W_s"
+  },
+  {
+    "id": "chem_29",
+    "domain": "chemical",
+    "category": "process_calculations",
+    "difficulty": "intermediate",
+    "name": "Conversion (Batch Reactor)",
+    "symbol": "X_A",
+    "formula": "X_A = \\frac{N_{A0} - N_A}{N_{A0}}",
+    "variables": {
+      "N_{A0}": "Initial moles of A (mol)",
+      "N_A": "Moles of A at time t (mol)"
+    },
+    "applications": [
+      "batch reactor analysis",
+      "yield optimisation"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_30",
+    "domain": "chemical",
+    "category": "process_calculations",
+    "difficulty": "intermediate",
+    "name": "Yield & Selectivity",
+    "symbol": "S",
+    "formula": "S = \\frac{\\text{moles of desired product formed}}{\\text{moles of limiting reactant consumed}}",
+    "variables": {
+      "S": "Selectivity (mol/mol)"
+    },
+    "applications": [
+      "reactor performance",
+      "process efficiency"
+    ],
+    "calculator_route": "/calculator/chem_30",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.moles_desired_product / inputs.moles_limiting_reactant"
+  },
+  {
+    "id": "chem_31",
+    "domain": "chemical",
+    "category": "thermodynamics",
+    "difficulty": "advanced",
+    "name": "Peng-Robinson EOS",
+    "symbol": "P",
+    "formula": "P = \\frac{RT}{V_m - b} - \\frac{a(T)}{V_m(V_m+b) + b(V_m-b)}",
+    "variables": {
+      "R": "8.314 J/mol·K",
+      "T": "Temperature (K)",
+      "V_m": "Molar volume (m³/mol)",
+      "a, b": "Fluid-specific constants"
+    },
+    "applications": [
+      "non-ideal gas properties",
+      "phase equilibrium"
+    ],
+    "calculator_route": "/calculator/chem_31",
+    "calculator_eligible": true,
+    "compute_logic": "(8.314 * inputs.T) / (inputs.V_m - inputs.b) - inputs.a / (inputs.V_m * (inputs.V_m + inputs.b) + inputs.b * (inputs.V_m - inputs.b))"
+  },
+  {
+    "id": "chem_32",
+    "domain": "chemical",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Equilibrium Constant (Kp)",
+    "symbol": "K_p",
+    "formula": "K_p = \\prod_i (P_i)^{\\nu_i}",
+    "variables": {
+      "P_i": "Partial pressure of species i (Pa)",
+      "\\nu_i": "Stoichiometric coefficient"
+    },
+    "applications": [
+      "equilibrium conversion",
+      "reaction feasibility"
+    ],
+    "calculator_route": "/calculator/chem_32",
+    "calculator_eligible": true,
+    "compute_logic": "'Equilibrium product. Cannot evaluate generically.'"
+  },
+  {
+    "id": "chem_33",
+    "domain": "chemical",
+    "category": "heat_transfer",
+    "difficulty": "basic",
+    "name": "Nusselt Number (Forced Convection)",
+    "symbol": "Nu",
+    "formula": "Nu = 0.023 Re^{0.8} Pr^{0.4}",
+    "variables": {
+      "Re": "Reynolds number",
+      "Pr": "Prandtl number"
+    },
+    "applications": [
+      "pipe heat transfer coefficient",
+      "heat exchanger design"
+    ],
+    "calculator_route": "/chemical/heat-exchanger",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_34",
+    "domain": "chemical",
+    "category": "heat_transfer",
+    "difficulty": "basic",
+    "name": "Prandtl Number",
+    "symbol": "Pr",
+    "formula": "Pr = \\frac{c_p \\mu}{k}",
+    "variables": {
+      "c_p": "Specific heat (J/kg·K)",
+      "\\mu": "Dynamic viscosity (Pa·s)",
+      "k": "Thermal conductivity (W/m·K)"
+    },
+    "applications": [
+      "heat transfer characterisation"
+    ],
+    "calculator_route": "/chemical/heat-exchanger",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_35",
+    "domain": "chemical",
+    "category": "process_safety",
+    "difficulty": "intermediate",
+    "name": "Relief Valve Sizing (API 520)",
+    "symbol": "A",
+    "formula": "A = \\frac{W}{C K_d P_1 K_b}\\sqrt{\\frac{TZ}{M}}",
+    "variables": {
+      "W": "Flow rate (kg/h)",
+      "C": "Gas constant factor",
+      "K_d": "Discharge coefficient",
+      "P_1": "Relieving pressure (kPa)",
+      "T": "Temperature (K)",
+      "M": "Molecular weight"
+    },
+    "applications": [
+      "pressure relief valve design",
+      "process safety"
+    ],
+    "calculator_route": "/calculator/chem_35",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.W / (inputs.C * inputs.K_d * inputs.P_1 * inputs.K_b) * Math.sqrt(inputs.T * inputs.Z / inputs.M)"
+  },
+  {
+    "id": "chem_36",
+    "domain": "chemical",
+    "category": "process_safety",
+    "difficulty": "basic",
+    "name": "Lower Flammability Limit (Le Chatelier)",
+    "symbol": "LFL_mix",
+    "formula": "LFL_{mix} = \\frac{1}{\\sum_i y_i / LFL_i}",
+    "variables": {
+      "y_i": "Mole fraction of component i",
+      "LFL_i": "LFL of component i (%)"
+    },
+    "applications": [
+      "hazardous area classification",
+      "explosion prevention"
+    ],
+    "calculator_route": "/calculator/chem_36",
+    "calculator_eligible": true,
+    "compute_logic": "1 / (inputs.y_1 / inputs.LFL_1 + inputs.y_2 / inputs.LFL_2)"
+  },
+  {
+    "id": "chem_37",
+    "domain": "chemical",
+    "category": "mass_transfer",
+    "difficulty": "intermediate",
+    "name": "Schmidt Number",
+    "symbol": "Sc",
+    "formula": "Sc = \\frac{\\mu}{\\rho D}",
+    "variables": {
+      "\\mu": "Dynamic viscosity (Pa·s)",
+      "\\rho": "Density (kg/m³)",
+      "D": "Diffusivity (m²/s)"
+    },
+    "applications": [
+      "mass transfer analysis",
+      "boundary layer calculations"
+    ],
+    "calculator_route": "/calculator/chem_37",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.mu / (inputs.rho * inputs.D)"
+  },
+  {
+    "id": "chem_38",
+    "domain": "chemical",
+    "category": "process_calculations",
+    "difficulty": "advanced",
+    "name": "Residence Time Distribution (RTD) — Mean",
+    "symbol": "τ",
+    "formula": "\\bar{t} = \\frac{\\int_0^\\infty t\\, C(t)\\, dt}{\\int_0^\\infty C(t)\\, dt}",
+    "variables": {
+      "t": "Time (s)",
+      "C(t)": "Tracer concentration at time t (mol/L)"
+    },
+    "applications": [
+      "non-ideal reactor diagnosis",
+      "mixing characterisation"
+    ],
+    "calculator_route": "/calculator/chem_38",
+    "calculator_eligible": true,
+    "compute_logic": "'RTD integral. Requires C(t) array data.'"
+  },
+  {
+    "id": "chem_39",
+    "domain": "chemical",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Antoine Equation (Vapour Pressure)",
+    "symbol": "P*",
+    "formula": "\\log_{10} P^* = A - \\frac{B}{C + T}",
+    "variables": {
+      "A, B, C": "Antoine constants (component-specific)",
+      "T": "Temperature (°C or K)",
+      "P*": "Vapour pressure (mmHg or Pa)"
+    },
+    "applications": [
+      "VLE calculations",
+      "safety analysis"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "chem_40",
+    "domain": "chemical",
+    "category": "separations",
+    "difficulty": "intermediate",
+    "name": "Operating Line (Absorption)",
+    "symbol": "y",
+    "formula": "y = \\frac{L}{G}(x - x_2) + y_2",
+    "variables": {
+      "L": "Liquid molar flow (mol/s)",
+      "G": "Gas molar flow (mol/s)",
+      "x": "Liquid mole fraction",
+      "y": "Gas mole fraction"
+    },
+    "applications": [
+      "absorption column design",
+      "scrubber design"
+    ],
+    "calculator_route": "/calculator/chem_40",
+    "calculator_eligible": true,
+    "compute_logic": "(inputs.L / inputs.G) * (inputs.x - inputs.x_2) + inputs.y_2"
+  },
+  {
+    "id": "math_01",
+    "domain": "mathematics",
+    "category": "algebra",
+    "difficulty": "intermediate",
+    "name": "Quadratic Formula",
+    "symbol": "x",
+    "formula": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+    "variables": {
+      "a": "Coefficient of x²",
+      "b": "Coefficient of x",
+      "c": "Constant"
+    },
+    "applications": [
+      "root finding",
+      "trajectory solving"
+    ],
+    "calculator_route": "/mathematics/quadratic",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_02",
+    "domain": "mathematics",
+    "category": "trigonometry",
+    "difficulty": "basic",
+    "name": "Pythagorean Theorem",
+    "symbol": "c",
+    "formula": "c = \\sqrt{a^2 + b^2}",
+    "variables": {
+      "a": "Side 1",
+      "b": "Side 2",
+      "c": "Hypotenuse"
+    },
+    "applications": [
+      "geometry",
+      "distance calculation"
+    ],
+    "calculator_route": "/mathematics/trigonometry",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_03",
+    "domain": "mathematics",
+    "category": "statistics",
+    "difficulty": "basic",
+    "name": "Sample Standard Deviation",
+    "symbol": "s",
+    "formula": "s = \\sqrt{\\frac{\\sum(x_i - \\bar{x})^2}{n - 1}}",
+    "variables": {
+      "x_i": "Data points",
+      "\\bar{x}": "Sample mean",
+      "n": "Sample size"
+    },
+    "applications": [
+      "data dispersion",
+      "quality control"
+    ],
+    "calculator_route": "/mathematics/statistics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_04",
+    "domain": "mathematics",
+    "category": "calculus",
+    "difficulty": "basic",
+    "name": "Derivative (Power Rule)",
+    "symbol": "f'",
+    "formula": "\\frac{d}{dx}(x^n) = nx^{n-1}",
+    "variables": {
+      "x": "Variable",
+      "n": "Exponent"
+    },
+    "applications": [
+      "slope calculation",
+      "optimization"
+    ],
+    "calculator_route": "/calculator/math_04",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.n * Math.pow(inputs.x, inputs.n - 1)"
+  },
+  {
+    "id": "math_05",
+    "domain": "mathematics",
+    "category": "linear_algebra",
+    "difficulty": "intermediate",
+    "name": "Determinant (2×2)",
+    "symbol": "det(A)",
+    "formula": "\\det(A) = ad - bc",
+    "variables": {
+      "a,b,c,d": "Matrix elements"
+    },
+    "applications": [
+      "matrix invertibility",
+      "area calculation"
+    ],
+    "calculator_route": "/mathematics/matrix-operations",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_06",
+    "domain": "mathematics",
+    "category": "complex_numbers",
+    "difficulty": "intermediate",
+    "name": "Euler's Formula",
+    "symbol": "e^{iθ}",
+    "formula": "e^{i\\theta} = \\cos\\theta + i\\sin\\theta",
+    "variables": {
+      "\\theta": "Angle (radians)",
+      "i": "Imaginary unit"
+    },
+    "applications": [
+      "phasors",
+      "signal analysis"
+    ],
+    "calculator_route": "/mathematics/complex-numbers",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_07",
+    "domain": "mathematics",
+    "category": "algebra",
+    "difficulty": "basic",
+    "name": "Quadratic Formula",
+    "symbol": "x",
+    "formula": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+    "variables": {
+      "a, b, c": "Coefficients of ax² + bx + c = 0"
+    },
+    "applications": [
+      "root finding",
+      "parabola intercepts"
+    ],
+    "calculator_route": "/mathematics/quadratic",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_08",
+    "domain": "mathematics",
+    "category": "algebra",
+    "difficulty": "basic",
+    "name": "Arithmetic Progression (nth Term)",
+    "symbol": "a_n",
+    "formula": "a_n = a_1 + (n-1)d",
+    "variables": {
+      "a_1": "First term",
+      "d": "Common difference",
+      "n": "Term number"
+    },
+    "applications": [
+      "sequence analysis",
+      "financial scheduling"
+    ],
+    "calculator_route": "/mathematics/quadratic",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_09",
+    "domain": "mathematics",
+    "category": "algebra",
+    "difficulty": "basic",
+    "name": "Sum of Arithmetic Series",
+    "symbol": "S_n",
+    "formula": "S_n = \\frac{n}{2}(a_1 + a_n)",
+    "variables": {
+      "n": "Number of terms",
+      "a_1": "First term",
+      "a_n": "Last term"
+    },
+    "applications": [
+      "series summation",
+      "salary progression"
+    ],
+    "calculator_route": "/mathematics/quadratic",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_10",
+    "domain": "mathematics",
+    "category": "algebra",
+    "difficulty": "intermediate",
+    "name": "Geometric Series Sum (Finite)",
+    "symbol": "S_n",
+    "formula": "S_n = a_1 \\cdot \\frac{1 - r^n}{1 - r}",
+    "variables": {
+      "a_1": "First term",
+      "r": "Common ratio (r ≠ 1)",
+      "n": "Number of terms"
+    },
+    "applications": [
+      "compound interest",
+      "geometric sequences"
+    ],
+    "calculator_route": "/mathematics/quadratic",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_11",
+    "domain": "mathematics",
+    "category": "algebra",
+    "difficulty": "intermediate",
+    "name": "Binomial Theorem",
+    "symbol": "(a+b)^n",
+    "formula": "(a+b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k",
+    "variables": {
+      "n": "Power",
+      "k": "Term index",
+      "\\binom{n}{k}": "Binomial coefficient"
+    },
+    "applications": [
+      "probability",
+      "polynomial expansion"
+    ],
+    "calculator_route": "/calculator/math_11",
+    "calculator_eligible": true,
+    "compute_logic": "'Binomial expansion symbolic representation.'"
+  },
+  {
+    "id": "math_12",
+    "domain": "mathematics",
+    "category": "algebra",
+    "difficulty": "basic",
+    "name": "Logarithm Change of Base",
+    "symbol": "log",
+    "formula": "\\log_b a = \\frac{\\ln a}{\\ln b}",
+    "variables": {
+      "a": "Argument",
+      "b": "New base"
+    },
+    "applications": [
+      "log computation",
+      "information entropy"
+    ],
+    "calculator_route": "/mathematics/quadratic",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_13",
+    "domain": "mathematics",
+    "category": "calculus",
+    "difficulty": "intermediate",
+    "name": "Power Rule (Differentiation)",
+    "symbol": "f'(x)",
+    "formula": "\\frac{d}{dx}[x^n] = nx^{n-1}",
+    "variables": {
+      "n": "Exponent (real number)"
+    },
+    "applications": [
+      "slope of polynomials",
+      "optimisation"
+    ],
+    "calculator_route": "/calculator/math_13",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.n * Math.pow(inputs.x, inputs.n - 1)"
+  },
+  {
+    "id": "math_14",
+    "domain": "mathematics",
+    "category": "calculus",
+    "difficulty": "intermediate",
+    "name": "Chain Rule",
+    "symbol": "f'(g(x))",
+    "formula": "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+    "variables": {
+      "f": "Outer function",
+      "g": "Inner function"
+    },
+    "applications": [
+      "composite function differentiation"
+    ],
+    "calculator_route": "/calculator/math_14",
+    "calculator_eligible": true,
+    "compute_logic": "'Chain rule symbolic representation.'"
+  },
+  {
+    "id": "math_15",
+    "domain": "mathematics",
+    "category": "calculus",
+    "difficulty": "intermediate",
+    "name": "Product Rule",
+    "symbol": "(uv)'",
+    "formula": "(uv)' = u'v + uv'",
+    "variables": {
+      "u, v": "Differentiable functions of x"
+    },
+    "applications": [
+      "differentiation of products",
+      "physics equations"
+    ],
+    "calculator_route": "/calculator/math_15",
+    "calculator_eligible": true,
+    "compute_logic": "'Product rule symbolic representation.'"
+  },
+  {
+    "id": "math_16",
+    "domain": "mathematics",
+    "category": "calculus",
+    "difficulty": "intermediate",
+    "name": "Fundamental Theorem of Calculus",
+    "symbol": "∫",
+    "formula": "\\int_a^b f(x)\\,dx = F(b) - F(a)",
+    "variables": {
+      "F(x)": "Antiderivative of f(x)",
+      "a, b": "Limits of integration"
+    },
+    "applications": [
+      "area under curve",
+      "net change"
+    ],
+    "calculator_route": "/calculator/math_16",
+    "calculator_eligible": true,
+    "compute_logic": "'Fundamental theorem of calculus integral.'"
+  },
+  {
+    "id": "math_17",
+    "domain": "mathematics",
+    "category": "calculus",
+    "difficulty": "advanced",
+    "name": "Taylor Series Expansion",
+    "symbol": "f(x)",
+    "formula": "f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n",
+    "variables": {
+      "f^{(n)}(a)": "nth derivative at point a",
+      "n!": "n factorial"
+    },
+    "applications": [
+      "function approximation",
+      "numerical methods"
+    ],
+    "calculator_route": "/calculator/math_17",
+    "calculator_eligible": true,
+    "compute_logic": "'Taylor series infinity summation.'"
+  },
+  {
+    "id": "math_18",
+    "domain": "mathematics",
+    "category": "calculus",
+    "difficulty": "intermediate",
+    "name": "L'Hôpital's Rule",
+    "symbol": "lim",
+    "formula": "\\lim_{x\\to c}\\frac{f(x)}{g(x)} = \\lim_{x\\to c}\\frac{f'(x)}{g'(x)}",
+    "variables": {
+      "f, g": "Functions where lim gives 0/0 or ∞/∞ form"
+    },
+    "applications": [
+      "indeterminate limits",
+      "asymptotic analysis"
+    ],
+    "calculator_route": "/calculator/math_18",
+    "calculator_eligible": true,
+    "compute_logic": "'LHopitals rule limit evaluation.'"
+  },
+  {
+    "id": "math_19",
+    "domain": "mathematics",
+    "category": "trigonometry",
+    "difficulty": "basic",
+    "name": "Pythagorean Identity",
+    "symbol": "sin²+cos²",
+    "formula": "\\sin^2\\theta + \\cos^2\\theta = 1",
+    "variables": {
+      "\\theta": "Angle (radians or degrees)"
+    },
+    "applications": [
+      "trigonometric simplification",
+      "unit circle"
+    ],
+    "calculator_route": "/calculator/math_19",
+    "calculator_eligible": true,
+    "compute_logic": "Math.pow(Math.sin(inputs.theta), 2) + Math.pow(Math.cos(inputs.theta), 2)"
+  },
+  {
+    "id": "math_20",
+    "domain": "mathematics",
+    "category": "trigonometry",
+    "difficulty": "basic",
+    "name": "Sine Rule (Law of Sines)",
+    "symbol": "a/sinA",
+    "formula": "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}",
+    "variables": {
+      "a, b, c": "Side lengths",
+      "A, B, C": "Opposite angles"
+    },
+    "applications": [
+      "triangle solving",
+      "surveying"
+    ],
+    "calculator_route": "/mathematics/trigonometry",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_21",
+    "domain": "mathematics",
+    "category": "trigonometry",
+    "difficulty": "basic",
+    "name": "Cosine Rule (Law of Cosines)",
+    "symbol": "c²",
+    "formula": "c^2 = a^2 + b^2 - 2ab\\cos C",
+    "variables": {
+      "a, b, c": "Side lengths",
+      "C": "Angle opposite side c"
+    },
+    "applications": [
+      "triangle side/angle calculation",
+      "navigation"
+    ],
+    "calculator_route": "/mathematics/trigonometry",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_22",
+    "domain": "mathematics",
+    "category": "trigonometry",
+    "difficulty": "intermediate",
+    "name": "Double Angle Formula (sin)",
+    "symbol": "sin2θ",
+    "formula": "\\sin 2\\theta = 2\\sin\\theta\\cos\\theta",
+    "variables": {
+      "\\theta": "Angle"
+    },
+    "applications": [
+      "trigonometric simplification",
+      "Fourier analysis"
+    ],
+    "calculator_route": "/calculator/math_22",
+    "calculator_eligible": true,
+    "compute_logic": "2 * Math.sin(inputs.theta) * Math.cos(inputs.theta)"
+  },
+  {
+    "id": "math_23",
+    "domain": "mathematics",
+    "category": "trigonometry",
+    "difficulty": "intermediate",
+    "name": "Double Angle Formula (cos)",
+    "symbol": "cos2θ",
+    "formula": "\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta",
+    "variables": {
+      "\\theta": "Angle"
+    },
+    "applications": [
+      "identity proofs",
+      "wave mechanics"
+    ],
+    "calculator_route": "/calculator/math_23",
+    "calculator_eligible": true,
+    "compute_logic": "Math.pow(Math.cos(inputs.theta), 2) - Math.pow(Math.sin(inputs.theta), 2)"
+  },
+  {
+    "id": "math_24",
+    "domain": "mathematics",
+    "category": "statistics",
+    "difficulty": "basic",
+    "name": "Population Mean",
+    "symbol": "μ",
+    "formula": "\\mu = \\frac{1}{N}\\sum_{i=1}^{N} x_i",
+    "variables": {
+      "x_i": "Data values",
+      "N": "Population size"
+    },
+    "applications": [
+      "descriptive statistics",
+      "quality control"
+    ],
+    "calculator_route": "/mathematics/statistics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_25",
+    "domain": "mathematics",
+    "category": "statistics",
+    "difficulty": "intermediate",
+    "name": "Population Variance",
+    "symbol": "σ²",
+    "formula": "\\sigma^2 = \\frac{1}{N}\\sum_{i=1}^{N}(x_i - \\mu)^2",
+    "variables": {
+      "x_i": "Data values",
+      "\\mu": "Population mean",
+      "N": "Population size"
+    },
+    "applications": [
+      "risk analysis",
+      "spread measurement"
+    ],
+    "calculator_route": "/mathematics/statistics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_26",
+    "domain": "mathematics",
+    "category": "statistics",
+    "difficulty": "intermediate",
+    "name": "Z-Score (Standardisation)",
+    "symbol": "z",
+    "formula": "z = \\frac{x - \\mu}{\\sigma}",
+    "variables": {
+      "x": "Value",
+      "\\mu": "Mean",
+      "\\sigma": "Standard deviation"
+    },
+    "applications": [
+      "hypothesis testing",
+      "normal distribution"
+    ],
+    "calculator_route": "/mathematics/statistics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_27",
+    "domain": "mathematics",
+    "category": "statistics",
+    "difficulty": "intermediate",
+    "name": "Bayes' Theorem",
+    "symbol": "P(A|B)",
+    "formula": "P(A|B) = \\frac{P(B|A)\\,P(A)}{P(B)}",
+    "variables": {
+      "P(A|B)": "Posterior probability",
+      "P(B|A)": "Likelihood",
+      "P(A)": "Prior",
+      "P(B)": "Evidence"
+    },
+    "applications": [
+      "medical diagnosis",
+      "spam filtering"
+    ],
+    "calculator_route": "/mathematics/statistics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_28",
+    "domain": "mathematics",
+    "category": "statistics",
+    "difficulty": "intermediate",
+    "name": "Pearson Correlation Coefficient",
+    "symbol": "r",
+    "formula": "r = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2\\sum(y_i-\\bar{y})^2}}",
+    "variables": {
+      "x_i, y_i": "Data pairs",
+      "\\bar{x}, \\bar{y}": "Means"
+    },
+    "applications": [
+      "correlation analysis",
+      "regression"
+    ],
+    "calculator_route": "/calculator/math_28",
+    "calculator_eligible": true,
+    "compute_logic": "'Pearson correlation. Requires array data.'"
+  },
+  {
+    "id": "math_29",
+    "domain": "mathematics",
+    "category": "linear_algebra",
+    "difficulty": "intermediate",
+    "name": "Matrix Determinant (2×2)",
+    "symbol": "det",
+    "formula": "\\det(A) = ad - bc \\text{ for } A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}",
+    "variables": {
+      "a, b, c, d": "Matrix elements"
+    },
+    "applications": [
+      "system of equations",
+      "invertibility check"
+    ],
+    "calculator_route": "/mathematics/matrix",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_30",
+    "domain": "mathematics",
+    "category": "linear_algebra",
+    "difficulty": "intermediate",
+    "name": "Dot Product",
+    "symbol": "a·b",
+    "formula": "\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}||\\mathbf{b}|\\cos\\theta",
+    "variables": {
+      "|a|, |b|": "Vector magnitudes",
+      "\\theta": "Angle between vectors"
+    },
+    "applications": [
+      "projection",
+      "angle between vectors"
+    ],
+    "calculator_route": "/mathematics/matrix",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_31",
+    "domain": "mathematics",
+    "category": "linear_algebra",
+    "difficulty": "intermediate",
+    "name": "Cross Product Magnitude",
+    "symbol": "|a×b|",
+    "formula": "|\\mathbf{a} \\times \\mathbf{b}| = |\\mathbf{a}||\\mathbf{b}|\\sin\\theta",
+    "variables": {
+      "|a|, |b|": "Vector magnitudes",
+      "\\theta": "Angle between vectors"
+    },
+    "applications": [
+      "area of parallelogram",
+      "torque calculation"
+    ],
+    "calculator_route": "/mathematics/matrix",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_32",
+    "domain": "mathematics",
+    "category": "linear_algebra",
+    "difficulty": "intermediate",
+    "name": "Eigenvalue Equation",
+    "symbol": "λ",
+    "formula": "A\\mathbf{v} = \\lambda\\mathbf{v}",
+    "variables": {
+      "A": "Square matrix",
+      "\\mathbf{v}": "Eigenvector",
+      "\\lambda": "Eigenvalue"
+    },
+    "applications": [
+      "PCA",
+      "vibration analysis"
+    ],
+    "calculator_route": "/calculator/math_32",
+    "calculator_eligible": true,
+    "compute_logic": "'Eigenvalue symbolic matrix equation.'"
+  },
+  {
+    "id": "math_33",
+    "domain": "mathematics",
+    "category": "number_theory",
+    "difficulty": "basic",
+    "name": "Combinatorics — nCr",
+    "symbol": "C(n,r)",
+    "formula": "C(n,r) = \\frac{n!}{r!(n-r)!}",
+    "variables": {
+      "n": "Total items",
+      "r": "Items chosen"
+    },
+    "applications": [
+      "probability",
+      "poker hand counting"
+    ],
+    "calculator_route": "/mathematics/statistics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_34",
+    "domain": "mathematics",
+    "category": "number_theory",
+    "difficulty": "basic",
+    "name": "Permutations — nPr",
+    "symbol": "P(n,r)",
+    "formula": "P(n,r) = \\frac{n!}{(n-r)!}",
+    "variables": {
+      "n": "Total items",
+      "r": "Items arranged"
+    },
+    "applications": [
+      "ordered arrangements",
+      "scheduling"
+    ],
+    "calculator_route": "/mathematics/statistics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_35",
+    "domain": "mathematics",
+    "category": "number_theory",
+    "difficulty": "intermediate",
+    "name": "Fermat's Little Theorem",
+    "symbol": "a^p",
+    "formula": "a^p \\equiv a \\pmod{p}",
+    "variables": {
+      "a": "Integer",
+      "p": "Prime number"
+    },
+    "applications": [
+      "modular arithmetic",
+      "cryptography"
+    ],
+    "calculator_route": "/calculator/math_35",
+    "calculator_eligible": true,
+    "compute_logic": "Math.pow(inputs.a, inputs.p) % inputs.p"
+  },
+  {
+    "id": "math_36",
+    "domain": "mathematics",
+    "category": "geometry",
+    "difficulty": "basic",
+    "name": "Circle Area & Circumference",
+    "symbol": "A, C",
+    "formula": "A = \\pi r^2,\\quad C = 2\\pi r",
+    "variables": {
+      "r": "Radius"
+    },
+    "applications": [
+      "area calculation",
+      "engineering design"
+    ],
+    "calculator_route": "/mathematics/geometry",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_37",
+    "domain": "mathematics",
+    "category": "geometry",
+    "difficulty": "basic",
+    "name": "Sphere Volume & Surface Area",
+    "symbol": "V, A",
+    "formula": "V = \\frac{4}{3}\\pi r^3,\\quad A = 4\\pi r^2",
+    "variables": {
+      "r": "Radius of sphere"
+    },
+    "applications": [
+      "tank sizing",
+      "physics problems"
+    ],
+    "calculator_route": "/mathematics/geometry",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_38",
+    "domain": "mathematics",
+    "category": "geometry",
+    "difficulty": "intermediate",
+    "name": "Distance Formula (3D)",
+    "symbol": "d",
+    "formula": "d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}",
+    "variables": {
+      "x_1,y_1,z_1": "Point 1 coordinates",
+      "x_2,y_2,z_2": "Point 2 coordinates"
+    },
+    "applications": [
+      "3D geometry",
+      "computer graphics"
+    ],
+    "calculator_route": "/mathematics/geometry",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_39",
+    "domain": "mathematics",
+    "category": "discrete_mathematics",
+    "difficulty": "intermediate",
+    "name": "Euler's Formula for Planar Graphs",
+    "symbol": "V-E+F",
+    "formula": "V - E + F = 2",
+    "variables": {
+      "V": "Vertices",
+      "E": "Edges",
+      "F": "Faces"
+    },
+    "applications": [
+      "graph theory",
+      "polyhedra analysis"
+    ],
+    "calculator_route": "/mathematics/statistics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "math_40",
+    "domain": "mathematics",
+    "category": "discrete_mathematics",
+    "difficulty": "intermediate",
+    "name": "Inclusion-Exclusion Principle",
+    "symbol": "|A∪B|",
+    "formula": "|A \\cup B| = |A| + |B| - |A \\cap B|",
+    "variables": {
+      "|A|, |B|": "Set sizes",
+      "|A∩B|": "Intersection size"
+    },
+    "applications": [
+      "counting problems",
+      "probability of union"
+    ],
+    "calculator_route": "/mathematics/statistics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_01",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "basic",
+    "name": "SUVAT: Displacement",
+    "symbol": "s",
+    "formula": "s = ut + \\frac{1}{2}at^2",
+    "variables": {
+      "u": "Initial velocity (m/s)",
+      "a": "Acceleration (m/s²)",
+      "t": "Time (s)"
+    },
+    "applications": [
+      "projectile motion",
+      "vehicle stopping"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_02",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "basic",
+    "name": "Newton's Second Law",
+    "symbol": "F",
+    "formula": "F = ma",
+    "variables": {
+      "m": "Mass (kg)",
+      "a": "Acceleration (m/s²)"
+    },
+    "applications": [
+      "force analysis",
+      "dynamics"
+    ],
+    "calculator_route": "/physics/newtons-laws",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_03",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "intermediate",
+    "name": "Projectile Range",
+    "symbol": "R",
+    "formula": "R = \\frac{v_0^2 \\sin(2\\theta)}{g}",
+    "variables": {
+      "v_0": "Initial speed (m/s)",
+      "\\theta": "Launch angle (°)",
+      "g": "Gravity (9.81 m/s²)"
+    },
+    "applications": [
+      "ballistics",
+      "sports science"
+    ],
+    "calculator_route": "/physics/projectile-motion",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_04",
+    "domain": "physics",
+    "category": "thermodynamics",
+    "difficulty": "basic",
+    "name": "Ideal Gas Law",
+    "symbol": "PV",
+    "formula": "PV = nRT",
+    "variables": {
+      "P": "Pressure (Pa)",
+      "V": "Volume (m³)",
+      "n": "Moles",
+      "R": "8.314 J/mol·K",
+      "T": "Temperature (K)"
+    },
+    "applications": [
+      "gas compression",
+      "thermodynamic cycles"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true,
+    "compute_logic": "(inputs.n * 8.314 * inputs.T) / inputs.V"
+  },
+  {
+    "id": "phys_05",
+    "domain": "physics",
+    "category": "electromagnetism",
+    "difficulty": "intermediate",
+    "name": "Coulomb's Law",
+    "symbol": "F",
+    "formula": "F = k_e \\frac{q_1 q_2}{r^2}",
+    "variables": {
+      "k_e": "Coulomb constant (8.99×10⁹ N·m²/C²)",
+      "q_1, q_2": "Charges (C)",
+      "r": "Distance (m)"
+    },
+    "applications": [
+      "electrostatics",
+      "charge interaction"
+    ],
+    "calculator_route": "/physics/coulombs-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_06",
+    "domain": "physics",
+    "category": "optics",
+    "difficulty": "intermediate",
+    "name": "Snell's Law",
+    "symbol": "θ₂",
+    "formula": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2",
+    "variables": {
+      "n_1": "Refractive index medium 1",
+      "n_2": "Refractive index medium 2",
+      "\\theta_1": "Angle of incidence (°)"
+    },
+    "applications": [
+      "lens design",
+      "fiber optics"
+    ],
+    "calculator_route": "/physics/optics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_07",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "basic",
+    "name": "Buoyancy Force",
+    "symbol": "F_b",
+    "formula": "F_b = \\rho_{fluid} \\cdot g \\cdot V_{displaced}",
+    "variables": {
+      "\\rho_{fluid}": "Fluid density (kg/m³)",
+      "g": "9.81 m/s²",
+      "V_{displaced}": "Displaced volume (m³)"
+    },
+    "applications": [
+      "ship design",
+      "flotation"
+    ],
+    "calculator_route": "/physics/buoyancy",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_08",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "basic",
+    "name": "Newton's Second Law",
+    "symbol": "F",
+    "formula": "F = ma",
+    "variables": {
+      "m": "Mass (kg)",
+      "a": "Acceleration (m/s²)"
+    },
+    "applications": [
+      "dynamics",
+      "vehicle acceleration"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_09",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "basic",
+    "name": "Gravitational Potential Energy",
+    "symbol": "PE",
+    "formula": "PE = mgh",
+    "variables": {
+      "m": "Mass (kg)",
+      "g": "9.81 m/s²",
+      "h": "Height above reference (m)"
+    },
+    "applications": [
+      "roller coasters",
+      "dam energy"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_10",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "basic",
+    "name": "Kinetic Energy",
+    "symbol": "KE",
+    "formula": "KE = \\frac{1}{2}mv^2",
+    "variables": {
+      "m": "Mass (kg)",
+      "v": "Velocity (m/s)"
+    },
+    "applications": [
+      "impact analysis",
+      "energy conversion"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_11",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "basic",
+    "name": "Work Done",
+    "symbol": "W",
+    "formula": "W = F \\cdot d \\cdot \\cos\\theta",
+    "variables": {
+      "F": "Force (N)",
+      "d": "Displacement (m)",
+      "\\theta": "Angle between F and d"
+    },
+    "applications": [
+      "mechanical work",
+      "energy transfer"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_12",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "basic",
+    "name": "Momentum",
+    "symbol": "p",
+    "formula": "p = mv",
+    "variables": {
+      "m": "Mass (kg)",
+      "v": "Velocity (m/s)"
+    },
+    "applications": [
+      "collision analysis",
+      "rocket propulsion"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_13",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "intermediate",
+    "name": "Impulse-Momentum Theorem",
+    "symbol": "J",
+    "formula": "J = \\Delta p = F \\Delta t",
+    "variables": {
+      "F": "Force (N)",
+      "\\Delta t": "Time interval (s)",
+      "\\Delta p": "Change in momentum (kg·m/s)"
+    },
+    "applications": [
+      "crash safety",
+      "sports physics"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_14",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "intermediate",
+    "name": "Torque",
+    "symbol": "τ",
+    "formula": "\\tau = r \\times F = rF\\sin\\theta",
+    "variables": {
+      "r": "Moment arm (m)",
+      "F": "Force (N)",
+      "\\theta": "Angle between r and F"
+    },
+    "applications": [
+      "gear systems",
+      "wrench mechanics"
+    ],
+    "calculator_route": "/mechanical/torque-power",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_15",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "intermediate",
+    "name": "Centripetal Acceleration",
+    "symbol": "a_c",
+    "formula": "a_c = \\frac{v^2}{r}",
+    "variables": {
+      "v": "Speed (m/s)",
+      "r": "Radius of circular path (m)"
+    },
+    "applications": [
+      "circular motion",
+      "satellite orbit"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_16",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "intermediate",
+    "name": "Newton's Law of Gravitation",
+    "symbol": "F_g",
+    "formula": "F_g = G\\frac{m_1 m_2}{r^2}",
+    "variables": {
+      "G": "6.674×10⁻¹¹ N·m²/kg²",
+      "m_1, m_2": "Masses (kg)",
+      "r": "Distance between centres (m)"
+    },
+    "applications": [
+      "planetary orbits",
+      "tidal forces"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_17",
+    "domain": "physics",
+    "category": "thermodynamics",
+    "difficulty": "basic",
+    "name": "First Law of Thermodynamics",
+    "symbol": "ΔU",
+    "formula": "\\Delta U = Q - W",
+    "variables": {
+      "Q": "Heat added to system (J)",
+      "W": "Work done by system (J)",
+      "\\Delta U": "Change in internal energy (J)"
+    },
+    "applications": [
+      "heat engines",
+      "refrigerators"
+    ],
+    "calculator_route": "/physics/thermodynamics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_18",
+    "domain": "physics",
+    "category": "thermodynamics",
+    "difficulty": "basic",
+    "name": "Ideal Gas Law",
+    "symbol": "PV",
+    "formula": "PV = nRT",
+    "variables": {
+      "P": "Pressure (Pa)",
+      "V": "Volume (m³)",
+      "n": "Moles (mol)",
+      "R": "8.314 J/mol·K",
+      "T": "Temperature (K)"
+    },
+    "applications": [
+      "gas behaviour",
+      "engine cycles"
+    ],
+    "calculator_route": "/chemical/ideal-gas-law",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_19",
+    "domain": "physics",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Carnot Efficiency",
+    "symbol": "η",
+    "formula": "\\eta = 1 - \\frac{T_C}{T_H}",
+    "variables": {
+      "T_C": "Cold reservoir temp (K)",
+      "T_H": "Hot reservoir temp (K)"
+    },
+    "applications": [
+      "heat engine design",
+      "refrigeration COP"
+    ],
+    "calculator_route": "/physics/thermodynamics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_20",
+    "domain": "physics",
+    "category": "thermodynamics",
+    "difficulty": "basic",
+    "name": "Heat Transfer (Conduction)",
+    "symbol": "Q/t",
+    "formula": "\\frac{Q}{t} = \\frac{kA\\Delta T}{L}",
+    "variables": {
+      "k": "Thermal conductivity (W/m·K)",
+      "A": "Area (m²)",
+      "\\Delta T": "Temperature difference (K)",
+      "L": "Thickness (m)"
+    },
+    "applications": [
+      "insulation design",
+      "heat sink"
+    ],
+    "calculator_route": "/mechanical/heat-transfer",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_21",
+    "domain": "physics",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Stefan-Boltzmann Radiation Law",
+    "symbol": "P",
+    "formula": "P = \\sigma A T^4",
+    "variables": {
+      "\\sigma": "5.67×10⁻⁸ W/m²·K⁴",
+      "A": "Surface area (m²)",
+      "T": "Temperature (K)"
+    },
+    "applications": [
+      "stellar radiation",
+      "thermal imaging"
+    ],
+    "calculator_route": "/physics/thermodynamics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_22",
+    "domain": "physics",
+    "category": "waves_optics",
+    "difficulty": "basic",
+    "name": "Wave Speed",
+    "symbol": "v",
+    "formula": "v = f\\lambda",
+    "variables": {
+      "f": "Frequency (Hz)",
+      "\\lambda": "Wavelength (m)"
+    },
+    "applications": [
+      "sound waves",
+      "electromagnetic waves"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_23",
+    "domain": "physics",
+    "category": "waves_optics",
+    "difficulty": "basic",
+    "name": "Snell's Law (Refraction)",
+    "symbol": "n",
+    "formula": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2",
+    "variables": {
+      "n_1, n_2": "Refractive indices",
+      "\\theta_1, \\theta_2": "Angles with normal"
+    },
+    "applications": [
+      "lens design",
+      "fibre optics"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_24",
+    "domain": "physics",
+    "category": "waves_optics",
+    "difficulty": "intermediate",
+    "name": "Doppler Effect (Sound)",
+    "symbol": "f'",
+    "formula": "f' = f\\frac{v \\pm v_o}{v \\mp v_s}",
+    "variables": {
+      "f": "Source frequency (Hz)",
+      "v": "Speed of sound (m/s)",
+      "v_o": "Observer speed (m/s)",
+      "v_s": "Source speed (m/s)"
+    },
+    "applications": [
+      "radar",
+      "medical ultrasound"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_25",
+    "domain": "physics",
+    "category": "waves_optics",
+    "difficulty": "basic",
+    "name": "Thin Lens Equation",
+    "symbol": "f",
+    "formula": "\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}",
+    "variables": {
+      "f": "Focal length (m)",
+      "d_o": "Object distance (m)",
+      "d_i": "Image distance (m)"
+    },
+    "applications": [
+      "camera design",
+      "eyeglasses"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_26",
+    "domain": "physics",
+    "category": "waves_optics",
+    "difficulty": "intermediate",
+    "name": "Diffraction Grating",
+    "symbol": "d sinθ",
+    "formula": "d\\sin\\theta = m\\lambda",
+    "variables": {
+      "d": "Grating spacing (m)",
+      "\\theta": "Diffraction angle",
+      "m": "Order (integer)",
+      "\\lambda": "Wavelength (m)"
+    },
+    "applications": [
+      "spectroscopy",
+      "optical instruments"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_27",
+    "domain": "physics",
+    "category": "electromagnetism",
+    "difficulty": "basic",
+    "name": "Electric Field Strength",
+    "symbol": "E",
+    "formula": "E = \\frac{F}{q} = \\frac{kQ}{r^2}",
+    "variables": {
+      "F": "Force on charge (N)",
+      "q": "Test charge (C)",
+      "k": "8.99×10⁹ N·m²/C²",
+      "Q": "Source charge (C)",
+      "r": "Distance (m)"
+    },
+    "applications": [
+      "capacitor design",
+      "electrostatics"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_28",
+    "domain": "physics",
+    "category": "electromagnetism",
+    "difficulty": "intermediate",
+    "name": "Lorentz Force",
+    "symbol": "F",
+    "formula": "\\mathbf{F} = q(\\mathbf{E} + \\mathbf{v} \\times \\mathbf{B})",
+    "variables": {
+      "q": "Charge (C)",
+      "E": "Electric field (N/C)",
+      "v": "Velocity (m/s)",
+      "B": "Magnetic field (T)"
+    },
+    "applications": [
+      "particle accelerators",
+      "mass spectrometry"
+    ],
+    "calculator_route": "/calculator/phys_28",
+    "calculator_eligible": true,
+    "compute_logic": "'Lorentz force vector cross product.'"
+  },
+  {
+    "id": "phys_29",
+    "domain": "physics",
+    "category": "quantum_physics",
+    "difficulty": "intermediate",
+    "name": "Planck's Energy Quantisation",
+    "symbol": "E",
+    "formula": "E = hf",
+    "variables": {
+      "h": "Planck's constant 6.626×10⁻³⁴ J·s",
+      "f": "Frequency (Hz)"
+    },
+    "applications": [
+      "photoelectric effect",
+      "LED design"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_30",
+    "domain": "physics",
+    "category": "quantum_physics",
+    "difficulty": "intermediate",
+    "name": "de Broglie Wavelength",
+    "symbol": "λ",
+    "formula": "\\lambda = \\frac{h}{mv}",
+    "variables": {
+      "h": "Planck's constant (J·s)",
+      "m": "Mass (kg)",
+      "v": "Velocity (m/s)"
+    },
+    "applications": [
+      "electron microscopy",
+      "quantum mechanics"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_31",
+    "domain": "physics",
+    "category": "quantum_physics",
+    "difficulty": "advanced",
+    "name": "Heisenberg Uncertainty Principle",
+    "symbol": "Δx·Δp",
+    "formula": "\\Delta x \\cdot \\Delta p \\geq \\frac{\\hbar}{2}",
+    "variables": {
+      "\\Delta x": "Position uncertainty (m)",
+      "\\Delta p": "Momentum uncertainty (kg·m/s)",
+      "\\hbar": "h/2π = 1.055×10⁻³⁴ J·s"
+    },
+    "applications": [
+      "quantum limit",
+      "nanotechnology"
+    ],
+    "calculator_route": "/calculator/phys_31",
+    "calculator_eligible": true,
+    "compute_logic": "1.054e-34 / (2 * inputs.delta_p)"
+  },
+  {
+    "id": "phys_32",
+    "domain": "physics",
+    "category": "relativity",
+    "difficulty": "advanced",
+    "name": "Mass-Energy Equivalence",
+    "symbol": "E",
+    "formula": "E = mc^2",
+    "variables": {
+      "m": "Rest mass (kg)",
+      "c": "Speed of light 3×10⁸ m/s"
+    },
+    "applications": [
+      "nuclear energy",
+      "particle physics"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_33",
+    "domain": "physics",
+    "category": "relativity",
+    "difficulty": "advanced",
+    "name": "Time Dilation (Special Relativity)",
+    "symbol": "Δt'",
+    "formula": "\\Delta t' = \\frac{\\Delta t}{\\sqrt{1 - v^2/c^2}}",
+    "variables": {
+      "\\Delta t": "Proper time (s)",
+      "v": "Relative velocity (m/s)",
+      "c": "Speed of light (m/s)"
+    },
+    "applications": [
+      "GPS correction",
+      "particle decay"
+    ],
+    "calculator_route": "/calculator/phys_33",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.delta_t / Math.sqrt(1 - Math.pow(inputs.v / inputs.c, 2))"
+  },
+  {
+    "id": "phys_34",
+    "domain": "physics",
+    "category": "nuclear_physics",
+    "difficulty": "intermediate",
+    "name": "Radioactive Decay Law",
+    "symbol": "N(t)",
+    "formula": "N(t) = N_0 e^{-\\lambda t}",
+    "variables": {
+      "N_0": "Initial number of nuclei",
+      "\\lambda": "Decay constant (1/s)",
+      "t": "Time (s)"
+    },
+    "applications": [
+      "carbon dating",
+      "nuclear reactor design"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_35",
+    "domain": "physics",
+    "category": "nuclear_physics",
+    "difficulty": "intermediate",
+    "name": "Half-Life",
+    "symbol": "t_{1/2}",
+    "formula": "t_{1/2} = \\frac{\\ln 2}{\\lambda}",
+    "variables": {
+      "\\lambda": "Decay constant (1/s)"
+    },
+    "applications": [
+      "radiological safety",
+      "medical isotopes"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_36",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "basic",
+    "name": "Power",
+    "symbol": "P",
+    "formula": "P = \\frac{W}{t} = Fv",
+    "variables": {
+      "W": "Work done (J)",
+      "t": "Time (s)",
+      "F": "Force (N)",
+      "v": "Velocity (m/s)"
+    },
+    "applications": [
+      "engine output",
+      "motor rating"
+    ],
+    "calculator_route": "/mechanical/torque-power",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_37",
+    "domain": "physics",
+    "category": "waves_optics",
+    "difficulty": "basic",
+    "name": "Sound Intensity Level",
+    "symbol": "L",
+    "formula": "L = 10\\log_{10}\\left(\\frac{I}{I_0}\\right)",
+    "variables": {
+      "I": "Sound intensity (W/m²)",
+      "I_0": "Reference intensity 10⁻¹² W/m²"
+    },
+    "applications": [
+      "acoustic design",
+      "noise control"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_38",
+    "domain": "physics",
+    "category": "thermodynamics",
+    "difficulty": "intermediate",
+    "name": "Entropy Change (Reversible)",
+    "symbol": "ΔS",
+    "formula": "\\Delta S = \\frac{Q_{rev}}{T}",
+    "variables": {
+      "Q_{rev}": "Reversible heat transferred (J)",
+      "T": "Absolute temperature (K)"
+    },
+    "applications": [
+      "thermodynamic cycles",
+      "chemical equilibrium"
+    ],
+    "calculator_route": "/physics/thermodynamics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_39",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "intermediate",
+    "name": "Angular Momentum",
+    "symbol": "L",
+    "formula": "L = I\\omega",
+    "variables": {
+      "I": "Moment of inertia (kg·m²)",
+      "\\omega": "Angular velocity (rad/s)"
+    },
+    "applications": [
+      "gyroscope",
+      "spinning satellite"
+    ],
+    "calculator_route": "/physics/kinematics",
+    "calculator_eligible": true
+  },
+  {
+    "id": "phys_40",
+    "domain": "physics",
+    "category": "classical_mechanics",
+    "difficulty": "intermediate",
+    "name": "Simple Harmonic Motion (Period)",
+    "symbol": "T",
+    "formula": "T = 2\\pi\\sqrt{\\frac{m}{k}}",
+    "variables": {
+      "m": "Mass (kg)",
+      "k": "Spring constant (N/m)"
+    },
+    "applications": [
+      "spring-mass systems",
+      "vibration analysis"
+    ],
+    "calculator_route": "/physics/waves",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_01",
+    "domain": "cs",
+    "category": "networking",
+    "difficulty": "intermediate",
+    "name": "Shannon Channel Capacity",
+    "symbol": "C",
+    "formula": "C = B \\log_2\\left(1 + \\frac{S}{N}\\right)",
+    "variables": {
+      "B": "Bandwidth (Hz)",
+      "S": "Signal power (W)",
+      "N": "Noise power (W)"
+    },
+    "applications": [
+      "network planning",
+      "modem design"
+    ],
+    "calculator_route": "/calculator/cs_01",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.B * Math.log2(1 + (inputs.S / inputs.N))"
+  },
+  {
+    "id": "cs_02",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "basic",
+    "name": "Big-O: Binary Search",
+    "symbol": "O",
+    "formula": "T(n) = O(\\log n)",
+    "variables": {
+      "n": "Input size"
+    },
+    "applications": [
+      "algorithm analysis",
+      "search performance"
+    ],
+    "calculator_route": "/calculator/cs_02",
+    "calculator_eligible": true,
+    "compute_logic": "Math.log2(inputs.n)"
+  },
+  {
+    "id": "cs_03",
+    "domain": "cs",
+    "category": "networking",
+    "difficulty": "intermediate",
+    "name": "Subnet Host Count",
+    "symbol": "H",
+    "formula": "H = 2^{(32 - \\text{prefix})} - 2",
+    "variables": {
+      "prefix": "CIDR prefix length (0-32)"
+    },
+    "applications": [
+      "IP subnetting",
+      "network design"
+    ],
+    "calculator_route": "/cs/subnet-calculator",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_04",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "advanced",
+    "name": "Huffman Entropy",
+    "symbol": "H",
+    "formula": "H = -\\sum p_i \\log_2(p_i)",
+    "variables": {
+      "p_i": "Probability of symbol i"
+    },
+    "applications": [
+      "data compression",
+      "information theory"
+    ],
+    "calculator_route": "/calculator/cs_04",
+    "calculator_eligible": true,
+    "compute_logic": "'Huffman entropy sequence sum.'"
+  },
+  {
+    "id": "cs_05",
+    "domain": "cs",
+    "category": "cryptography",
+    "difficulty": "advanced",
+    "name": "RSA Modular Exponentiation",
+    "symbol": "C",
+    "formula": "C = M^e \\mod n",
+    "variables": {
+      "M": "Message",
+      "e": "Public exponent",
+      "n": "Modulus"
+    },
+    "applications": [
+      "encryption",
+      "digital signatures"
+    ],
+    "calculator_route": "/calculator/cs_05",
+    "calculator_eligible": true,
+    "compute_logic": "Number((BigInt(inputs.M) ** BigInt(inputs.e)) % BigInt(inputs.n))"
+  },
+  {
+    "id": "cs_06",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "basic",
+    "name": "Big-O: Bubble / Insertion Sort",
+    "symbol": "T(n)",
+    "formula": "T(n) = O(n^2)",
+    "variables": {
+      "n": "Number of elements"
+    },
+    "applications": [
+      "algorithm analysis",
+      "sorting benchmarks"
+    ],
+    "calculator_route": "/calculator/cs_06",
+    "calculator_eligible": true,
+    "compute_logic": "Math.pow(inputs.n, 2)"
+  },
+  {
+    "id": "cs_07",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "intermediate",
+    "name": "Big-O: Merge Sort / Heap Sort",
+    "symbol": "T(n)",
+    "formula": "T(n) = O(n \\log n)",
+    "variables": {
+      "n": "Number of elements"
+    },
+    "applications": [
+      "efficient sorting",
+      "algorithm comparison"
+    ],
+    "calculator_route": "/calculator/cs_07",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.n * Math.log2(inputs.n)"
+  },
+  {
+    "id": "cs_08",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "intermediate",
+    "name": "Big-O: Matrix Multiplication (Naive)",
+    "symbol": "T(n)",
+    "formula": "T(n) = O(n^3)",
+    "variables": {
+      "n": "Matrix dimension (n×n)"
+    },
+    "applications": [
+      "linear algebra",
+      "graphics transforms"
+    ],
+    "calculator_route": "/calculator/cs_08",
+    "calculator_eligible": true,
+    "compute_logic": "Math.pow(inputs.n, 3)"
+  },
+  {
+    "id": "cs_09",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "basic",
+    "name": "Hash Table Load Factor",
+    "symbol": "λ",
+    "formula": "\\lambda = \\frac{n}{m}",
+    "variables": {
+      "n": "Number of stored elements",
+      "m": "Number of hash table slots"
+    },
+    "applications": [
+      "hash table performance",
+      "collision control"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_10",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "intermediate",
+    "name": "Master Theorem (Divide & Conquer)",
+    "symbol": "T(n)",
+    "formula": "T(n) = aT\\!\\left(\\frac{n}{b}\\right) + f(n)",
+    "variables": {
+      "a": "Number of subproblems",
+      "b": "Input size reduction factor",
+      "f(n)": "Cost of non-recursive work"
+    },
+    "applications": [
+      "analysing divide-and-conquer algorithms"
+    ],
+    "calculator_route": "/calculator/cs_10",
+    "calculator_eligible": true,
+    "compute_logic": "'Master theorem recursion.'"
+  },
+  {
+    "id": "cs_11",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "intermediate",
+    "name": "Dijkstra's Algorithm Complexity",
+    "symbol": "T",
+    "formula": "T = O((V + E) \\log V)",
+    "variables": {
+      "V": "Number of vertices",
+      "E": "Number of edges"
+    },
+    "applications": [
+      "shortest path routing",
+      "GPS navigation"
+    ],
+    "calculator_route": "/calculator/cs_11",
+    "calculator_eligible": true,
+    "compute_logic": "(inputs.V + inputs.E) * Math.log2(inputs.V)"
+  },
+  {
+    "id": "cs_12",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "basic",
+    "name": "BFS / DFS Complexity",
+    "symbol": "T",
+    "formula": "T = O(V + E)",
+    "variables": {
+      "V": "Vertices",
+      "E": "Edges"
+    },
+    "applications": [
+      "graph traversal",
+      "web crawling"
+    ],
+    "calculator_route": "/calculator/cs_12",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.V + inputs.E"
+  },
+  {
+    "id": "cs_13",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "intermediate",
+    "name": "Fibonacci Recurrence (Naive)",
+    "symbol": "F(n)",
+    "formula": "F(n) = F(n-1) + F(n-2),\\quad F(0)=0,\\; F(1)=1",
+    "variables": {
+      "n": "Term index"
+    },
+    "applications": [
+      "dynamic programming",
+      "algorithm recursion"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_14",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "advanced",
+    "name": "Knapsack DP (0/1)",
+    "symbol": "dp[i][w]",
+    "formula": "dp[i][w] = \\max(dp[i-1][w],\\; v_i + dp[i-1][w-w_i])",
+    "variables": {
+      "v_i": "Value of item i",
+      "w_i": "Weight of item i",
+      "w": "Remaining capacity"
+    },
+    "applications": [
+      "resource allocation",
+      "optimisation"
+    ],
+    "calculator_route": "/calculator/cs_14",
+    "calculator_eligible": true,
+    "compute_logic": "'Knapsack DP requires capacity array iteration.'"
+  },
+  {
+    "id": "cs_15",
+    "domain": "cs",
+    "category": "networking",
+    "difficulty": "basic",
+    "name": "Bandwidth-Delay Product",
+    "symbol": "BDP",
+    "formula": "BDP = Bandwidth \\times RTT",
+    "variables": {
+      "Bandwidth": "Link speed (bits/s)",
+      "RTT": "Round-trip time (s)"
+    },
+    "applications": [
+      "TCP buffer sizing",
+      "network capacity planning"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_16",
+    "domain": "cs",
+    "category": "networking",
+    "difficulty": "basic",
+    "name": "Packet Transmission Delay",
+    "symbol": "t_t",
+    "formula": "t_t = \\frac{L}{B}",
+    "variables": {
+      "L": "Packet size (bits)",
+      "B": "Link bandwidth (bits/s)"
+    },
+    "applications": [
+      "network latency modelling",
+      "QoS analysis"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_17",
+    "domain": "cs",
+    "category": "networking",
+    "difficulty": "intermediate",
+    "name": "TCP Throughput (Theoretical)",
+    "symbol": "T",
+    "formula": "T = \\frac{MSS}{RTT \\sqrt{p}}",
+    "variables": {
+      "MSS": "Maximum segment size (bytes)",
+      "RTT": "Round-trip time (s)",
+      "p": "Packet loss probability"
+    },
+    "applications": [
+      "TCP performance analysis",
+      "network tuning"
+    ],
+    "calculator_route": "/calculator/cs_17",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.MSS / (inputs.RTT * Math.sqrt(inputs.p))"
+  },
+  {
+    "id": "cs_18",
+    "domain": "cs",
+    "category": "networking",
+    "difficulty": "intermediate",
+    "name": "Goodput (Effective Throughput)",
+    "symbol": "G",
+    "formula": "G = \\frac{\\text{Useful data received}}{\\text{Total time}}",
+    "variables": {
+      "Useful data": "Payload bytes",
+      "Total time": "Transfer duration (s)"
+    },
+    "applications": [
+      "network efficiency",
+      "protocol overhead analysis"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_19",
+    "domain": "cs",
+    "category": "networking",
+    "difficulty": "intermediate",
+    "name": "CIDR Usable Hosts",
+    "symbol": "H",
+    "formula": "H = 2^{32 - prefix} - 2",
+    "variables": {
+      "prefix": "CIDR prefix length (e.g. 24 for /24)"
+    },
+    "applications": [
+      "IP addressing",
+      "network design"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_20",
+    "domain": "cs",
+    "category": "architecture",
+    "difficulty": "basic",
+    "name": "CPI — Cycles Per Instruction",
+    "symbol": "CPI",
+    "formula": "\\text{CPI} = \\frac{\\text{Total CPU cycles}}{\\text{Instruction count}}",
+    "variables": {
+      "Total CPU cycles": "Clock cycles elapsed",
+      "Instruction count": "Number of instructions executed"
+    },
+    "applications": [
+      "CPU performance analysis",
+      "benchmark comparison"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_21",
+    "domain": "cs",
+    "category": "architecture",
+    "difficulty": "intermediate",
+    "name": "Amdahl's Law (Speedup)",
+    "symbol": "S",
+    "formula": "S = \\frac{1}{(1-p) + \\frac{p}{n}}",
+    "variables": {
+      "p": "Parallelisable fraction (0–1)",
+      "n": "Number of processors"
+    },
+    "applications": [
+      "parallel computing",
+      "multicore CPU analysis"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_22",
+    "domain": "cs",
+    "category": "architecture",
+    "difficulty": "intermediate",
+    "name": "AMAT — Average Memory Access Time",
+    "symbol": "AMAT",
+    "formula": "AMAT = t_{hit} + (1 - h) \\cdot t_{miss}",
+    "variables": {
+      "t_{hit}": "Cache hit time (ns)",
+      "h": "Cache hit rate (0–1)",
+      "t_{miss}": "Miss penalty (ns)"
+    },
+    "applications": [
+      "memory hierarchy design",
+      "cache optimisation"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_23",
+    "domain": "cs",
+    "category": "architecture",
+    "difficulty": "basic",
+    "name": "Cache Hit Rate",
+    "symbol": "h",
+    "formula": "h = \\frac{\\text{Cache hits}}{\\text{Total memory accesses}}",
+    "variables": {
+      "Cache hits": "Accesses served from cache",
+      "Total accesses": "All memory references"
+    },
+    "applications": [
+      "cache performance",
+      "L1/L2/L3 analysis"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_24",
+    "domain": "cs",
+    "category": "architecture",
+    "difficulty": "intermediate",
+    "name": "Gustafson's Law (Scaled Speedup)",
+    "symbol": "S'",
+    "formula": "S'(n) = n - (1-p)(n-1)",
+    "variables": {
+      "n": "Number of processors",
+      "p": "Parallel fraction (0–1)"
+    },
+    "applications": [
+      "large-scale parallel computing",
+      "HPC benchmarking"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_25",
+    "domain": "cs",
+    "category": "architecture",
+    "difficulty": "advanced",
+    "name": "CMOS Power Dissipation",
+    "symbol": "P",
+    "formula": "P = \\alpha C_L V_{DD}^2 f",
+    "variables": {
+      "\\alpha": "Activity factor",
+      "C_L": "Load capacitance (F)",
+      "V_{DD}": "Supply voltage (V)",
+      "f": "Clock frequency (Hz)"
+    },
+    "applications": [
+      "chip power budgeting",
+      "low-power design"
+    ],
+    "calculator_route": "/calculator/cs_25",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.alpha * inputs.C_L * Math.pow(inputs.V_DD, 2) * inputs.f"
+  },
+  {
+    "id": "cs_26",
+    "domain": "cs",
+    "category": "cryptography",
+    "difficulty": "advanced",
+    "name": "Diffie-Hellman Key Exchange",
+    "symbol": "K",
+    "formula": "K = g^{ab} \\mod p",
+    "variables": {
+      "g": "Generator (primitive root mod p)",
+      "a, b": "Private keys",
+      "p": "Large prime modulus"
+    },
+    "applications": [
+      "key exchange",
+      "TLS/SSL handshake"
+    ],
+    "calculator_route": "/calculator/cs_26",
+    "calculator_eligible": true,
+    "compute_logic": "Number((BigInt(inputs.g) ** BigInt(inputs.ab)) % BigInt(inputs.p))"
+  },
+  {
+    "id": "cs_27",
+    "domain": "cs",
+    "category": "cryptography",
+    "difficulty": "intermediate",
+    "name": "Birthday Paradox (Collision Probability)",
+    "symbol": "P",
+    "formula": "P(collision) \\approx 1 - e^{-n^2 / 2N}",
+    "variables": {
+      "n": "Number of samples",
+      "N": "Total possible hash values"
+    },
+    "applications": [
+      "hash function security",
+      "collision attacks"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_28",
+    "domain": "cs",
+    "category": "cryptography",
+    "difficulty": "basic",
+    "name": "AES Key Space Size",
+    "symbol": "K",
+    "formula": "K = 2^{\\text{key bits}}",
+    "variables": {
+      "key bits": "128, 192, or 256"
+    },
+    "applications": [
+      "encryption strength",
+      "brute-force resistance"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_29",
+    "domain": "cs",
+    "category": "information_theory",
+    "difficulty": "intermediate",
+    "name": "Shannon Entropy",
+    "symbol": "H",
+    "formula": "H(X) = -\\sum_{i} p_i \\log_2 p_i",
+    "variables": {
+      "p_i": "Probability of outcome i"
+    },
+    "applications": [
+      "data compression",
+      "feature selection in ML"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_30",
+    "domain": "cs",
+    "category": "information_theory",
+    "difficulty": "advanced",
+    "name": "Mutual Information",
+    "symbol": "I(X;Y)",
+    "formula": "I(X;Y) = H(X) + H(Y) - H(X,Y)",
+    "variables": {
+      "H(X), H(Y)": "Individual entropies (bits)",
+      "H(X,Y)": "Joint entropy (bits)"
+    },
+    "applications": [
+      "feature selection",
+      "channel analysis"
+    ],
+    "calculator_route": "/calculator/cs_30",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.H_X + inputs.H_Y - inputs.H_XY"
+  },
+  {
+    "id": "cs_31",
+    "domain": "cs",
+    "category": "information_theory",
+    "difficulty": "intermediate",
+    "name": "Information Redundancy",
+    "symbol": "R",
+    "formula": "R = 1 - \\frac{H(X)}{H_{max}}",
+    "variables": {
+      "H(X)": "Actual entropy (bits)",
+      "H_{max}": "Maximum possible entropy (bits)"
+    },
+    "applications": [
+      "compression efficiency",
+      "source coding"
+    ],
+    "calculator_route": "/calculator/cs_31",
+    "calculator_eligible": true,
+    "compute_logic": "1 - (inputs.H_X / inputs.H_max)"
+  },
+  {
+    "id": "cs_32",
+    "domain": "cs",
+    "category": "operating_systems",
+    "difficulty": "intermediate",
+    "name": "CPU Utilisation (Little's Law)",
+    "symbol": "U",
+    "formula": "U = \\lambda \\cdot W",
+    "variables": {
+      "\\lambda": "Arrival rate of jobs (jobs/s)",
+      "W": "Average service time (s)"
+    },
+    "applications": [
+      "server capacity planning",
+      "OS scheduling"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_33",
+    "domain": "cs",
+    "category": "operating_systems",
+    "difficulty": "basic",
+    "name": "Effective Access Time (EAT)",
+    "symbol": "EAT",
+    "formula": "EAT = h \\cdot t_{cache} + (1-h) \\cdot t_{memory}",
+    "variables": {
+      "h": "Cache hit probability",
+      "t_{cache}": "Cache access time (ns)",
+      "t_{memory}": "Main memory access time (ns)"
+    },
+    "applications": [
+      "virtual memory performance"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_34",
+    "domain": "cs",
+    "category": "operating_systems",
+    "difficulty": "intermediate",
+    "name": "Page Fault Effective Access Time",
+    "symbol": "EAT",
+    "formula": "EAT = (1-p) \\cdot t_{mem} + p \\cdot t_{page fault}",
+    "variables": {
+      "p": "Page fault rate",
+      "t_{mem}": "Memory access time (ns)",
+      "t_{page fault}": "Page fault service time (ms)"
+    },
+    "applications": [
+      "virtual memory tuning",
+      "workload analysis"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_35",
+    "domain": "cs",
+    "category": "operating_systems",
+    "difficulty": "intermediate",
+    "name": "Disk Access Time",
+    "symbol": "T",
+    "formula": "T = t_{seek} + t_{rotation} + t_{transfer}",
+    "variables": {
+      "t_{seek}": "Seek time (ms)",
+      "t_{rotation}": "Rotational latency (ms)",
+      "t_{transfer}": "Data transfer time (ms)"
+    },
+    "applications": [
+      "HDD performance modelling",
+      "I/O scheduling"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_36",
+    "domain": "cs",
+    "category": "data_structures",
+    "difficulty": "basic",
+    "name": "B-Tree Maximum Keys per Node",
+    "symbol": "k",
+    "formula": "k = 2t - 1",
+    "variables": {
+      "t": "Minimum degree of B-tree (t ≥ 2)"
+    },
+    "applications": [
+      "database indexing",
+      "file system design"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_37",
+    "domain": "cs",
+    "category": "data_structures",
+    "difficulty": "intermediate",
+    "name": "AVL Tree Maximum Height",
+    "symbol": "h",
+    "formula": "h < 1.44 \\log_2(n+2)",
+    "variables": {
+      "n": "Number of nodes"
+    },
+    "applications": [
+      "self-balancing BST",
+      "database indices"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_38",
+    "domain": "cs",
+    "category": "data_structures",
+    "difficulty": "intermediate",
+    "name": "Bloom Filter False Positive Rate",
+    "symbol": "p",
+    "formula": "p \\approx \\left(1 - e^{-kn/m}\\right)^k",
+    "variables": {
+      "k": "Number of hash functions",
+      "n": "Number of inserted elements",
+      "m": "Size of bit array"
+    },
+    "applications": [
+      "cache membership queries",
+      "network routers"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_39",
+    "domain": "cs",
+    "category": "data_structures",
+    "difficulty": "advanced",
+    "name": "Skip List Expected Height",
+    "symbol": "h",
+    "formula": "E[h] = \\log_{1/p} n",
+    "variables": {
+      "p": "Promotion probability (typically 0.5)",
+      "n": "Number of elements"
+    },
+    "applications": [
+      "probabilistic data structures",
+      "concurrent lists"
+    ],
+    "calculator_route": "/calculator/cs_39",
+    "calculator_eligible": true,
+    "compute_logic": "Math.log(inputs.n) / Math.log(1 / inputs.p)"
+  },
+  {
+    "id": "cs_40",
+    "domain": "cs",
+    "category": "probability",
+    "difficulty": "basic",
+    "name": "Geometric Distribution (CDF)",
+    "symbol": "P",
+    "formula": "P(X \\leq k) = 1 - (1-p)^k",
+    "variables": {
+      "p": "Success probability per trial",
+      "k": "Number of trials"
+    },
+    "applications": [
+      "random backoff",
+      "retry protocols"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_41",
+    "domain": "cs",
+    "category": "probability",
+    "difficulty": "intermediate",
+    "name": "Poisson Arrival Rate",
+    "symbol": "P(k)",
+    "formula": "P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}",
+    "variables": {
+      "\\lambda": "Average arrival rate (events/unit time)",
+      "k": "Observed events"
+    },
+    "applications": [
+      "network traffic modelling",
+      "queueing theory"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_42",
+    "domain": "cs",
+    "category": "probability",
+    "difficulty": "intermediate",
+    "name": "Expected Max Load (Balls-into-Bins)",
+    "symbol": "L",
+    "formula": "E[L] = \\Theta\\!\\left(\\frac{\\log n}{\\log \\log n}\\right)",
+    "variables": {
+      "n": "Number of bins = number of balls"
+    },
+    "applications": [
+      "load balancing",
+      "hash table analysis"
+    ],
+    "calculator_route": "/calculator/cs_42",
+    "calculator_eligible": true,
+    "compute_logic": "Math.log(inputs.n) / Math.log(Math.log(inputs.n))"
+  },
+  {
+    "id": "cs_43",
+    "domain": "cs",
+    "category": "algorithms",
+    "difficulty": "intermediate",
+    "name": "Quick Sort Average Complexity",
+    "symbol": "T(n)",
+    "formula": "T(n) = O(n \\log n) \\text{ avg},\\; O(n^2) \\text{ worst}",
+    "variables": {
+      "n": "Number of elements"
+    },
+    "applications": [
+      "in-place sorting",
+      "algorithm analysis"
+    ],
+    "calculator_route": "/calculator/cs_43",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.n * Math.log2(inputs.n)"
+  },
+  {
+    "id": "cs_44",
+    "domain": "cs",
+    "category": "networking",
+    "difficulty": "basic",
+    "name": "End-to-End Propagation Delay",
+    "symbol": "t_p",
+    "formula": "t_p = \\frac{d}{s}",
+    "variables": {
+      "d": "Distance (m)",
+      "s": "Propagation speed (~2×10⁸ m/s in copper)"
+    },
+    "applications": [
+      "network latency",
+      "satellite link design"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "cs_45",
+    "domain": "cs",
+    "category": "architecture",
+    "difficulty": "basic",
+    "name": "CPU Execution Time",
+    "symbol": "T",
+    "formula": "T = \\frac{IC \\times CPI}{f}",
+    "variables": {
+      "IC": "Instruction count",
+      "CPI": "Cycles per instruction",
+      "f": "Clock frequency (Hz)"
+    },
+    "applications": [
+      "CPU performance",
+      "program optimisation"
+    ],
+    "calculator_route": "/cs/base-converter",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_01",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "basic",
+    "name": "Future Value (Compound)",
+    "symbol": "FV",
+    "formula": "FV = PV(1 + r)^n",
+    "variables": {
+      "PV": "Present value ($)",
+      "r": "Interest rate per period",
+      "n": "Number of periods"
+    },
+    "applications": [
+      "savings growth",
+      "loan forecasting"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_02",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "intermediate",
+    "name": "Net Present Value",
+    "symbol": "NPV",
+    "formula": "NPV = \\sum_{t=0}^{n} \\frac{C_t}{(1+r)^t}",
+    "variables": {
+      "C_t": "Cash flow at time t ($)",
+      "r": "Discount rate",
+      "t": "Period"
+    },
+    "applications": [
+      "investment decisions",
+      "project evaluation"
+    ],
+    "calculator_route": "/economics/npv",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_03",
+    "domain": "economics",
+    "category": "engineering_economics",
+    "difficulty": "intermediate",
+    "name": "Break-Even Point (Units)",
+    "symbol": "Q",
+    "formula": "Q = \\frac{FC}{P - VC}",
+    "variables": {
+      "FC": "Fixed costs ($)",
+      "P": "Price per unit ($)",
+      "VC": "Variable cost per unit ($)"
+    },
+    "applications": [
+      "profitability analysis",
+      "pricing strategy"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_04",
+    "domain": "economics",
+    "category": "investments",
+    "difficulty": "basic",
+    "name": "Return on Investment",
+    "symbol": "ROI",
+    "formula": "ROI = \\frac{\\text{Net Profit}}{\\text{Investment Cost}} \\times 100\\%",
+    "variables": {
+      "Net Profit": "Gain minus cost ($)",
+      "Investment Cost": "Total cost ($)"
+    },
+    "applications": [
+      "investment evaluation",
+      "business decisions"
+    ],
+    "calculator_route": "/economics/roi-payback",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_05",
+    "domain": "economics",
+    "category": "engineering_economics",
+    "difficulty": "intermediate",
+    "name": "Straight-Line Depreciation",
+    "symbol": "D",
+    "formula": "D = \\frac{C - S}{n}",
+    "variables": {
+      "C": "Initial cost ($)",
+      "S": "Salvage value ($)",
+      "n": "Useful life (years)"
+    },
+    "applications": [
+      "asset management",
+      "tax planning"
+    ],
+    "calculator_route": "/economics/depreciation",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_06",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "intermediate",
+    "name": "Annuity Present Value",
+    "symbol": "PV",
+    "formula": "PV = PMT \\cdot \\frac{1 - (1+r)^{-n}}{r}",
+    "variables": {
+      "PMT": "Payment per period ($)",
+      "r": "Rate per period",
+      "n": "Periods"
+    },
+    "applications": [
+      "loan payments",
+      "retirement planning"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_07",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "intermediate",
+    "name": "Internal Rate of Return (IRR)",
+    "symbol": "IRR",
+    "formula": "0 = \\sum_{t=0}^{n} \\frac{C_t}{(1+IRR)^t}",
+    "variables": {
+      "C_t": "Cash flow at time t ($)",
+      "n": "Number of periods"
+    },
+    "applications": [
+      "investment appraisal",
+      "project comparison"
+    ],
+    "calculator_route": "/economics/irr",
+    "calculator_eligible": true,
+    "compute_logic": "'IRR summation polynomial root finding. Numerical method required.'"
+  },
+  {
+    "id": "econ_08",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "intermediate",
+    "name": "Payback Period",
+    "symbol": "PP",
+    "formula": "PP = \\frac{\\text{Initial Investment}}{\\text{Annual Cash Inflow}}",
+    "variables": {
+      "Initial Investment": "Upfront cost ($)",
+      "Annual Cash Inflow": "Average yearly return ($)"
+    },
+    "applications": [
+      "capital budgeting",
+      "risk assessment"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_09",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "intermediate",
+    "name": "Profitability Index",
+    "symbol": "PI",
+    "formula": "PI = \\frac{PV \\text{ of future cash flows}}{\\text{Initial Investment}}",
+    "variables": {
+      "PV": "Present value of inflows ($)",
+      "Initial Investment": "Upfront cost ($)"
+    },
+    "applications": [
+      "capital rationing",
+      "project ranking"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_10",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "intermediate",
+    "name": "Effective Annual Rate (EAR)",
+    "symbol": "EAR",
+    "formula": "EAR = \\left(1 + \\frac{r}{m}\\right)^m - 1",
+    "variables": {
+      "r": "Nominal interest rate",
+      "m": "Compounding periods per year"
+    },
+    "applications": [
+      "loan comparison",
+      "deposit accounts"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_11",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "intermediate",
+    "name": "Bond Price",
+    "symbol": "P",
+    "formula": "P = \\sum_{t=1}^{n} \\frac{C}{(1+r)^t} + \\frac{F}{(1+r)^n}",
+    "variables": {
+      "C": "Coupon payment ($)",
+      "r": "Yield to maturity (decimal)",
+      "F": "Face value ($)",
+      "n": "Periods to maturity"
+    },
+    "applications": [
+      "bond valuation",
+      "fixed income investing"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_12",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "advanced",
+    "name": "Black-Scholes (Call Option)",
+    "symbol": "C",
+    "formula": "C = S_0 N(d_1) - K e^{-rT} N(d_2)",
+    "variables": {
+      "S_0": "Current stock price ($)",
+      "K": "Strike price ($)",
+      "r": "Risk-free rate",
+      "T": "Time to expiry (years)",
+      "N(d)": "Standard normal CDF"
+    },
+    "applications": [
+      "option pricing",
+      "derivatives trading"
+    ],
+    "calculator_route": "/calculator/econ_12",
+    "calculator_eligible": true,
+    "compute_logic": "'Black-Scholes cumulative distribution required.'"
+  },
+  {
+    "id": "econ_13",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "intermediate",
+    "name": "Sharpe Ratio",
+    "symbol": "S",
+    "formula": "S = \\frac{R_p - R_f}{\\sigma_p}",
+    "variables": {
+      "R_p": "Portfolio return",
+      "R_f": "Risk-free return",
+      "\\sigma_p": "Portfolio standard deviation"
+    },
+    "applications": [
+      "portfolio performance",
+      "risk-adjusted return"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_14",
+    "domain": "economics",
+    "category": "financial_mathematics",
+    "difficulty": "intermediate",
+    "name": "CAPM — Capital Asset Pricing Model",
+    "symbol": "E(R)",
+    "formula": "E(R_i) = R_f + \\beta_i (E(R_m) - R_f)",
+    "variables": {
+      "R_f": "Risk-free rate",
+      "\\beta_i": "Asset beta",
+      "E(R_m)": "Expected market return"
+    },
+    "applications": [
+      "asset valuation",
+      "cost of equity"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_15",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "basic",
+    "name": "Price Elasticity of Demand",
+    "symbol": "PED",
+    "formula": "PED = \\frac{\\% \\Delta Q_d}{\\% \\Delta P}",
+    "variables": {
+      "\\% \\Delta Q_d": "% change in quantity demanded",
+      "\\% \\Delta P": "% change in price"
+    },
+    "applications": [
+      "pricing strategy",
+      "tax incidence analysis"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_16",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "basic",
+    "name": "Price Elasticity of Supply",
+    "symbol": "PES",
+    "formula": "PES = \\frac{\\% \\Delta Q_s}{\\% \\Delta P}",
+    "variables": {
+      "\\% \\Delta Q_s": "% change in quantity supplied",
+      "\\% \\Delta P": "% change in price"
+    },
+    "applications": [
+      "market analysis",
+      "supply response"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_17",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "basic",
+    "name": "Consumer Surplus",
+    "symbol": "CS",
+    "formula": "CS = \\frac{1}{2}(P_{max} - P) \\times Q",
+    "variables": {
+      "P_{max}": "Maximum willingness to pay ($)",
+      "P": "Market price ($)",
+      "Q": "Quantity"
+    },
+    "applications": [
+      "welfare analysis",
+      "market efficiency"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_18",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "basic",
+    "name": "Producer Surplus",
+    "symbol": "PS",
+    "formula": "PS = \\frac{1}{2}(P - P_{min}) \\times Q",
+    "variables": {
+      "P": "Market price ($)",
+      "P_{min}": "Minimum acceptable price ($)",
+      "Q": "Quantity"
+    },
+    "applications": [
+      "welfare economics",
+      "trade analysis"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_19",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "intermediate",
+    "name": "Marginal Revenue",
+    "symbol": "MR",
+    "formula": "MR = \\frac{\\Delta TR}{\\Delta Q}",
+    "variables": {
+      "\\Delta TR": "Change in total revenue ($)",
+      "\\Delta Q": "Change in quantity"
+    },
+    "applications": [
+      "profit maximisation",
+      "pricing decisions"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_20",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "intermediate",
+    "name": "Profit Maximisation (MR = MC)",
+    "symbol": "π",
+    "formula": "\\pi \\text{ max when } MR = MC",
+    "variables": {
+      "MR": "Marginal revenue ($)",
+      "MC": "Marginal cost ($)"
+    },
+    "applications": [
+      "firm output decisions",
+      "monopoly pricing"
+    ],
+    "calculator_route": "/calculator/econ_20",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.MR == inputs.MC ? 'Optimal Profit' : 'Adjust production'"
+  },
+  {
+    "id": "econ_21",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "basic",
+    "name": "Total Cost",
+    "symbol": "TC",
+    "formula": "TC = FC + VC",
+    "variables": {
+      "FC": "Fixed costs ($)",
+      "VC": "Variable costs ($)"
+    },
+    "applications": [
+      "cost analysis",
+      "break-even analysis"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_22",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "basic",
+    "name": "Average Total Cost",
+    "symbol": "ATC",
+    "formula": "ATC = \\frac{TC}{Q}",
+    "variables": {
+      "TC": "Total cost ($)",
+      "Q": "Quantity produced"
+    },
+    "applications": [
+      "cost-per-unit analysis",
+      "pricing floors"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_23",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "intermediate",
+    "name": "Lerner Index (Market Power)",
+    "symbol": "L",
+    "formula": "L = \\frac{P - MC}{P}",
+    "variables": {
+      "P": "Price ($)",
+      "MC": "Marginal cost ($)"
+    },
+    "applications": [
+      "monopoly power measurement",
+      "antitrust analysis"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_24",
+    "domain": "economics",
+    "category": "macroeconomics",
+    "difficulty": "basic",
+    "name": "GDP (Expenditure Approach)",
+    "symbol": "GDP",
+    "formula": "GDP = C + I + G + (X - M)",
+    "variables": {
+      "C": "Consumption ($)",
+      "I": "Investment ($)",
+      "G": "Government spending ($)",
+      "X": "Exports ($)",
+      "M": "Imports ($)"
+    },
+    "applications": [
+      "national income accounting",
+      "economic output"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_25",
+    "domain": "economics",
+    "category": "macroeconomics",
+    "difficulty": "basic",
+    "name": "Inflation Rate (CPI)",
+    "symbol": "π",
+    "formula": "\\pi = \\frac{CPI_{t} - CPI_{t-1}}{CPI_{t-1}} \\times 100",
+    "variables": {
+      "CPI_t": "CPI in current period",
+      "CPI_{t-1}": "CPI in previous period"
+    },
+    "applications": [
+      "monetary policy",
+      "real wage calculation"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_26",
+    "domain": "economics",
+    "category": "macroeconomics",
+    "difficulty": "intermediate",
+    "name": "Money Multiplier",
+    "symbol": "m",
+    "formula": "m = \\frac{1}{\\text{Reserve Ratio}}",
+    "variables": {
+      "Reserve Ratio": "Fraction of deposits held as reserves (0–1)"
+    },
+    "applications": [
+      "monetary policy",
+      "banking system"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_27",
+    "domain": "economics",
+    "category": "macroeconomics",
+    "difficulty": "intermediate",
+    "name": "Quantity Theory of Money (MV = PQ)",
+    "symbol": "MV",
+    "formula": "MV = PQ",
+    "variables": {
+      "M": "Money supply ($)",
+      "V": "Velocity of money",
+      "P": "Price level",
+      "Q": "Real output"
+    },
+    "applications": [
+      "inflation analysis",
+      "monetary policy"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_28",
+    "domain": "economics",
+    "category": "macroeconomics",
+    "difficulty": "intermediate",
+    "name": "Okun's Law (Output-Unemployment Gap)",
+    "symbol": "ΔY",
+    "formula": "\\frac{\\Delta Y}{Y} \\approx -2 \\Delta u",
+    "variables": {
+      "\\Delta Y": "Change in real GDP",
+      "Y": "Potential GDP",
+      "\\Delta u": "Change in unemployment rate"
+    },
+    "applications": [
+      "macroeconomic policy",
+      "unemployment analysis"
+    ],
+    "calculator_route": "/calculator/econ_28",
+    "calculator_eligible": true,
+    "compute_logic": "-2 * inputs.delta_u"
+  },
+  {
+    "id": "econ_29",
+    "domain": "economics",
+    "category": "macroeconomics",
+    "difficulty": "intermediate",
+    "name": "Fiscal Multiplier",
+    "symbol": "k",
+    "formula": "k = \\frac{1}{1 - MPC}",
+    "variables": {
+      "MPC": "Marginal propensity to consume (0–1)"
+    },
+    "applications": [
+      "fiscal policy impact",
+      "stimulus analysis"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_30",
+    "domain": "economics",
+    "category": "macroeconomics",
+    "difficulty": "basic",
+    "name": "Real GDP",
+    "symbol": "Y_r",
+    "formula": "Y_r = \\frac{\\text{Nominal GDP}}{\\text{GDP Deflator}} \\times 100",
+    "variables": {
+      "Nominal GDP": "Current price GDP ($)",
+      "GDP Deflator": "Price index (base=100)"
+    },
+    "applications": [
+      "growth measurement",
+      "inflation adjustment"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_31",
+    "domain": "economics",
+    "category": "engineering_economics",
+    "difficulty": "intermediate",
+    "name": "Annual Equivalent Cost (AEC)",
+    "symbol": "AEC",
+    "formula": "AEC = PV \\times \\frac{r(1+r)^n}{(1+r)^n - 1}",
+    "variables": {
+      "PV": "Present value ($)",
+      "r": "Discount rate per period",
+      "n": "Project life (periods)"
+    },
+    "applications": [
+      "equipment replacement",
+      "lifecycle cost comparison"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_32",
+    "domain": "economics",
+    "category": "engineering_economics",
+    "difficulty": "intermediate",
+    "name": "Benefit-Cost Ratio",
+    "symbol": "BCR",
+    "formula": "BCR = \\frac{\\text{PV of Benefits}}{\\text{PV of Costs}}",
+    "variables": {
+      "PV of Benefits": "Discounted total benefits ($)",
+      "PV of Costs": "Discounted total costs ($)"
+    },
+    "applications": [
+      "infrastructure projects",
+      "government investment"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_33",
+    "domain": "economics",
+    "category": "engineering_economics",
+    "difficulty": "intermediate",
+    "name": "Depreciation — Double Declining Balance",
+    "symbol": "D_t",
+    "formula": "D_t = \\frac{2}{n} \\times BV_{t-1}",
+    "variables": {
+      "n": "Asset life (years)",
+      "BV_{t-1}": "Book value at start of year t ($)"
+    },
+    "applications": [
+      "accelerated depreciation",
+      "tax planning"
+    ],
+    "calculator_route": "/economics/depreciation",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_34",
+    "domain": "economics",
+    "category": "engineering_economics",
+    "difficulty": "intermediate",
+    "name": "Units of Production Depreciation",
+    "symbol": "D",
+    "formula": "D = \\frac{C - S}{\\text{Total units}} \\times \\text{Units produced}",
+    "variables": {
+      "C": "Asset cost ($)",
+      "S": "Salvage value ($)",
+      "Total units": "Expected lifetime production"
+    },
+    "applications": [
+      "manufacturing asset accounting",
+      "wear-based depreciation"
+    ],
+    "calculator_route": "/economics/depreciation",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_35",
+    "domain": "economics",
+    "category": "engineering_economics",
+    "difficulty": "advanced",
+    "name": "MARR — Minimum Attractive Rate of Return",
+    "symbol": "MARR",
+    "formula": "\\text{Accept project if } IRR \\geq MARR",
+    "variables": {
+      "IRR": "Internal rate of return",
+      "MARR": "Minimum acceptable return set by firm"
+    },
+    "applications": [
+      "capital budgeting",
+      "engineering project go/no-go"
+    ],
+    "calculator_route": "/calculator/econ_35",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.IRR >= inputs.MARR ? 'Accept Project' : 'Reject Project'"
+  },
+  {
+    "id": "econ_36",
+    "domain": "economics",
+    "category": "investments",
+    "difficulty": "basic",
+    "name": "Compound Annual Growth Rate (CAGR)",
+    "symbol": "CAGR",
+    "formula": "CAGR = \\left(\\frac{V_{end}}{V_{begin}}\\right)^{1/n} - 1",
+    "variables": {
+      "V_{end}": "Ending value ($)",
+      "V_{begin}": "Beginning value ($)",
+      "n": "Number of years"
+    },
+    "applications": [
+      "investment performance",
+      "revenue growth"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_37",
+    "domain": "economics",
+    "category": "investments",
+    "difficulty": "intermediate",
+    "name": "Weighted Average Cost of Capital (WACC)",
+    "symbol": "WACC",
+    "formula": "WACC = \\frac{E}{V}R_e + \\frac{D}{V}R_d(1-T_c)",
+    "variables": {
+      "E": "Equity value ($)",
+      "D": "Debt value ($)",
+      "V": "Total value (E+D)",
+      "R_e": "Cost of equity",
+      "R_d": "Cost of debt",
+      "T_c": "Tax rate"
+    },
+    "applications": [
+      "valuation",
+      "investment hurdle rate"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_38",
+    "domain": "economics",
+    "category": "investments",
+    "difficulty": "intermediate",
+    "name": "Dividend Discount Model (Gordon Growth)",
+    "symbol": "P",
+    "formula": "P = \\frac{D_1}{r - g}",
+    "variables": {
+      "D_1": "Next dividend ($)",
+      "r": "Required rate of return",
+      "g": "Constant growth rate"
+    },
+    "applications": [
+      "stock valuation",
+      "equity analysis"
+    ],
+    "calculator_route": "/economics/tvm",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_39",
+    "domain": "economics",
+    "category": "microeconomics",
+    "difficulty": "intermediate",
+    "name": "Herfindahl-Hirschman Index (HHI)",
+    "symbol": "HHI",
+    "formula": "HHI = \\sum_{i=1}^{n} s_i^2",
+    "variables": {
+      "s_i": "Market share of firm i (%)",
+      "n": "Number of firms"
+    },
+    "applications": [
+      "market concentration",
+      "antitrust regulation"
+    ],
+    "calculator_route": "/economics/break-even",
+    "calculator_eligible": true
+  },
+  {
+    "id": "econ_40",
+    "domain": "economics",
+    "category": "macroeconomics",
+    "difficulty": "intermediate",
+    "name": "Taylor Rule (Interest Rate)",
+    "symbol": "i",
+    "formula": "i = r^* + \\pi + 0.5(\\pi - \\pi^*) + 0.5(y - y^*)",
+    "variables": {
+      "r^*": "Real equilibrium rate",
+      "\\pi": "Actual inflation",
+      "\\pi^*": "Target inflation",
+      "y": "Log real GDP",
+      "y^*": "Log potential GDP"
+    },
+    "applications": [
+      "central bank policy",
+      "interest rate forecasting"
+    ],
+    "calculator_route": "/calculator/econ_40",
+    "calculator_eligible": true,
+    "compute_logic": "inputs.r_star + inputs.pi + 0.5*(inputs.pi - inputs.pi_star) + 0.5*(inputs.y - inputs.y_star)"
+  }
+]

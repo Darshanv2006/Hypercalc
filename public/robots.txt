@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hypercalc.vercel.app/sitemap.xml

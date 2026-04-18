@@ -1,0 +1,103 @@
+const fs = require('fs');
+
+const data = JSON.parse(fs.readFileSync('dv/src/data/formulas.json', 'utf8'));
+
+const logicMap = {
+  "mech_26": "inputs.Q - inputs.W",
+  "mech_31": "inputs.k_a * inputs.k_b * inputs.k_c * inputs.k_d * inputs.k_e * inputs.S_e_prime",
+  "mech_37": "1 - (inputs.Q_out / inputs.Q_in)",
+  "elec_11": "'Sum of V = 0 loop. Cannot evaluate symbolically.'",
+  "elec_12": "'Sum of I_in = Sum of I_out. Cannot evaluate symbolically.'",
+  "elec_13": "inputs.V_oc",
+  "elec_27": "-inputs.N * inputs.dPhi_dt",
+  "elec_34": "inputs.V_Z",
+  "elec_38": "'Fourier series expansion. Symbolic/Iterative evaluation only.'",
+  "elec_39": "(inputs.V - inputs.I_a * inputs.R_a) / (inputs.K * inputs.Phi)",
+  "civil_11": "(inputs.P / inputs.P_n) + (inputs.M / inputs.M_n)",
+  "civil_24": "inputs.a_1 * inputs.D_1 + inputs.a_2 * inputs.D_2 * inputs.m_2 + inputs.a_3 * inputs.D_3 * inputs.m_3",
+  "civil_29": "(2 * inputs.E * inputs.I / inputs.L) * (2 * inputs.theta_A + inputs.theta_B - 3 * inputs.psi) + inputs.FEM_AB",
+  "civil_30": "(inputs.q * inputs.B * (1 - Math.pow(inputs.nu, 2)) / inputs.E) * inputs.I_w",
+  "civil_33": "inputs.q_z * inputs.C_f * inputs.A_f",
+  "civil_34": "'Equilibrium equations. Sum of forces is 0.'",
+  "civil_35": "inputs.h_before - inputs.h_after",
+  "civil_37": "0.208 * inputs.A / inputs.t_p",
+  "civil_38": "(inputs.f_s * inputs.A_s) + (inputs.q_p * inputs.A_p)",
+  "civil_40": "inputs.rho * 0.02 * inputs.concrete_volume",
+  "chem_06": "inputs.A * Math.exp(-inputs.E_a / (8.314 * inputs.T))",
+  "chem_09": "inputs.H_products - inputs.H_reactants",
+  "chem_10": "'Differential Van\\'t Hoff Equation.'",
+  "chem_12": "inputs.k * Math.pow(inputs.C_A, 2)",
+  "chem_14": "'PFR Volume Integral. Requires rate expression integration.'",
+  "chem_15": "inputs.k * inputs.tau * Math.pow(inputs.C_A0, inputs.n - 1)",
+  "chem_16": "-inputs.D * inputs.dC_dz",
+  "chem_17": "(inputs.k_c * inputs.L) / inputs.D",
+  "chem_18": "inputs.NTU * inputs.HTU",
+  "chem_20": "1 - Math.exp(-inputs.NTU * (1 - inputs.C_star)) / (1 - inputs.C_star * Math.exp(-inputs.NTU * (1 - inputs.C_star)))",
+  "chem_23": "(150 * inputs.mu * inputs.u * Math.pow(1 - inputs.epsilon, 2)) / (Math.pow(inputs.d_p, 2) * Math.pow(inputs.epsilon, 3)) + (1.75 * inputs.rho * Math.pow(inputs.u, 2) * (1 - inputs.epsilon)) / (inputs.d_p * Math.pow(inputs.epsilon, 3))",
+  "chem_26": "Math.log((inputs.x_D / (1 - inputs.x_D)) / (inputs.x_B / (1 - inputs.x_B))) / Math.log(inputs.alpha)",
+  "chem_27": "inputs.m_out + inputs.Accumulation",
+  "chem_28": "inputs.delta_H + inputs.delta_KE + inputs.delta_PE + inputs.W_s",
+  "chem_30": "inputs.moles_desired_product / inputs.moles_limiting_reactant",
+  "chem_31": "(8.314 * inputs.T) / (inputs.V_m - inputs.b) - inputs.a / (inputs.V_m * (inputs.V_m + inputs.b) + inputs.b * (inputs.V_m - inputs.b))",
+  "chem_32": "'Equilibrium product. Cannot evaluate generically.'",
+  "chem_35": "inputs.W / (inputs.C * inputs.K_d * inputs.P_1 * inputs.K_b) * Math.sqrt(inputs.T * inputs.Z / inputs.M)",
+  "chem_36": "1 / (inputs.y_1 / inputs.LFL_1 + inputs.y_2 / inputs.LFL_2)",
+  "chem_37": "inputs.mu / (inputs.rho * inputs.D)",
+  "chem_38": "'RTD integral. Requires C(t) array data.'",
+  "chem_40": "(inputs.L / inputs.G) * (inputs.x - inputs.x_2) + inputs.y_2",
+  "math_04": "inputs.n * Math.pow(inputs.x, inputs.n - 1)",
+  "math_11": "'Binomial expansion symbolic representation.'",
+  "math_13": "inputs.n * Math.pow(inputs.x, inputs.n - 1)",
+  "math_14": "'Chain rule symbolic representation.'",
+  "math_15": "'Product rule symbolic representation.'",
+  "math_16": "'Fundamental theorem of calculus integral.'",
+  "math_17": "'Taylor series infinity summation.'",
+  "math_18": "'LHopitals rule limit evaluation.'",
+  "math_19": "Math.pow(Math.sin(inputs.theta), 2) + Math.pow(Math.cos(inputs.theta), 2)",
+  "math_22": "2 * Math.sin(inputs.theta) * Math.cos(inputs.theta)",
+  "math_23": "Math.pow(Math.cos(inputs.theta), 2) - Math.pow(Math.sin(inputs.theta), 2)",
+  "math_28": "'Pearson correlation. Requires array data.'",
+  "math_32": "'Eigenvalue symbolic matrix equation.'",
+  "math_35": "Math.pow(inputs.a, inputs.p) % inputs.p",
+  "phys_04": "(inputs.n * 8.314 * inputs.T) / inputs.V",
+  "phys_28": "'Lorentz force vector cross product.'",
+  "phys_31": "1.054e-34 / (2 * inputs.delta_p)",
+  "phys_33": "inputs.delta_t / Math.sqrt(1 - Math.pow(inputs.v / inputs.c, 2))",
+  "cs_01": "inputs.B * Math.log2(1 + (inputs.S / inputs.N))",
+  "cs_02": "Math.log2(inputs.n)",
+  "cs_04": "'Huffman entropy sequence sum.'",
+  "cs_05": "Number((BigInt(inputs.M) ** BigInt(inputs.e)) % BigInt(inputs.n))",
+  "cs_06": "Math.pow(inputs.n, 2)",
+  "cs_07": "inputs.n * Math.log2(inputs.n)",
+  "cs_08": "Math.pow(inputs.n, 3)",
+  "cs_10": "'Master theorem recursion.'",
+  "cs_11": "(inputs.V + inputs.E) * Math.log2(inputs.V)",
+  "cs_12": "inputs.V + inputs.E",
+  "cs_14": "'Knapsack DP requires capacity array iteration.'",
+  "cs_17": "inputs.MSS / (inputs.RTT * Math.sqrt(inputs.p))",
+  "cs_25": "inputs.alpha * inputs.C_L * Math.pow(inputs.V_DD, 2) * inputs.f",
+  "cs_26": "Number((BigInt(inputs.g) ** BigInt(inputs.ab)) % BigInt(inputs.p))",
+  "cs_30": "inputs.H_X + inputs.H_Y - inputs.H_XY",
+  "cs_31": "1 - (inputs.H_X / inputs.H_max)",
+  "cs_39": "Math.log(inputs.n) / Math.log(1 / inputs.p)",
+  "cs_42": "Math.log(inputs.n) / Math.log(Math.log(inputs.n))",
+  "cs_43": "inputs.n * Math.log2(inputs.n)",
+  "econ_07": "'IRR summation polynomial root finding. Numerical method required.'",
+  "econ_12": "'Black-Scholes cumulative distribution required.'",
+  "econ_20": "inputs.MR == inputs.MC ? 'Optimal Profit' : 'Adjust production'",
+  "econ_28": "-2 * inputs.delta_u",
+  "econ_35": "inputs.IRR >= inputs.MARR ? 'Accept Project' : 'Reject Project'",
+  "econ_40": "inputs.r_star + inputs.pi + 0.5*(inputs.pi - inputs.pi_star) + 0.5*(inputs.y - inputs.y_star)"
+};
+
+data.forEach(formula => {
+  if (logicMap.hasOwnProperty(formula.id)) {
+    formula.calculator_eligible = true;
+    formula.calculator_route = "/calculator/" + formula.id;
+    // We add compute_logic so generic page can evaluate it
+    formula.compute_logic = logicMap[formula.id];
+  }
+});
+
+fs.writeFileSync('dv/src/data/formulas.json', JSON.stringify(data, null, 2));
+console.log('Successfully patched formulas!');

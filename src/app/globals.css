@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #0A0A0F;
+  --surface: #F8F9FA;
+  --surface-elevated: #FFFFFF;
+  --border: #E5E7EB;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  
+  --domain-mechanical: #D97706;
+  --domain-electrical: #CA8A04;
+  --domain-civil: #059669;
+  --domain-chemical: #7C3AED;
+  --domain-mathematics: #4F46E5;
+  --domain-physics: #0891B2;
+  --domain-cs: #65A30D;
+  --domain-economics: #E11D48;
+}
+
+.dark {
+  --background: #0A0A0F;
+  --foreground: #F4F4F8;
+  --surface: #12121A;
+  --surface-elevated: #1C1C28;
+  --border: #2A2A3A;
+  --text-primary: #F4F4F8;
+  --text-secondary: #9898B0;
+  
+  --domain-mechanical: #F59E0B;
+  --domain-electrical: #EAB308;
+  --domain-civil: #10B981;
+  --domain-chemical: #8B5CF6;
+  --domain-mathematics: #6366F1;
+  --domain-physics: #06B6D4;
+  --domain-cs: #84CC16;
+  --domain-economics: #F43F5E;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  
+  --color-mechanical: var(--domain-mechanical);
+  --color-electrical: var(--domain-electrical);
+  --color-civil: var(--domain-civil);
+  --color-chemical: var(--domain-chemical);
+  --color-mathematics: var(--domain-mathematics);
+  --color-physics: var(--domain-physics);
+  --color-cs: var(--domain-cs);
+  --color-economics: var(--domain-economics);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -12px -12px;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}

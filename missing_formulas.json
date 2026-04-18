@@ -1,0 +1,427 @@
+[
+  {
+    "id": "mech_26",
+    "name": "First Law of Thermodynamics",
+    "formula": "\\Delta U = Q - W"
+  },
+  {
+    "id": "mech_31",
+    "name": "Endurance Limit (Fatigue)",
+    "formula": "S_e = k_a k_b k_c k_d k_e S_e'"
+  },
+  {
+    "id": "mech_37",
+    "name": "Ideal Rankine Cycle Efficiency",
+    "formula": "\\eta = 1 - \\frac{Q_{out}}{Q_{in}} = \\frac{W_{net}}{Q_{in}}"
+  },
+  {
+    "id": "elec_11",
+    "name": "Kirchhoff's Voltage Law (KVL)",
+    "formula": "\\sum V = 0 \\text{ around any closed loop}"
+  },
+  {
+    "id": "elec_12",
+    "name": "Kirchhoff's Current Law (KCL)",
+    "formula": "\\sum I_{in} = \\sum I_{out} \\text{ at any node}"
+  },
+  {
+    "id": "elec_13",
+    "name": "Thevenin Equivalent Voltage",
+    "formula": "V_{th} = V_{oc}"
+  },
+  {
+    "id": "elec_27",
+    "name": "Faraday's Law of Electromagnetic Induction",
+    "formula": "\\mathcal{E} = -N \\frac{d\\Phi}{dt}"
+  },
+  {
+    "id": "elec_34",
+    "name": "Zener Diode Voltage Regulation",
+    "formula": "V_{out} = V_Z"
+  },
+  {
+    "id": "elec_38",
+    "name": "Fourier Series (Fundamental)",
+    "formula": "f(t) = a_0 + \\sum_{n=1}^{\\infty}\\left(a_n\\cos\\frac{n\\pi t}{L} + b_n\\sin\\frac{n\\pi t}{L}\\right)"
+  },
+  {
+    "id": "elec_39",
+    "name": "DC Motor Speed-Torque",
+    "formula": "N = \\frac{V - I_a R_a}{K\\Phi}"
+  },
+  {
+    "id": "civil_11",
+    "name": "Combined Bending & Axial (Interaction)",
+    "formula": "\\frac{P}{P_n} + \\frac{M}{M_n} \\leq 1.0"
+  },
+  {
+    "id": "civil_24",
+    "name": "Pavement CBR & Thickness (AASHTO simplified)",
+    "formula": "SN = a_1 D_1 + a_2 D_2 m_2 + a_3 D_3 m_3"
+  },
+  {
+    "id": "civil_29",
+    "name": "Slope-Deflection Equation",
+    "formula": "M_{AB} = \\frac{2EI}{L}(2\\theta_A + \\theta_B - 3\\psi) + FEM_{AB}"
+  },
+  {
+    "id": "civil_30",
+    "name": "Settlement (Immediate — Elastic)",
+    "formula": "S_i = \\frac{q B (1-\\nu^2)}{E} I_w"
+  },
+  {
+    "id": "civil_33",
+    "name": "Wind Load on Structure",
+    "formula": "F_w = q_z C_f A_f"
+  },
+  {
+    "id": "civil_34",
+    "name": "Truss Member Force (Method of Joints)",
+    "formula": "\\sum F_x = 0,\\quad \\sum F_y = 0"
+  },
+  {
+    "id": "civil_35",
+    "name": "Slump Test (Workability)",
+    "formula": "S = h_{before} - h_{after}\\text{ (mm)}"
+  },
+  {
+    "id": "civil_37",
+    "name": "Unit Hydrograph (SCS Method)",
+    "formula": "Q_p = \\frac{0.208 A}{t_p}"
+  },
+  {
+    "id": "civil_38",
+    "name": "Pile Capacity (Static Formula)",
+    "formula": "Q_u = Q_s + Q_p = f_s A_s + q_p A_p"
+  },
+  {
+    "id": "civil_40",
+    "name": "Quantity of Steel (Rule of Thumb)",
+    "formula": "V_s = \\rho \\times 1\\%\\text{ to }4\\%\\text{ of concrete volume}"
+  },
+  {
+    "id": "chem_06",
+    "name": "Arrhenius Equation",
+    "formula": "k = A e^{-E_a / RT}"
+  },
+  {
+    "id": "chem_09",
+    "name": "Hess's Law (Enthalpy of Reaction)",
+    "formula": "\\Delta H_{rxn} = \\sum \\Delta H_f^\\circ(\\text{products}) - \\sum \\Delta H_f^\\circ(\\text{reactants})"
+  },
+  {
+    "id": "chem_10",
+    "name": "Van't Hoff Equation",
+    "formula": "\\frac{d\\ln K}{dT} = \\frac{\\Delta H_{rxn}^\\circ}{RT^2}"
+  },
+  {
+    "id": "chem_12",
+    "name": "Second-Order Reaction Rate",
+    "formula": "-r_A = k C_A^2"
+  },
+  {
+    "id": "chem_14",
+    "name": "PFR Design Equation",
+    "formula": "V = F_{A0} \\int_0^X \\frac{dX}{-r_A}"
+  },
+  {
+    "id": "chem_15",
+    "name": "Damköhler Number",
+    "formula": "Da = \\frac{k \\tau C_{A0}^{n-1}}{1}"
+  },
+  {
+    "id": "chem_16",
+    "name": "Fick's First Law of Diffusion",
+    "formula": "J = -D \\frac{dC}{dz}"
+  },
+  {
+    "id": "chem_17",
+    "name": "Sherwood Number",
+    "formula": "Sh = \\frac{k_c L}{D}"
+  },
+  {
+    "id": "chem_18",
+    "name": "Overall Mass Transfer (NTU-HTU)",
+    "formula": "Z = NTU \\times HTU"
+  },
+  {
+    "id": "chem_20",
+    "name": "NTU-Effectiveness Method",
+    "formula": "\\varepsilon = 1 - e^{-NTU(1-C^*)} / (1 - C^* e^{-NTU(1-C^*)})"
+  },
+  {
+    "id": "chem_23",
+    "name": "Ergun Equation (Packed Bed)",
+    "formula": "\\frac{\\Delta P}{L} = \\frac{150 \\mu u (1-\\varepsilon)^2}{d_p^2 \\varepsilon^3} + \\frac{1.75 \\rho u^2 (1-\\varepsilon)}{d_p \\varepsilon^3}"
+  },
+  {
+    "id": "chem_26",
+    "name": "Fenske Equation (Minimum Stages)",
+    "formula": "N_{min} = \\frac{\\ln\\left[\\frac{(x_D/(1-x_D))}{(x_B/(1-x_B))}\\right]}{\\ln \\alpha}"
+  },
+  {
+    "id": "chem_27",
+    "name": "Mass Balance (Steady State)",
+    "formula": "\\dot{m}_{in} = \\dot{m}_{out} + \\text{Accumulation}"
+  },
+  {
+    "id": "chem_28",
+    "name": "Energy Balance (Open System)",
+    "formula": "Q - W_s = \\Delta H + \\Delta KE + \\Delta PE"
+  },
+  {
+    "id": "chem_30",
+    "name": "Yield & Selectivity",
+    "formula": "S = \\frac{\\text{moles of desired product formed}}{\\text{moles of limiting reactant consumed}}"
+  },
+  {
+    "id": "chem_31",
+    "name": "Peng-Robinson EOS",
+    "formula": "P = \\frac{RT}{V_m - b} - \\frac{a(T)}{V_m(V_m+b) + b(V_m-b)}"
+  },
+  {
+    "id": "chem_32",
+    "name": "Equilibrium Constant (Kp)",
+    "formula": "K_p = \\prod_i (P_i)^{\\nu_i}"
+  },
+  {
+    "id": "chem_35",
+    "name": "Relief Valve Sizing (API 520)",
+    "formula": "A = \\frac{W}{C K_d P_1 K_b}\\sqrt{\\frac{TZ}{M}}"
+  },
+  {
+    "id": "chem_36",
+    "name": "Lower Flammability Limit (Le Chatelier)",
+    "formula": "LFL_{mix} = \\frac{1}{\\sum_i y_i / LFL_i}"
+  },
+  {
+    "id": "chem_37",
+    "name": "Schmidt Number",
+    "formula": "Sc = \\frac{\\mu}{\\rho D}"
+  },
+  {
+    "id": "chem_38",
+    "name": "Residence Time Distribution (RTD) — Mean",
+    "formula": "\\bar{t} = \\frac{\\int_0^\\infty t\\, C(t)\\, dt}{\\int_0^\\infty C(t)\\, dt}"
+  },
+  {
+    "id": "chem_40",
+    "name": "Operating Line (Absorption)",
+    "formula": "y = \\frac{L}{G}(x - x_2) + y_2"
+  },
+  {
+    "id": "math_04",
+    "name": "Derivative (Power Rule)",
+    "formula": "\\frac{d}{dx}(x^n) = nx^{n-1}"
+  },
+  {
+    "id": "math_11",
+    "name": "Binomial Theorem",
+    "formula": "(a+b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k"
+  },
+  {
+    "id": "math_13",
+    "name": "Power Rule (Differentiation)",
+    "formula": "\\frac{d}{dx}[x^n] = nx^{n-1}"
+  },
+  {
+    "id": "math_14",
+    "name": "Chain Rule",
+    "formula": "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)"
+  },
+  {
+    "id": "math_15",
+    "name": "Product Rule",
+    "formula": "(uv)' = u'v + uv'"
+  },
+  {
+    "id": "math_16",
+    "name": "Fundamental Theorem of Calculus",
+    "formula": "\\int_a^b f(x)\\,dx = F(b) - F(a)"
+  },
+  {
+    "id": "math_17",
+    "name": "Taylor Series Expansion",
+    "formula": "f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n"
+  },
+  {
+    "id": "math_18",
+    "name": "L'Hôpital's Rule",
+    "formula": "\\lim_{x\\to c}\\frac{f(x)}{g(x)} = \\lim_{x\\to c}\\frac{f'(x)}{g'(x)}"
+  },
+  {
+    "id": "math_19",
+    "name": "Pythagorean Identity",
+    "formula": "\\sin^2\\theta + \\cos^2\\theta = 1"
+  },
+  {
+    "id": "math_22",
+    "name": "Double Angle Formula (sin)",
+    "formula": "\\sin 2\\theta = 2\\sin\\theta\\cos\\theta"
+  },
+  {
+    "id": "math_23",
+    "name": "Double Angle Formula (cos)",
+    "formula": "\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta"
+  },
+  {
+    "id": "math_28",
+    "name": "Pearson Correlation Coefficient",
+    "formula": "r = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2\\sum(y_i-\\bar{y})^2}}"
+  },
+  {
+    "id": "math_32",
+    "name": "Eigenvalue Equation",
+    "formula": "A\\mathbf{v} = \\lambda\\mathbf{v}"
+  },
+  {
+    "id": "math_35",
+    "name": "Fermat's Little Theorem",
+    "formula": "a^p \\equiv a \\pmod{p}"
+  },
+  {
+    "id": "phys_04",
+    "name": "Ideal Gas Law",
+    "formula": "PV = nRT"
+  },
+  {
+    "id": "phys_28",
+    "name": "Lorentz Force",
+    "formula": "\\mathbf{F} = q(\\mathbf{E} + \\mathbf{v} \\times \\mathbf{B})"
+  },
+  {
+    "id": "phys_31",
+    "name": "Heisenberg Uncertainty Principle",
+    "formula": "\\Delta x \\cdot \\Delta p \\geq \\frac{\\hbar}{2}"
+  },
+  {
+    "id": "phys_33",
+    "name": "Time Dilation (Special Relativity)",
+    "formula": "\\Delta t' = \\frac{\\Delta t}{\\sqrt{1 - v^2/c^2}}"
+  },
+  {
+    "id": "cs_01",
+    "name": "Shannon Channel Capacity",
+    "formula": "C = B \\log_2\\left(1 + \\frac{S}{N}\\right)"
+  },
+  {
+    "id": "cs_02",
+    "name": "Big-O: Binary Search",
+    "formula": "T(n) = O(\\log n)"
+  },
+  {
+    "id": "cs_04",
+    "name": "Huffman Entropy",
+    "formula": "H = -\\sum p_i \\log_2(p_i)"
+  },
+  {
+    "id": "cs_05",
+    "name": "RSA Modular Exponentiation",
+    "formula": "C = M^e \\mod n"
+  },
+  {
+    "id": "cs_06",
+    "name": "Big-O: Bubble / Insertion Sort",
+    "formula": "T(n) = O(n^2)"
+  },
+  {
+    "id": "cs_07",
+    "name": "Big-O: Merge Sort / Heap Sort",
+    "formula": "T(n) = O(n \\log n)"
+  },
+  {
+    "id": "cs_08",
+    "name": "Big-O: Matrix Multiplication (Naive)",
+    "formula": "T(n) = O(n^3)"
+  },
+  {
+    "id": "cs_10",
+    "name": "Master Theorem (Divide & Conquer)",
+    "formula": "T(n) = aT\\!\\left(\\frac{n}{b}\\right) + f(n)"
+  },
+  {
+    "id": "cs_11",
+    "name": "Dijkstra's Algorithm Complexity",
+    "formula": "T = O((V + E) \\log V)"
+  },
+  {
+    "id": "cs_12",
+    "name": "BFS / DFS Complexity",
+    "formula": "T = O(V + E)"
+  },
+  {
+    "id": "cs_14",
+    "name": "Knapsack DP (0/1)",
+    "formula": "dp[i][w] = \\max(dp[i-1][w],\\; v_i + dp[i-1][w-w_i])"
+  },
+  {
+    "id": "cs_17",
+    "name": "TCP Throughput (Theoretical)",
+    "formula": "T = \\frac{MSS}{RTT \\sqrt{p}}"
+  },
+  {
+    "id": "cs_25",
+    "name": "CMOS Power Dissipation",
+    "formula": "P = \\alpha C_L V_{DD}^2 f"
+  },
+  {
+    "id": "cs_26",
+    "name": "Diffie-Hellman Key Exchange",
+    "formula": "K = g^{ab} \\mod p"
+  },
+  {
+    "id": "cs_30",
+    "name": "Mutual Information",
+    "formula": "I(X;Y) = H(X) + H(Y) - H(X,Y)"
+  },
+  {
+    "id": "cs_31",
+    "name": "Information Redundancy",
+    "formula": "R = 1 - \\frac{H(X)}{H_{max}}"
+  },
+  {
+    "id": "cs_39",
+    "name": "Skip List Expected Height",
+    "formula": "E[h] = \\log_{1/p} n"
+  },
+  {
+    "id": "cs_42",
+    "name": "Expected Max Load (Balls-into-Bins)",
+    "formula": "E[L] = \\Theta\\!\\left(\\frac{\\log n}{\\log \\log n}\\right)"
+  },
+  {
+    "id": "cs_43",
+    "name": "Quick Sort Average Complexity",
+    "formula": "T(n) = O(n \\log n) \\text{ avg},\\; O(n^2) \\text{ worst}"
+  },
+  {
+    "id": "econ_07",
+    "name": "Internal Rate of Return (IRR)",
+    "formula": "0 = \\sum_{t=0}^{n} \\frac{C_t}{(1+IRR)^t}"
+  },
+  {
+    "id": "econ_12",
+    "name": "Black-Scholes (Call Option)",
+    "formula": "C = S_0 N(d_1) - K e^{-rT} N(d_2)"
+  },
+  {
+    "id": "econ_20",
+    "name": "Profit Maximisation (MR = MC)",
+    "formula": "\\pi \\text{ max when } MR = MC"
+  },
+  {
+    "id": "econ_28",
+    "name": "Okun's Law (Output-Unemployment Gap)",
+    "formula": "\\frac{\\Delta Y}{Y} \\approx -2 \\Delta u"
+  },
+  {
+    "id": "econ_35",
+    "name": "MARR — Minimum Attractive Rate of Return",
+    "formula": "\\text{Accept project if } IRR \\geq MARR"
+  },
+  {
+    "id": "econ_40",
+    "name": "Taylor Rule (Interest Rate)",
+    "formula": "i = r^* + \\pi + 0.5(\\pi - \\pi^*) + 0.5(y - y^*)"
+  }
+]
