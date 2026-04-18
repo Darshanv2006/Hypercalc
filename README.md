@@ -56,7 +56,7 @@ A comprehensive engineering calculator platform built with Next.js 14, TypeScrip
 1. Clone the repository:
 ```bash
 git clone https://github.com/Darshanv2006/Hypercalc.git
-cd Hypercalc/dv
+cd Hypercalc
 ```
 
 2. Install dependencies:
