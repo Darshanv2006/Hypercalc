@@ -21,15 +21,29 @@ A comprehensive engineering calculator platform built with Next.js 14, TypeScrip
 - **Interactive Charts** with Recharts
 - **Dark Mode Support**
 
+### Screenshots
+
+**Dashboard Overview**
+![HyperCalc Dashboard](./Screenshot/dashboard.png)
+
+**Engineering Domains**
+![Engineering Domains](./Screenshot/domains.png)
+
 ## Tech Stack
 
+### Frontend Core
 - **Framework:** Next.js 14 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4
+
+### Engine & Features
 - **Math Rendering:** KaTeX
-- **Charts:** Recharts
-- **Search:** Fuse.js
+- **Charts & Visualization:** Recharts
+- **Fuzzy Search:** Fuse.js
+
+### Backend & Deployment
 - **Deployment:** Vercel
+- **Data Architecture:** Embedded JSON/TS Configs
 
 ## Getting Started
 
@@ -42,8 +56,8 @@ A comprehensive engineering calculator platform built with Next.js 14, TypeScrip
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/hypercalc.git
-cd hypercalc/dv
+git clone https://github.com/Darshanv2006/Hypercalc.git
+cd Hypercalc/dv
 ```
 
 2. Install dependencies:
@@ -67,25 +81,24 @@ npm start
 
 ## Project Structure
 
-```
+```text
 dv/
-├── app/                    # Next.js app directory
-│   ├── [domain]/          # Domain-specific pages
-│   ├── formulas/          # Formula reference library
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Home page
-├── components/            # Reusable components
-│   ├── calculator/        # Calculator components
-│   ├── layout/            # Layout components
-│   └── GlobalSearch.tsx   # Global search modal
-├── lib/                   # Utility libraries
-│   ├── calculators.ts     # Calculator data
-│   ├── formulas.ts        # Formula data
-│   └── units/             # Unit conversion
-├── public/                # Static assets
-│   ├── sitemap.xml        # SEO sitemap
-│   └── robots.txt         # SEO robots
-└── styles/                # Global styles
+├── src/
+│   ├── app/                 # Next.js app directory (Pages & Routing)
+│   │   ├── [domain]/        # Domain-specific pages
+│   │   ├── formulas/        # Formula reference library
+│   │   ├── layout.tsx       # Root layout
+│   │   └── page.tsx         # Home page
+│   ├── components/          # Reusable UI components
+│   │   ├── calculator/      # Calculator engine and visual components
+│   │   └── layout/          # Layout components
+│   ├── data/                # Formulas and domain data
+│   └── lib/                 # Utility libraries and helpers
+├── backend/                 # Data population and scripts
+├── public/                  # Static assets
+├── Screenshot/              # Project screenshots
+├── package.json             # Core dependencies
+└── tailwind.config.ts       # Styles configuration
 ```
 
 ## Available Scripts
