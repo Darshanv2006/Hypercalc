@@ -1,6 +1,6 @@
 # HyperCalc
 
-A comprehensive engineering calculator platform built with Next.js 14, TypeScript, and Tailwind CSS.
+A comprehensive engineering calculator platform built with Next.js 14,  TypeScript, and Tailwind CSS.
 
 ## Features
 
